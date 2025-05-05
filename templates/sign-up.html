@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Ingelinn Hallseth" />
+  <meta name="description"
+    content="The Sign Up page for Edugate. Edugate is a result management system for high schools in Nigeria." />
+  <link rel="stylesheet" href="../dist/output.css" />
+  <script src="" defer></script>
+  <title>Edugate | Sign Up</title>
+</head>
+
+<body class="bg-neutral-light-gray font-Roboto">
+  <!-- not logged in -->
+  <header class="bg-neutral-light-gray text-neutral-dark-gray">
+    <nav class="max-w-7x1 flex items-center justify-between px-4 border-b-1 border-[#D1D1D1]">
+      <a href="../templates/index.html"><img class="w-16 h-16 md:w-44 md:h-44" src="../public/img/logo-header.png" alt="Edugate Logo"></a>
+
+
+      <!-- Hamburger Menu -->
+      <div class="relative md:hidden">
+        <!-- Checkbox for Hamburger Toggle -->
+        <input type="checkbox" id="menu-toggle" class="hidden peer" />
+        <!-- Hamburger Icon -->
+        <label for="menu-toggle" class="block cursor-pointer focus:outline-none peer-checked:hidden"
+          aria-label="Toggle menu">
+          <img class="w-[1.5625rem] h-[1.5625rem]" src="../public/icons/hamburger-menu.png" alt="Hamburger Menu">
+
+        </label>
+
+        <div
+          class="fixed inset-0 bg-white text-neutral-dark-gray z-50 transform translate-x-full peer-checked:translate-x-0 transition-transform duration-300">
+          <!-- Close Icon -->
+          <label for="menu-toggle" class="absolute top-4 right-4 cursor-pointer focus:outline-none"
+            aria-label="Close menu">
+            <svg class="w-12 h-12 mt-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </label>
+
+          <ul class="flex flex-col items-end justify-start mt-40 h-full gap-10 text-xl mr-8">
+            <li>
+
+              <a href="login-page.html"
+                class="flex items-center gap-5 p-3 border-b-2 border-white hover:border-primary">
+                Login
+                <img class="w-6 h-6" src="../public/icons/login.png" alt="Login Icon">
+              </a>
+            </li>
+            <li>
+
+              <a href="sign-up.html"
+                class="flex items-center gap-5 p-3 border-b-2 border-white hover:border-primary">
+                Signup
+                <img class="w-6 h-6" src="../public/icons/signup.png" alt="Signup Icon">
+              </a>
+            </li>
+            <li>
+
+              <a href="about.html"
+                class="flex items-center gap-5 p-3 border-b-2 border-white hover:border-primary">
+                About
+                <img class="w-6 h-6" src="../public/icons/about.png" alt="About Icon">
+              </a>
+            </li>
+            <li>
+
+              <a href="contact.html"
+                class="flex items-center gap-5 p-3 border-b-2 border-white hover:border-primary">
+                Contact
+                <img class="w-6 h-6" src="../public/icons/contact.png" alt="Contact Icon">
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <ul class="hidden md:flex mr-10 font-Poppins font-medium text-xl">
+        <li class="py-8 px-16 border-b-2 border-neutral-light-gray hover:border-primary">
+
+          <a href="about.html" class="font-heading ">About</a>
+        </li>
+        <li class="py-8 px-16 border-b-2 border-neutral-light-gray hover:border-primary">
+          <a href="contact.html" class="font-heading ">Contact</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main class="max-sm:mt-4">
+    <div class="w-full max-w-[25rem] sm:max-w-md mx-auto sm:mt-6 p-5  sm:p-0">
+      <form
+        class="bg-neutral-light-gray border-0 sm:border-3 sm:border-[#cccccc] shadow-none sm:inset-shadow-sm sm:inset-shadow-[#cccccc] p-0 sm:px-12 sm:pt-8 sm:pb-10 mb-4"
+        action="submit-form-here" method="post">
+        <h1 class="text-neutral-dark-gray text-center font-Poppins text-[32px] font-bold tracking-wide sm:mb-4 max-md:py-3.5">
+          Sign Up</h1>
+        <div class="max-sm:mb-0 mb-6">
+          <label class="block text-neutral-dark-gray font-Roboto text-base sm:text-sm font-bold tracking-wide max-sm:my-4"
+            for="email">Email</label>
+          <input
+            class="bg-white border border-[#cccccc] inset-shadow-sm inset-shadow-[#cccccc] rounded-md focus:border-primary focus:ring-0 w-full py-2 px-2 sm:px-4 text-neutral-dark-gray text-sm sm:text-base"
+            type="email" name="email" id="email" placeholder="example@mail.com" required />
+        </div>
+        <div class="flex flex-col sm:flex-row max-sm:gap-0 gap-4 max-sm:mb-0 mb-6">
+          <div class="flex-1">
+            <label class="block text-neutral-dark-gray font-Roboto text-base sm:text-sm font-bold tracking-wide max-sm:my-4"
+              for="firstname">First name</label>
+            <input
+              class="bg-white border border-[#cccccc] inset-shadow-sm inset-shadow-[#cccccc] rounded-md focus:border-primary focus:ring-0 w-full py-2 px-2 sm:px-4 text-neutral-dark-gray text-sm sm:text-base"
+              type="text" name="firstname" id="firstname" placeholder="Ola" required />
+          </div>
+          <div class="flex-1">
+            <label class="block text-neutral-dark-gray font-Roboto text-base sm:text-sm font-bold tracking-wide max-sm:my-4"
+              for="surname">Surname</label>
+            <input
+              class="bg-white border border-[#cccccc] inset-shadow-sm inset-shadow-[#cccccc] rounded-md focus:border-primary focus:ring-0 w-full py-2 px-2 sm:px-4 text-neutral-dark-gray text-sm sm:text-base"
+              type="text" name="surname" id="surname" placeholder="Nordmann" required />
+          </div>
+        </div>
+        <div class="max-sm:mb-0 mb-6">
+          <label class="block text-neutral-dark-gray font-Roboto text-base sm:text-sm font-bold tracking-wide max-sm:my-4"
+            for="password">Password</label>
+          <input
+            class="bg-white border border-[#cccccc] inset-shadow-sm inset-shadow-[#cccccc] rounded-md focus:border-primary focus:ring-0 w-full py-2 px-2 sm:px-4 text-neutral-dark-gray text-sm sm:text-base"
+            type="password" name="password" id="password" placeholder="Choose password" required
+            autocomplete="new-password" minlength="8" pattern=".{8,}" />
+        </div>
+        <div class="max-sm:mb-4 mb-6">
+          <label class="block text-neutral-dark-gray font-Roboto text-base sm:text-sm font-bold tracking-wide max-sm:my-4"
+            for="confirm-password">Confirm password</label>
+          <input
+            class="bg-white border border-[#cccccc] inset-shadow-sm inset-shadow-[#cccccc] rounded-md focus:border-primary focus:ring-0 w-full py-2 px-2 sm:px-4 text-neutral-dark-gray text-sm sm:text-base"
+            type="password" name="confirm-password" id="confirm-password" placeholder="Repeat password" required
+            autocomplete="new-password" minlength="8" pattern=".{8,}" />
+        </div>
+        <div class="text-center mb-4">
+          <button type="submit" class="primary-button primary-button:hover">
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
+  </main>
+  <section class="flex flex-col items-center hidden">
+
+    <div class="bg-[rgb(255,235,238)] h-28 w-84 md:h-42 md:w-112 border-none shadow-[-2px_4px_4px_2px_rgba(0,0,0,0.25)] items-center text-center">
+        <img src="../public/icons/x-red.png" alt="an icon of a red x, clicked to close the alert." class="ml-auto pr-2 pt-2 md:pr-4 md:pt-4">
+        <div class="text-center, items-center justify-center flex flex-col">
+          <h2 class="md:text-[2rem] text-[1.5rem] text-Poppins text-[#C62828] font-[700] tracking-[0.5px] -mt-2 mr-15 md:mr-0 md:mt-0">Failed Sign Up!</h2>
+          <img src="../public/icons/vector.png" alt="a circle with an exclamation mark inside. a vector" class="mr-70 -mt-9 md:mr-84 md:-mt-10 md:mb-8 h-8 w-8 md:h-20 md:w-20">
+        <p class="text-[1rem] text-roboto text-[#C62828] font-[400] tracking-[0.5px] mt-3 mr-12 md:-mt-18 md:ml-20">Wrong password or email address!</p>
+        </div>
+  </section>
+  <footer>
+    <div class="flex justify-center items-center w-42.813 h-15.375 flex-shrink-0">
+      <img class="max-sm:hidden" src="../public/img/circle-footer.png">
+      <img src="../public/img/Circles_illustration_mobile.png"
+        alt="two colorful circles where one is blue and one is green" class="md:hidden flex ml-auto mt-4">
+    </div>
+  </footer>
+</body>
+
+</html>

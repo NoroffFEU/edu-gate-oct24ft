@@ -1,0 +1,39 @@
+
+	"name": "edu-gate",
+	"version": "1.0.0",
+	"description": "The frontend part of edugate",
+	"engines": {
+		"node": ">=18.17.1",
+		"npm": ">=10.8.2"
+	},
+	"main": "app.js",
+  "scripts": {
+    "build": "npx @tailwindcss/cli -i ./css/styles.css -o ./dist/output.css",
+    "start": "npm run build && node ./src/index.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/sulenchy/edu-gate.git"
+	},
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/sulenchy/edu-gate/issues"
+	},
+	"homepage": "https://github.com/sulenchy/edu-gate#readme",
+	"dependencies": {
+		"@tailwindcss/cli": "^4.0.1",
+		"edu-gate": "file:"
+	},
+	"directories": {
+		"doc": "docs"
+	},
+	"keywords": [],
+	"devDependencies": {
+		"tailwindcss": "^4.0.17",
+		"lightningcss": "^1.29.3",
+		"tailwindcss": "^4.0.14"
+	}
+}
+
+

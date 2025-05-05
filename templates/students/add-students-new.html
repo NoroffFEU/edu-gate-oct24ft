@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="Rebecca Våge Husa"/>
+    <meta name="description" content="The add students page for Edugate. Edugate is a result management system for high schools in Nigeria."/>
+      <link rel="stylesheet" href="../../dist/output.css" />
+    <script src="" defer></script>
+    <title>Edugate | Add students</title>
+</head>
+<body class="bg-neutral-light-gray flex-col min-h-screen font-Roboto">
+    <header class="bg-neutral-light-gray text-neutral-dark-gray border-b border-[#CCCCCC]">
+        <nav class="max-w-7x1 flex items-center justify-between px-0 md:px-4">
+            <img class="pl-0 md:pl-5 w-34 md:w-auto" src="../../public/img/logo-header.png" alt="Edugate Logo">
+        <!-- Hamburger Menu -->
+        <div class="fixed inset-0 md:hidden">
+            <!-- Checkbox for Hamburger Toggle -->
+            <input
+                type="checkbox"
+                id="menu-toggle"
+                class="hidden peer"
+            />
+            <!-- Hamburger Icon -->
+            <label
+                for="menu-toggle"
+                class="absolute top-14 right-4 cursor-pointer focus:outline-none peer-checked:hidden"
+                aria-label="Toggle menu"
+            >
+                <svg class="w-16 h-16" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </label>
+  
+            <div
+                class="fixed inset-0 bg-white text-neutral-dark-gray z-50 transform translate-x-full peer-checked:translate-x-0 transition-transform duration-300"
+            >
+                <!-- Close Icon -->
+                <label
+                    for="menu-toggle"
+                    class="absolute top-4 right-4 cursor-pointer focus:outline-none"
+                    aria-label="Close menu"
+                >
+                    <svg class="w-12 h-12 mt-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </label>
+  
+                <ul class="flex flex-col items-end justify-start mt-40 h-full gap-10 text-xl mr-8">
+                    <li>
+                        <a href="dashboard-student.html" class="flex items-center gap-5 p-3 border-b-2 border-white hover:border-primary">
+                            Dashboard
+                            <img class="w-6 h-6" src="../../public/icons/dashboard.png" alt="Dashboard Icon">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="edit-profile-student.html" class="flex items-center gap-5 p-3 border-b-2 border-white hover:border-primary">
+                            Profile
+                            <img class="w-6 h-6" src="../../public/icons/user-circle.png" alt="Profile Icon">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../about.html" class="flex items-center gap-5 p-3 border-b-2 border-white hover:border-primary">
+                            About
+                            <img class="w-6 h-6" src="../../public/icons/about.png" alt="About Icon">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../contact.html" class="flex items-center gap-5 p-3 border-b-2 border-white hover:border-primary">
+                            Contact
+                            <img class="w-6 h-6" src="../../public/icons/contact.png" alt="Contact Icon">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="flex items-center gap-5 p-3 border-b-2 border-white hover:border-accent-hover">
+                            Log out
+                            <img class="w-6 h-6" src="../../public/icons/logout.png" alt="Log out Icon">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+  
+        <ul class="hidden md:flex mr-0 font-Poppins font-medium text-l ml-auto">
+            <li class="py-8 px-12 border-b-2 border-neutral-light-gray hover:border-primary">
+                <a href="../../templates/students/dashboard-student.html" class="font-heading">Dashboard</a>
+            </li>
+            <li class="py-8 px-12 border-b-2 border-neutral-light-gray hover:border-primary">
+                <a href="../../templates/about.html" class="font-heading">About</a>
+            </li>
+            <li class="py-8 px-12 border-b-2 border-neutral-light-gray hover:border-primary">
+                <a href="../../templates/contact.html" class="font-heading">Contact</a>
+            </li>
+        </ul>
+            <!-- User Dropdown -->
+            <div class="relative">
+              <!-- Hidden Checkbox -->
+              <input type="checkbox" id="dropdown-toggle" class="hidden peer">
+  
+              <!-- User Icon (Clickable) -->
+              <label
+                  for="dropdown-toggle"
+                  class="hidden md:flex w-14 h-14 mr-10 cursor-pointer"
+              >
+                  <img src="../../public/icons/user-circle.png" alt="User dropdown">
+              </label>
+  
+              <!-- Dropdown Menu -->
+              <ul
+                  class="absolute right-0 mr-8 w-40 text-center border bg-neutral-light-gray border-neutral-light-gray rounded-lg shadow-lg opacity-0 invisible peer-checked:opacity-100 peer-checked:visible transition-opacity duration-200">
+                  <li>
+                      <a href="#" class="block px-8 py-4 hover:bg-white hover:text-green-600">See results</a>
+                  </li>
+                  <li>
+                      <a href="#" class="block px-8 py-4 hover:bg-white border-y-2 border-white hover:text-green-600">Profile</a>
+                  </li>
+                  <li>
+                      <a href="#" class="block px-8 py-4 hover:bg-white hover:text-red-600">Log out</a>
+                  </li>
+              </ul>
+          </div>
+    </nav>
+  </header>
+    <main class="flex flex-row flex-grow gap-0 m-0"> 
+      <div id="sidebar" class="sidebar teacher-sidebar hidden lg:flex flex-col gap-12 ml-4">
+        <div class="flex flex-col gap-12 mt-10">
+        <img src="/public/icons/dashboard.png" class="w-[41px]" alt="Dashboard icon">
+        <img src="/public/icons/results.png" class="w-[41px]" alt="Results icon">
+        <img src="/public/icons/user-circle.png" class="w-[41px]" alt="User icon">
+        <img src="/public/icons/school-management.png" class="w-[41px]" alt="School management icon">
+        <img src="/public/icons/logout.png" class="w-[41px]" alt="Log out icon">
+        </div>
+  </div>
+  <!--Sidebar-->
+  <div id="sidebar-hov" class="teacher-sidebar hidden lg:flex flex-col gap-12 ">
+    <a href="dashboard-admin.html" class=" rounded-md">
+        <img src="/public/icons/dashboard.png" class="w-[41px]" alt="Dashboard icon"><span>Home</span>
+    </a>
+    <a href="add-results.html" class=" rounded-md">
+        <img src="/public/icons/results.png" class="w-[41px]" alt="Results management icon"><span>Results Management</span>
+    </a>
+    <a href="manage-user.html" class="rounded-md">
+        <img src="/public/icons/user-circle.png" class="w-[41px]" alt="User icon"><span>User Management</span>
+    </a>
+    <a href="add-school.html" class="rounded-md">
+        <img src="/public/icons/school-management.png" class="w-[41px]" alt="School management icon"><span>Top Students</span>
+    </a>
+    <a href="/templates" class="rounded-md">
+        <img src="/public/icons/logout.png" class="w-[41px]" alt="Log out icon"><span>Logout</span>
+    </a>
+  </div>
+
+  <div class="fixed top-10 right-4 flex flex-col items-end space-y-4">
+    <div id="success-alert"
+        class="alert-main hidden bg-green-100 border-l-4 border-green-500 text-green-700 p-4 rounded-lg shadow-md max-w-md w-fit">
+        <p class="font-bold flex items-center font-Roboto">
+            <img src="../../public/icons/verified.png" class="w-6 h-6 mr-2" alt="verified"> 
+            Files were successfully added!
+        </p>
+    </div>
+
+    <div id="error-alert"
+        class="alert-main hidden bg-red-100 border-l-4 border-red-500 text-red-700 p-4 rounded-lg shadow-md max-w-md w-fit">
+        <p class="font-bold flex items-center font-Roboto">
+            <img src="../../public/icons/fail.png" class="w-6 h-6 mr-2" alt="Fail"> 
+            Failed to upload files. Please try again.
+        </p>
+    </div>
+</div>
+
+      
+  <!-- <section class="mb-6 mt-6"> -->
+    <section class="flex flex-col w-full gap-12 m-0 pr-[16px] sm:!pr-[80px]  border-#CCCCCC-400 pl-4 pt-5">
+        <p class="self-start mb-12 text-[#757575] ">
+          Dashboard &nbsp;&nbsp;> <span class="text-[#4CAF50]"> &nbsp;&nbsp;Add students</span>
+        </p>
+
+    <main class="w-full font-Poppins flex-1">
+    <section class="mb-4 flex flex-col justify-center text-center items-center mt-24 md:mt-10 py-6">
+    <h1 class="text-black text-center font-Poppins text-[32px] font-bold tracking-wide sm:mb-12 mb-6">Add students</h1>
+    <p class="text-neutral-dark-gray font-Roboto sm:text-xl text-sm font-normal sm:tracking-wide sm:mb-12 mb-4">To add students, upload an excel spreadsheet with this format:</p>
+    </section>
+    <div class=" w-full px-8">
+    <table border="1" class="w-full mx-auto border border-gray-300 text-left text-sm md:text-base">
+      <thead class="bg-gray-200 text-gray-600 uppercase text-center text-xs sm:text-sm md:base">
+        <tr>
+          <th class="bg-gray-200 text-gray-600 uppercase pl-0.5 md:px-4 py-2">#</th>
+          <th class="border border-gray-300 pl-0.5 md:px-4 py-2">A</th>
+          <th class="border border-gray-300 pl-0.5 md:px-4 py-2">B</th>
+          <th class="border border-gray-300 pl-0.5 md:px-4 py-2">C</th>
+          <th class="border border-gray-300 pl-0.5 md:px-4 py-2">D</th>
+          <th class="border border-gray-300 pl-0.5 md:px-4 py-2">E</th>
+        </tr>
+      </thead>
+      <tbody class="text-[10px] sm:text-xs md:text-sm">
+        <tr>
+          <td class="bg-gray-200 border border-gray-300 pl-0.5 md:px-4 py-2">1</td>
+          <td class="bg-white border border-gray-300 pl-0.5 md:px-4 py-2">first_name</td>
+          <td class="bg-white border border-gray-300 pl-0.5 md:px-4 py-2">surname</td>
+          <td class="bg-white border border-gray-300 pl-0.5 md:px-4 py-2">grad_year</td>
+          <td class="bg-white border border-gray-300 pl-0.5 md:px-4 py-2">id</td>
+          <td class="bg-white border border-gray-300 pl-0.5 md:px-4 py-2">dob</td>
+        </tr>
+        <tr>
+          <td class="bg-gray-200 border border-gray-300 pl-0.5 md:px-4 py-2">2</td>
+          <td class="bg-white border border-gray-300 pl-0.5 md:px-4 py-2">First Name</td>
+          <td class="bg-white border border-gray-300 pl-0.5 md:px-4 py-2">Second Name</td>
+          <td class="bg-white border border-gray-300 pl-0.5 md:px-4 py-2">Year of Graduation</td>
+          <td class="bg-white border border-gray-300 pl-0.5 md:px-4 py-2">School student ID Number</td>
+          <td class="bg-white border border-gray-300 pl-0.5 md:px-4 py-2">Date of Birth</td>
+        </tr>
+        <tr>
+          <td class="bg-gray-200 border border-gray-300 pl-0.5 md:px-4 py-2">3</td>
+          <td class="bg-white border border-gray-300 pl-0.5 md:px-4 py-2">#</td>
+          <td class="bg-white border border-gray-300 pl-0.5 md:px-4 py-2">#</td>
+          <td class="bg-white border border-gray-300 pl-0.5 md:px-4 py-2">#</td>
+          <td class="bg-white border border-gray-300 pl-0.5 md:px-4 py-2">#</td>
+          <td class="bg-white border border-gray-300 pl-0.5 md:px-4 py-2">#</td>
+        </tr>
+        <tr>
+          <td class="bg-gray-200 border border-gray-300 pl-0.5 md:px-4 py-2">4</td>
+          <td class="bg-white border border-gray-300 pl-0.5 md:px-4 py-2">#</td>
+          <td class="bg-white border border-gray-300 pl-0.5 md:px-4 py-2">#</td>
+          <td class="bg-white border border-gray-300 pl-0.5 md:px-4 py-2">#</td>
+          <td class="bg-white border border-gray-300 pl-0.5 md:px-4 py-2">#</td>
+          <td class="bg-white border border-gray-300 pl-0.5 md:px-4 py-2">#</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+    <div class="flex flex-col items-center justify-center space-y-4">
+        <button id="upload-btn" type="button" class="px-6 py-2 max-w-xs bg-green-500 text-white font-semibold rounded-md hover:bg-green-600 transition mt-6">Upload +</button>
+        <a href="dashboard-student.html"><button type="button" class="px-6 py-2 max-w-xs bg-white text-blue-500 border-2 border-blue-500 font-semibold rounded-md hover:bg-blue-100 hover:text-blue-700 transition">Back to dashboard</button></a>
+    </div>
+  </main>
+  </div>
+  <footer class="flex justify-end sm:justify-center mt-35 sm:mt-10">
+    <img class="sm:hidden" src="../../public/img/Circles illustration mobile.png" alt="Edugate footer circles">
+    <img class="hidden sm:block shrink-0 mx-4 mt-8" src="../../public/img/circle-footer.png" alt="Edugate footer circles">
+</footer>
+<div id="success-alert"
+class="alert-main hidden bg-green-100 border-l-4 border-green-500 text-green-700 p-4 rounded-lg shadow-md w-full max-w-md mx-auto">
+<p class="font-bold"><img src="../../public/icons/verified.png" style="display: inline;" alt="verified"> Files were
+    successfully added!</p>
+</div>
+
+<div id="error-alert"
+class="alert-main hidden bg-red-100 border-l-4 border-red-500 text-red-700 p-4 rounded-lg shadow-md w-full max-w-md mx-auto">
+<p class="font-bold"><img src="../../public/icons/fail.png" style="display: inline;" alt="Fail"> Failed to upload
+    files. Please try again.</p>
+</div>
+</body>
+<script>
+    // here i have used java script to make the botton functional, after discusssing with team leader Annak, and was given go a head by one of the teachers Adu
+    document.getElementById("upload-btn").addEventListener("click", function () {
+    const errorAlert = document.getElementById("error-alert");
+    const successAlert = document.getElementById("success-alert");
+
+    const isSuccess = Math.random() < 0.5;
+
+    if (isSuccess) {
+        successAlert.classList.remove("hidden");
+        setTimeout(() => {
+            successAlert.classList.add("hidden");
+        }, 6000);
+    } else {
+        errorAlert.classList.remove("hidden");
+        setTimeout(() => {
+            errorAlert.classList.add("hidden");
+        }, 6000);
+    }
+});
+</script>
+</html>
+
+
+

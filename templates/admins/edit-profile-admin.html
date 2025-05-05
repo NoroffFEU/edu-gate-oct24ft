@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A page for editing admin information">
+  <link rel="stylesheet" href="../../dist/output.css">
+  <title>Edit Profile - Admin</title>
+</head>
+
+<body class="bg-neutral-light-gray">
+  <header class="w-full bg-neutral-light-gray text-neutral-dark-gray font-Poppins border-b-1 border-[#cccccc]">
+    <div class="w-full max-w-7xl mx-auto px-2 lg:px-6">
+      <nav class="flex w-full items-center justify-between">
+        <img class="ml-4 w-16 h-16 lg:hidden" src="../../public/img/logo-header-cropped.png" alt="Edugate Logo">
+        <img class="w-44 h-44 hidden lg:block" src="../../public/img/logo-header.png" alt="Edugate Logo">
+        <div class="relative lg:hidden ml-auto">
+          <!--Checkbox for Hamburger Toggle-->
+          <input type="checkbox" id="menu-toggle" class="hidden peer">
+          <!--Hamburger Icon-->
+          <label for="menu-toggle" class="block cursor-pointer focus:outline-none peer-checked:hidden mr-4"
+            aria-label="Toggle menu">
+            <img src="../../public/icons/hamburger-menu.png" alt="Hamburger menu icon for navigation">
+          </label>
+          <div
+            class="fixed inset-0 bg-white text-neutral-dark-gray z-50 transform translate-x-full peer-checked:translate-x-0 transition-transform duration-300">
+            <!--Close Icon-->
+            <label for="menu-toggle" class="absolute top-4 right-4 cursor-pointer focus:outline-none"
+              aria-label="Close menu">
+              <svg class="w-12 h-12 mt-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+              </svg>
+            </label>
+            <ul
+              class="flex flex-col items-end justify-start mt-40 h-full gap-10 text-xl mr-8 font-semibold text-[20px] text-neutral-dark-gray font-Poppins">
+              <li>
+                <a href="#" class="flex items-center gap-5 p-3 border-b-2 border-white hover:border-primary">
+                  Dashboard
+                  <img class="w-6 h-6" src="../../public/icons/dashboard.png" alt="Dashboard Icon">
+                </a>
+              </li>
+              <li>
+                <a href="#" class="flex items-center gap-5 p-3 border-b-2 border-white hover:border-primary">
+                  Profile
+                  <img class="w-6 h-6" src="../../public/icons/user-circle.png" alt="User profile Icon">
+                </a>
+              </li>
+              <li>
+                <a href="#" class="flex items-center gap-5 p-3 border-b-2 border-white hover:border-primary">
+                  Manage results
+                  <img class="w-6 h-6" src="../../public/icons/results.png" alt="Results management icon">
+                </a>
+              </li>
+              <li>
+                <a href="#" class="flex items-center gap-5 p-3 border-b-2 border-white hover:border-primary">
+                  About
+                  <img class="w-6 h-6" src="../../public/icons/about.png" alt="About Icon">
+                </a>
+              </li>
+              <li>
+                <a href="#" class="flex items-center gap-5 p-3 border-b-2 border-white hover:border-primary">
+                  Contact
+                  <img class="w-6 h-6" src="../../public/icons/contact.png" alt="Contact Icon">
+                </a>
+              </li>
+              <li>
+                <a href="#" class="flex items-center gap-5 p-3 border-b-2 border-white hover:border-accent-hover">
+                  Log out
+                  <img class="w-6 h-6" src="../../public/icons/logout.png" alt="Log out Icon">
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <ul class="hidden lg:flex items-center space-x-16 font-Poppins font-medium">
+          <li>
+            <a href="#"
+              class="py-8 md:px-8 px-16 border-b-2 border-neutral-light-gray hover:border-primary font-Poppins font-semibold md:text-[20px] text-neutral-dark-gray">
+              Dashboard</a>
+          </li>
+          <li>
+            <a href="../about.html"
+              class="py-8 md:px-8 border-b-2 border-neutral-light-gray hover:border-primary font-Poppins font-semibold md:text-[20px] text-neutral-dark-gray">
+              About</a>
+          </li>
+          <li>
+            <a href="../contact.html"
+              class="py-8 md:px-8 border-b-2 border-neutral-light-gray hover:border-primary font-Poppins font-semibold md:text-[20px] text-neutral-dark-gray">
+              Contact</a>
+          </li>
+
+          <!--User Dropdown-->
+          <li class="relative">
+            <!--Hidden Checkbox-->
+            <input type="checkbox" id="dropdown-toggle" class="hidden peer">
+            <!--User Icon (Clickable)-->
+            <label for="dropdown-toggle" class="hidden lg:flex w-14 h-14 mr-10 cursor-pointer">
+              <img src="../../public/icons/user-circle.png" alt="User dropdown">
+            </label>
+            <!--Dropdown Menu-->
+            <ul
+              class="absolute right-0 mr-8 w-40 text-center border bg-neutral-light-gray border-neutral-light-gray rounded-lg shadow-lg opacity-0 invisible peer-checked:opacity-100 peer-checked:visible transition-opacity duration-200">
+              <li>
+                <a href="#" class="block px-8 py-4 hover:bg-white hover:text-green-600">See results</a>
+              </li>
+              <li>
+                <a href="#"
+                  class="block px-8 py-4 hover:bg-white border-y-2 border-white hover:text-green-600">Profile</a>
+              </li>
+              <li>
+                <a href="#" class="block px-8 py-4 hover:bg-white hover:text-red-600">Log out</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="w-full max-w-7xl mx-auto md:mb-8 px-6">
+    <div class="flex mb-6 mt-3 gap-6 lg:mt-10 lg:ml-9 lg:mb-10">
+      <a href="#" class="text-neutral-medium-gray font-Roboto font-normal text-[16px]">
+        Dashboard</a>
+      <p class="text-neutral-medium-gray font-Roboto font-bold text-[16px]">
+        >
+      </p>
+      <a href="#" class="text-primary font-Roboto font-medium text-[16px]">
+        Profile</a>
+    </div>
+    <section class="max-w-3xl mx-auto md:pt-20 lg:border-3 border-neutral-medium-gray"
+      aria-labelledby="edit-profile-title">
+      <h1 id="edit-profile-title"
+        class="text-neutral-dark-gray text-center font-Poppins text-[20px] md:text-[32px] font-bold mb-4">
+        Edit Profile
+      </h1>
+      <!-- Desktop Version -->
+      <div class="flex justify-center relative">
+        <label class="relative w-[129px] h-[129px] group cursor-pointer hidden md:block"
+          aria-label="Change profile picture">
+          <!-- Default profile icon -->
+          <img src="../../public/icons/profile-icon.png" alt="Profile icon"
+            class="w-full h-full transition-opacity duration-300 group-hover:opacity-0">
+
+          <!-- Hover state -->
+          <img src="../../public/icons/profile-icon-hover.png" alt="Click to change profile picture"
+            class="w-full h-full absolute top-0 left-0 right-0 bottom-0 m-auto transition-opacity duration-300 opacity-0 group-hover:opacity-100">
+
+          <!-- File input for profile image -->
+          <input type="file" id="profileImageInput" accept="image/*"
+            class="absolute top-0 left-0 w-full h-full opacity-0 cursor-pointer z-10 group-hover:block"
+            aria-label="Upload profile picture">
+        </label>
+      </div>
+
+      <!-- Mobile Version -->
+      <div class="flex justify-center mt-4 md:hidden">
+        <label class="relative w-[74px] h-[74px] group cursor-pointer bg-gray-200 rounded-full hover:bg-gray-300"
+          aria-label="Change profile picture - mobile version">
+          <!-- Default profile icon for mobile -->
+          <img src="../../public/icons/user-circle-edit-mobile.png" alt="Change profile picture - mobile"
+            class="w-full h-full" role="button" aria-label="Click to change profile picture">
+
+
+          <!-- File input for mobile version -->
+          <input type="file" id="profileImageInputMobile" accept="image/*"
+            class="absolute top-0 left-0 w-full h-full opacity-0 cursor-pointer z-10 group-hover:block"
+            aria-label="Upload profile picture">
+        </label>
+      </div>
+      <div class="flex items-center justify-center">
+        <form action="#" class="w-full max-w-xs mx-auto">
+          <!--Editable fields-->
+          <label class="text-neutral-dark-gray text-[16px] font-Roboto font-bold tracking-wide">Name:
+            <input type="text" name="Name" placeholder="Joe Bloggs" required
+              class="bg-white w-full h-[51.04px] mb-2 p-[8px] pl-3 border-[1px] border-[#cccccc] rounded-md shadow-inner shadow-gray-400 mt-1 font-medium text-[16px] text-neutral-dark-gray hover:border-primary focus:border-primary focus:ring focus:ring-primary outline-none font-Roboto">
+          </label>
+          <label class="text-neutral-dark-gray text-[16px] font-Roboto font-bold tracking-wide" for="email">Email:
+            <input id="email" type="email" name="Email" placeholder="joeblog2024@edugate.no" required
+              class="bg-white w-full h-[51.04px] mb-2 p-[8px] pl-3 border-[1px] border-[#cccccc] rounded-md shadow-inner shadow-gray-400 mt-1 font-medium text-[16px] text-neutral-dark-gray hover:border-primary focus:border-primary focus:ring focus:ring-primary outline-none font-Roboto">
+          </label>
+          <label class="text-neutral-dark-gray text-[16px] font-Roboto font-bold tracking-wide lg:hidden"
+            for="dob-mobile">DOB:
+            <input type="text" id="dob-mobile" name="dob" placeholder="01/01/1987" required
+              class="bg-white w-full h-[51.04px] mb-2 p-[8px] pl-3 border-[1px] border-[#cccccc] rounded-md shadow-inner shadow-gray-400 mt-1 font-medium text-[16px] text-neutral-dark-gray focus:border-primary focus:ring focus:ring-primary outline-none font-Roboto">
+          </label>
+          <label class="text-neutral-dark-gray text-[16px] font-Roboto font-bold tracking-wide hidden lg:block"
+            for="dob-desktop">Date of birth:
+            <input type="text" id="dob-desktop" name="dob" placeholder="01/01/1987" required
+              class="bg-white w-full h-[51.04px] mb-2 p-[8px] pl-3 border-[1px] border-[#cccccc] rounded-md shadow-inner shadow-gray-400 mt-1 font-medium text-[16px] text-neutral-dark-gray hover:border-primary focus:border-primary focus:ring focus:ring-primary outline-none font-Roboto">
+          </label>
+          <!--Added Extra field mobile screens-->
+          <label class="text-neutral-dark-gray text-[16px] font-Roboto font-bold tracking-wide sm:hidden"
+            for="position">Position:
+            <input type="text" id="position" name="position" placeholder="Administrator" readonly
+              class="bg-[#d9d9d9] w-full h-[51.04px] mb-2 p-[8px] pl-3 border-[1px] border-[#cccccc] rounded-md shadow-inner shadow-gray-400 mt-1 font-bold text-[16px] font-Roboto">
+          </label>
+          <!--Read-only fields-->
+          <label class="text-neutral-dark-gray text-[16px] font-Roboto font-bold tracking-wide"
+            for="school">School:</label>
+          <input type="text" id="school" name="school" placeholder="The Academy" readonly
+            class="bg-[#d9d9d9] w-full h-[51.04px] mb-2 p-[8px] pl-3 border-[1px] border-[#cccccc] rounded-md shadow-inner shadow-gray-400 mt-1 font-bold text-[16px] font-Roboto">
+          <div class="flex justify-center">
+            <button class="primary-button mt-3 mb-6 lg:mt-6 lg:mb-40" type="submit">
+              Update
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+
+  <footer class="w-full max-w-7xl mx-auto flex justify-center relative">
+    <div class="w-full pl-10 sm:hidden md:hidden">
+      <img class="w-full h-auto object-contain" src="../../public/img/Circles_illustration_mobile.png"
+        alt="Edugate footer circles">
+    </div>
+    <img class="hidden sm:block shrink-0 mx-auto" src="../../public/img/circle-footer.png" alt="Edugate footer circles">
+  </footer>
+</body>
+
+</html>

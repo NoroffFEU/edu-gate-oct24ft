@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../dist/output.css">
+    <title>Landing page Edugate</title>
+</head>
+
+<body class="bg-neutral-light-gray">
+    <header class="bg-neutral-light-gray text-neutral-dark-gray max-md:border max-md:border-gray-300 xl:mb-[3.8125rem] 2xl:mb-0 ">
+        <nav class="flex items-center justify-between px-4 py-[0.1875rem] sm:py-0" >
+        <a class="md:hidden" href="../templates/index.html"><img src="../public/img/logo-header-small-screen.png" alt="header logo for Edugate." class="h-16 w-16"></a>
+        <a class="max-md:hidden" href="../templates/index.html"><img class="" src="../public/img/logo-header.png" alt="Edugate Logo"></a>
+
+            <!-- Hamburger Menu -->
+            <div class="relative md:hidden">
+                <!-- Checkbox for Hamburger Toggle -->
+                <input type="checkbox" id="menu-toggle" class="peer hidden">
+                <!-- Hamburger Icon -->
+                <label for="menu-toggle" class="block cursor-pointer peer-checked:hidden focus:outline-none"
+                    aria-label="Toggle menu">
+                    <img src="../public/icons/hamburger-menu.png" alt="a hamburger icon used for menu">
+                </label>
+
+                <div
+                    class="text-neutral-dark-gray fixed inset-0 z-50 translate-x-full transform bg-white transition-transform duration-300 peer-checked:translate-x-0">
+                    <!-- Close Icon -->
+                    <label for="menu-toggle" class="absolute top-4 right-4 cursor-pointer focus:outline-none"
+                        aria-label="Close menu">
+                        <svg class="mt-8 h-12 w-12" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </label>
+
+                    <ul class="mt-40 mr-8 flex h-full flex-col items-end justify-start gap-10 text-xl">
+                        <li>
+                            <a href="../templates/login-page.html"
+                                class="hover:border-primary flex items-center gap-5 border-b-2 border-white p-3">
+                                Login
+                                <img class="h-6 w-6" src="../public/icons/login.png" alt="Login Icon">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../templates/sign-up.html"
+                                class="hover:border-primary flex items-center gap-5 border-b-2 border-white p-3">
+                                Signup
+                                <img class="h-6 w-6" src="../public/icons/signup.png" alt="Signup Icon">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../templates/about.html"
+                                class="hover:border-primary flex items-center gap-5 border-b-2 border-white p-3">
+                                About
+                                <img class="h-6 w-6" src="../public/icons/about.png" alt="About Icon">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../templates/contact.html"
+                                class="hover:border-primary flex items-center gap-5 border-b-2 border-white p-3">
+                                Contact
+                                <img class="h-6 w-6" src="../public/icons/contact.png" alt="Contact Icon">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <ul class="font-Poppins hidden items-center text-xl font-medium md:flex h-[4.625rem]">
+                <li class="hover:border-primary flex w-[15.5rem] flex-col items-center py-[1.4375rem] hover:border-b active:border-b-2 active:font-bold">
+                    <a href="../templates/about.html" class="font-Poppins text-zinc-800 text-xl font-semibold tracking-wide">About</a>
+                </li>
+                <li class="hover:border-primary flex w-[15.5rem] flex-col items-center py-[1.4375rem] hover:border-b active:border-b-2 active:font-bold">
+                    <a href="../templates/contact.html" class="font-Poppins text-zinc-800 text-xl font-semibold tracking-wide">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main class="bg-neutral-light-gray">
+        <section class="flex flex-col items-center justify-between max-sm:mt-[3.125rem] lg:h-[45rem] lg:bg-[url(../public/img/heroimage-edugate.png)] bg-top bg-cover bg-no-repeat lg:bg-center lg:bg-cover xl:bg-contain lg:bg-no-repeat">
+            <div class="flex flex-col items-center justify-between lg:justify-start text-center h-[18.75rem] lg:h-[8.375rem] bg-[url(../public/img/heroimage-edugate.png)] lg:bg-none bg-cover bg-no-repeat bg-center lg:mt-[0.8125rem] lg:p-10">
+                <h1 class="text-neutral-dark-gray font-Poppins font-bold text-[2rem] tracking-[0.01rem] max-sm:mt-2">
+                    Edugate
+                </h1>
+                <p class="mx-10 mb-[0.84375rem] max-[22.5rem]:text-xs text-sm md:text-base font-normal tracking-[0.03125rem] text-zinc-800 lg:font-medium font-Roboto">
+                    Welcome to Edugate, the platform that lets you access your exam
+                    results online
+                </p>
+            </div>
+            <div
+                class="flex flex-col sm:flex-row items-center gap-4 mt-4 lg:mb-16 lg:flex-row">
+                <a href = "../templates/sign-up.html">
+                <button
+                    class="bg-primary text-white hover:bg-primary-hover flex h-[2.75rem] w-[6.875rem] items-center justify-center rounded-md text-base font-Poppins font-semibold lg:h-[3.69rem] lg:w-[8.315rem] lg:px-2.5 lg:py-5 lg:text-[1.5rem] cursor-pointer">
+                    Sign Up
+                </button></a>
+                <a href = "../templates/login-page.html">
+                <button
+                    class="border-secondary text-secondary hover:bg-secondary-hover box-border flex h-[2.75rem] w-[6.875rem] items-center justify-center rounded-md border-2 text-base font-Poppins font-semibold lg:h-[3.6875rem] lg:w-[7.375rem] lg:text-[1.625rem] cursor-pointer">
+                    Log In
+                </button></a>
+            </div>
+        </section>
+    </main>
+    <footer class="mt-[6.455rem] flex justify-end sm:mt-10 sm:justify-center xl:mt-[3.8125rem] 2xl:mt-10">
+        <img class="sm:hidden" src="../public/img/Circles_illustration_mobile.png" alt="Edugate footer circles">
+        <img class="hidden shrink-0 sm:block" src="../public/img/circle-footer.png"
+            alt="Edugate footer circles">
+    </footer>
+</body>
+
+</html>

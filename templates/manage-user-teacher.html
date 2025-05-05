@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manage Teacher</title>
+  <link rel="stylesheet" href="../dist/output.css"> <!-- Added stylesheet direction -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="flex bg-neutral-light-gray"> 
+  <div class="flex-1 flex-col min-h-screen"> 
+  <header class="flex flex-row justify-between items-center p-4 border-2 w-full"> <!-- Reduced border width -->
+      <img src="../public/img/logo-header.png" alt="Edugate logo"> <!-- Added icon directions -->
+      <nav>
+        <ul class="flex items-center space-x-6">
+          <li>Dashboard</li>
+          <li>About</li>
+          <li>Contact</li>
+          <li><img src="../public/icons/user-circle.png" alt="Profile button"></li> <!-- Added icon directions -->
+        </ul>
+      </nav>
+  </header>
+
+  <main class="flex flex-row flex-grow gap-0 m-0"> 
+    <section class="flex flex-col box-border border-r-2 border-gray-400 p-5 hidden sm:table-cell pt-20 bg-gray-100">
+      <input type="checkbox" id="nav-right-checkbox" aria-label="nav-right" class="hidden">
+      <nav class="flex flex-col gap-12">
+        <a href="dashboard-admin.html" class="hover:bg-gray-200 p-2 rounded-lg">
+            <img src="/public/icons/dashboard.png" class="w-[41px]" alt="Dashboard icon">
+        </a>
+        <a href="add-results.html" class="hover:bg-gray-200 p-2 rounded-lg">
+            <img src="/public/icons/results.png" class="w-10" alt="Results management icon">
+        </a>
+        <a href="manage-user.html" class="hover:bg-gray-200 p-2 rounded-lg">
+            <img src="/public/icons/user-management.png" class="w-10" alt="User management icon">
+        </a>
+        <a href="add-school.html" class="hover:bg-gray-200 p-2 rounded-lg">
+            <img src="/public/icons/top-students.png" class="w-10" alt="Top students icon">
+        </a>
+        <a href="logout.html" class="hover:bg-red-200 p-2 rounded-lg">
+          <img src="/public/icons/logout.png" class="w-10" alt="Log out icon">
+      </a>
+    </nav>
+    </section>
+    <section class="flex flex-col w-full gap-12 m-0 pr-[16px] sm:!pr-[80px] border-t-2 border-gray-400 pl-4 pt-5">
+      <p class="self-start mb-12">
+        Dashboard > Select user > <span class="text-[#4CAF50]">Manage user</span>
+      </p>
+      <div class="w-[315px] max-w-2xl m-auto flex flex-col">
+        <h2 class="text-neutral-dark-gray text-center font-Poppins m-auto text-[32px] font-bold tracking-wide mb-12 sm:mb-4 pb-4">Manage Teacher</h2>
+        <p class="text-center text-neutral-dark-gray font-Roboto text-xl sm:text-sm font-normal tracking-wide mb-12 sm:mb-4 pb-8">Edit the user info below</p>
+        <form action="" class="space-y-6 flex m-auto justify-center">
+          <div class="space-y-4 w-[315px]">
+            <label class="block text-neutral-dark-gray font-Roboto text-base sm:text-sm font-bold tracking-wide outline-none">
+              ID:
+              <input type="text" name="id" placeholder="1921840" class="w-full p-2 border-2 !border-zinc-300 focus:outline-none focus:!border-primary rounded shadow-inner mt-1 font-thin bg-white h-11">
+            </label>
+
+            <label class="block text-neutral-dark-gray font-Roboto text-base sm:text-sm font-bold tracking-wide">
+              First name:
+              <input type="text" name="first-name" placeholder="Joe" class="w-full p-2 border-2 !border-zinc-300 focus:outline-none focus:!border-primary rounded shadow-inner mt-1 font-thin bg-white h-11">
+            </label>
+
+            <label class="block text-neutral-dark-gray font-Roboto text-base sm:text-sm font-bold tracking-wide">
+              Last name:
+              <input type="text" name="last-name" placeholder="Blogs" class="w-full p-2 border-2 !border-zinc-300 focus:outline-none focus:!border-primary rounded shadow-inner mt-1 font-thin bg-white h-11">
+            </label>
+
+            <label class="block text-neutral-dark-gray font-Roboto text-base sm:text-sm font-bold tracking-wide">
+              Position:
+              <input type="text" name="position" placeholder="Teacher" class="w-full p-2 border-2 !border-zinc-300 focus:outline-none focus:!border-primary rounded shadow-inner mt-1 font-thin bg-white h-11">
+            </label>
+
+            <label class="block text-neutral-dark-gray font-Roboto text-base sm:text-sm font-bold tracking-wide">
+              Date of Birth:
+              <input type="date" name="dob" class="w-full p-2 border-2 !border-zinc-300 focus:outline-none focus:!border-primary rounded shadow-inner mt-1 font-thin bg-white h-11">
+            </label>
+
+            <label class="block text-neutral-dark-gray font-Roboto text-base sm:text-sm font-bold tracking-wide">
+              Email:
+              <input type="email" name="email" placeholder="joeblog2020@edugate.no"
+                class="w-full p-2 border-2 !border-zinc-300 focus:outline-none focus:!border-primary rounded shadow-inner mt-1 font-thin bg-white h-11">
+            </label>
+
+            <label class="block text-neutral-dark-gray font-Roboto text-base sm:text-sm font-bold tracking-wide">
+              School:
+              <input type="text" name="school" placeholder="The Academy" class="w-full p-2 border-2 !border-zinc-300 focus:outline-none focus:!border-primary rounded shadow-inner mt-1 font-thin bg-white h-11">
+            </label>
+          </div>
+        </form>
+      </div>
+      <div class="md:hidden flex flex-col gap-1 justify-between m-auto">
+        <button class="flex justify-center primary-button mt-4"> <!-- the custom button styles updated with the new version, will show after merge-->
+          Update
+        </button>
+        <button class="flex justify-center alert-button mt-4 items-center"> <!-- the custom button styles updated with the new version, will show after merge-->
+          Delete user
+        </button>
+      </div>
+      <div class="hidden md:flex mt-4 space-x-4 m-auto">
+        <button class="bg-[#4CAF50] text-white px-6 py-2 rounded hover:bg-[#45a049] w-[177px] h-[56px] text-3xl">
+          Update
+        </button>
+        <button class="bg-[#FF5722] text-white px-6 py-2 rounded hover:bg-[#f4511e] w-[177px] h-[56px] text-3xl">
+          Delete user
+        </button>
+      </div>
+    </section>
+  </main>
+  <footer class="flex justify-end sm:justify-center">
+    <img class="sm:hidden p-4 pb-0 w-full" src="../public/img/Circles_illustration_mobile.png" alt="Edugate footer circles mobile">
+    <img class="hidden sm:block shrink-0 mx-4 mt-8" src="../public/img/circle-footer.png" alt="Edugate footer circles desktop">
+  </footer> <!-- updated footer from the contact page, now the media works for mobile and desktop versions -->
+  </div>
+</body>
+
+</html>

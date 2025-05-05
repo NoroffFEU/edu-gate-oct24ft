@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Admin profile page for Edugate webpage.">
+    <link rel="stylesheet" href="../../dist/output.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>Admin Dashboard Page</title>
+</head>
+<body>
+<!--header is removed and being replaced-->
+    <main class="flex flex-row">
+            <!--Sidebar-->
+            <section class="flex flex-col box-border border-r-2 border-gray-400 p-5 hidden sm:table-cell pt-20">
+                <input type="checkbox" id="nav-right-checkbox" aria-label="nav-right" class="hidden">
+                <ul class="flex flex-col justify gap-[41px] justify-around">
+                <li><img src="../../public/icons/dashboard.png" alt="" class="w-[41px]"></li>
+                <li><img src="../../public/icons/results.png" alt="" class="w-[41px]"></li>
+                <li><img src="../../public/icons/user-management.png" alt="" class="w-[41px]"></li>
+                <li><img src="../../public/icons/top-students.png" alt="" class="w-[41px]"></li>
+                <li><img src="../../public/icons/logout.png" alt="" class="w-[41px]"></li>
+              </ul>
+              </section>
+<section class="flex flex-col m-0 w-full border-t-2 border-gray-400">
+            <div class="grid grid-cols-1 place-items-center gap-4 w-full">
+                <h1 class="text-neutral-dark-gray text-center font-Poppins text-4xl font-bold tracking-wide mt-12 mb-12">Dashboard</h1>
+                <img src="../../public/img/Student initials.png" alt="Picture of a green circle with the initials JB.">
+                <h2 class="text-neutral-dark-gray text-center font-Poppins text-2xl font-bold tracking-wide mt-6 mb-6">Joe Bloggs</h2>
+                <h3 class="text-neutral-dark-gray text-center font-Roboto text-base font-bold tracking-wide mb-12">Admin at Edugate School</h3>
+                <div class="grid sm:grid-cols-3 gap-20 m-4 grid-cols-1">
+                    <div class="flex flex-col items-center justify-center relative">
+                        <p class="flex rounded-full bg-[#C62828] absolute top-0 left-8 font-Poppins text-2xl w-8 h-8 justify-center">1</p>
+                        <img class="cursor-pointer w-[96px] h-[96px]" src="../../public/icons/add-user.png" alt="Picture of a green user icon with an edit icon">
+                        <h4 class="text-neutral-dark-gray text-center font-Poppins text-xl font-semibold tracking-wide mt-4">Manage users</h4>
+                    </div>
+                    <div class="flex flex-col items-center justify-center">
+                        <img class="cursor-pointer w-[96px] h-[96px]" src="../../public/icons/add-student.png" alt="Picture of a green student icon with an add button">
+                        <h4 class="text-neutral-dark-gray text-center font-Poppins text-xl font-semibold tracking-wide mt-4">Add student</h4>
+                    </div>
+                    <div class="flex flex-col items-center justify-center">
+                        <img class="cursor-pointer w-[96px] h-[96px]" src="../../public/icons/add-school.png" alt="Picture of a green school icon with an add button">
+                        <h4 class="text-neutral-dark-gray text-center font-Poppins text-xl font-semibold tracking-wide mt-4">Add school</h4>
+                    </div>
+                    <div class="flex flex-col items-center justify-center">
+                        <img class="cursor-pointer w-[96px] h-[96px]" src="../../public/icons/add-teacher.png" alt="Picture of a green teacher icon with an add button">
+                        <h4 class="text-neutral-dark-gray text-center font-Poppins text-xl font-semibold tracking-wide mt-4">Add teacher</h4>
+                    </div>
+                    <div class="flex flex-col items-center justify-center">
+                        <img class="cursor-pointer w-[96px] h-[96px]" src="../../public/icons/results.png" alt="Picture of a green profile icon">
+                        <h4 class="text-neutral-dark-gray text-center font-Poppins text-xl font-semibold tracking-wide mt-4">Logs</h4>
+                    </div>
+                    <div class="flex flex-col items-center justify-center relative">
+                        <p class="flex rounded-full bg-[#FFA000] absolute top-0 left-8 font-Poppins text-2xl w-8 h-8 justify-center">3</p>
+                        <img class="cursor-pointer w-[96px] h-[96px]" src="../../public/icons/search.png" alt="Picture of a green profile icon">
+                        <h4 class="text-neutral-dark-gray text-center font-Poppins text-xl font-semibold tracking-wide mt-4">System</h4>
+                    </div>
+                    <div class="flex flex-col items-center justify-center">
+                        <img class="cursor-pointer w-[96px] h-[96px]" src="../../public/icons/user-circle.png" alt="Picture of a green profile icon">
+                        <h4 class="text-neutral-dark-gray text-center font-Poppins text-xl font-semibold tracking-wide mt-4">See profile</h4>
+                    </div>
+                    <div class="flex flex-col items-center justify-center">
+                        <img class="cursor-pointer w-[96px] h-[96px]" src="../../public/icons/logout.png" alt="Picture of a red log out icon">
+                        <h4 class="text-neutral-dark-gray text-center font-Poppins text-xl font-semibold tracking-wide mt-4">Log out</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="flex justify-end sm:justify-center">
+        <img class="sm:hidden p-4 pb-0 w-full" src="../../public/img/Circles_illustration_mobile.png" alt="Edugate footer circles mobile">
+        <img class="hidden sm:block shrink-0 mx-4 mt-8" src="../../public/img/circle-footer.png" alt="Edugate footer circles">
+      </footer>
+</body>
+</html>

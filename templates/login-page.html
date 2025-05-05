@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Ingelinn Hallseth" />
+    <meta
+      name="description"
+      content="The Log In page for Edugate. Edugate is a result management system for high schools in Nigeria." />
+    <link rel="stylesheet" href="../dist/output.css" />
+    <script src="" defer></script>
+    <title>Edugate | Log In</title>
+  </head>
+  <body class="bg-neutral-light-gray font-Roboto">
+    <header class="bg-neutral-light-gray text-neutral-dark-gray font-Poppins h-17.5 md:h-44">
+      <nav class="flex items-center justify-between px-4">
+        <a href="index.html"><img class="ml-4 mr-16 w-16 h-16 md:w-44 md:h-44 " src="../public/img/logo-header.png" alt="Edugate Logo"></a>
+  
+        <div class="md:hidden">
+          <input type="checkbox" id="menu-toggle" class="hidden peer"/>
+          <label for="menu-toggle" class="peer-checked:hidden" aria-label="Toggle menu">
+            <img src="../public/icons/hamburger-menu.png" alt="hamburger menu icon toggle button" class="w-6.25 h-6.25 cursor-pointer">
+          </label>
+          <div class="fixed inset-0 bg-white text-neutral-dark-gray z-100 transform translate-x-full peer-checked:translate-x-0 transition-transform duration-300">
+            <label for="menu-toggle" class="cursor-pointer focus:outline-none" aria-label="Close menu">
+              <img src="../public/icons/x-close(1).jpg" alt="hamburger menu icon toggle button" class="w-6.25 h-6.25 mb-4 flex justify-end ml-auto mr-4 mt-4">
+              <img src="../public/img/logo-header.png" alt="Edugate Logo" class="w-16 h-16 flex mr-4 -mt-14">
+            </label>
+            <ul class="flex flex-col items-end justify-start gap-10 text-xl">
+              <li>
+                <a href="login-page.html" class="flex items-center gap-5 p-3 border-b-2 border-white hover:border-primary">
+                  Login
+                  <img class="w-6 h-6" src="../public/icons/login.png" alt="login Icon">
+                </a>
+              </li>
+              <li>
+                <a href="sign-up.html" class="flex items-center gap-5 p-3 border-b-2 border-white hover:border-primary">
+                  Sign up
+                  <img class="w-6 h-6" src="../public/icons/signup.png" alt="signup Icon">
+                </a>
+              </li>
+              <li>
+                <a href="about.html" class="flex items-center gap-5 p-3 border-b-2 border-transparent hover:border-primary cursor-pointer">
+                  About
+                  <img class="w-6 h-6" src="../public/icons/about.png" alt="About Icon">
+                </a>
+              </li>
+              <li>
+                <a href="contact.html" class="flex items-center gap-5 p-3 border-b-2 border-transparent hover:border-primary cursor-pointer">
+                  Contact
+                  <img class="w-6 h-6" src="../public/icons/contact.png" alt="Contact Icon">
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <ul class="hidden md:flex font-Poppins font-semibold ml-auto text-[1.25rem] items-center justify-center text-center">
+          <li>
+            <a href="about.html" class="md:px-20 lg:px-31 py-8 border-b-1 border-transparent hover:border-primary cursor-pointer">
+              About</a>
+          </li>
+          <li>
+            <a href="contact.html" class="md:px-20 lg:px-31 py-8 border-b-1 border-transparent hover:border-primary cursor-pointer">
+              Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="w-full max-w-sm mx-auto px-4 sm:px-0 mt-20">
+        <form
+          class="bg-neutral-light-gray border-0 sm:border-3 sm:border-[#cccccc] shadow-none sm:inset-shadow-sm sm:inset-shadow-[#cccccc] px-10 sm:px-12 pt-6 sm:pt-8 pb-8 sm:pb-10 mb-4 md:w-118 md:h-124"
+          action="submit-form-here"
+          method="post">
+          <h1
+            class="text-neutral-dark-gray text-center font-Poppins text-[2rem] font-bold tracking-[0.16px] md:mb-12 sm:mb-4">
+            Log in
+          </h1>
+          <div class="mb-6">
+            <label
+              class="block text-neutral-dark-gray font-Roboto text-base sm:text-sm font-bold tracking-[0.5px]"
+              for="email"
+              >Email</label
+            >
+            <input
+              class="bg-white border border-[#cccccc] inset-shadow-sm inset-shadow-[#cccccc] rounded-md focus:border-primary focus:ring-0 w-full py-2 px-3 sm:px-4 text-neutral-dark-gray text-sm sm:text-base tracking-[0.5px] placeholder:text-[rgba(51,51,51,0.80)] md:mt-4"
+              type="email"
+              name="email"
+              id="email"
+              placeholder="example@mail.com"
+              required
+              autocomplete="email"
+              inputmode="email" />
+          </div>
+          <div class="mb-6">
+            <label
+              class="block text-neutral-dark-gray font-Roboto text-base sm:text-sm font-bold tracking-[0.5px] placeholder:text-[rgba(51,51,51,0.80)]"
+              for="password"
+              >Password</label
+            >
+            <input
+              class="bg-white border border-[#cccccc] inset-shadow-sm inset-shadow-[#cccccc] rounded-md focus:border-primary focus:ring-0 w-full py-2 px-3 sm:px-4 text-dark-medium-gray text-sm sm:text-base tracking-[0.5px] placeholder:text-[rgba(51,51,51,0.80)] md:mt-4"
+              type="password"
+              name="password"
+              id="password"
+              placeholder="Enter password"
+              required
+              autocomplete="current-password" />
+          </div>
+          <p
+            class="mt-8 text-left text-[1rem] sm:text-base font-normal text-black font-Roboto">
+            Forgot your password?
+            <a class="font-bold hover:cursor-pointer" href="#"><span class="font-normal cursor-default">Click </span>here</a>
+          </p>
+            <div class="flex m-auto text-center mb-4 md:mt-6 md:w-35">
+              <button type="submit" class="primary-button primary-button:hover shadow-[inset_0_4px_4px_rgba(0,0,0,0.2)]">
+                Submit
+              </button>
+            </div> 
+        </form>
+      </div>
+    </main>
+
+    <section class="flex justify-start ml-2">
+      <div class="bg-[rgb(241,255,235)] mr-2 mt-4 mb-4 w-84.25 h-28.5 md:w-112.5 md:h-41.75 py-4 px-2 shadow-[-2px_4px_4px_2px_rgba(0,0,0,0.25)] ">
+        <button class="flex flex-col ml-auto -mt-2 mr-2 md:-mt-3.75 -md:-mr-3.75  w-3.75 h-5 cursor-pointer" aria-label="Close">
+          <img src="../public/icons/green-x.png" alt="Close icon" class="flex -mr-2 mt-2 md:mt-3.75 md:-mr-3.75 mb-19.5 w-3.75 h-5">
+        </button>
+        <div class="flex flex-col gap-2 w-80.25 h-19 -mt-4 md:-ml-2 md:h-20">
+          <div class="flex flex-row items-center gap-2">
+            <img src="../public/icons/success.png"
+                 alt="Verified icon"
+                 class="w-8 h-8 w-7.6375 md:block md:row-auto md:w-20 md:h-20 md:mt-10.75 md:mb-11 md:ml-4.5">
+            <h2 class="text-Poppins text-[#388E3C] w-70.25 h-9 font-[700] tracking-[0.125px] text-[1.5rem] md:text-[2rem] mb:tracking-[0.5px] md:ml-4.5 md:-mt-16.5 md:w-38 md:h-[29.6px]">
+              Success!
+            </h2>
+          </div>
+          <p class="text-left w-80.25 h-9.5 md:ml-31 md:-mt-23.5 md:mr-0.5 md:w-77 md:h-12.258065 text-roboto text-[#388E3C] font-[400] tracking-[0.5px] leading-[1]">
+            Please check your email for instructions on how to verify your account.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="flex justify-center">
+      <img src="../public/img/circle-footer.png" alt="two colorful circles where one is blue and one is green"
+        class="mt-19 hidden md:flex">
+      <img src="../public/img/Circles_illustration_mobile.png"
+        alt="two colorful circles where one is blue and one is green" class="md:hidden mt-4 flex ml-auto justify-baseline ">
+    </footer>
+  </body>
+</html>

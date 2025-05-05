@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="author" content="Arnt Helge" />
+		<meta lang="en" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Select student</title>
+		<meta name="description" content="" />
+		<link href="../dist/output.css" rel="stylesheet" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@400;700&display=swap"
+			rel="stylesheet"
+		/>
+		<script
+			src="https://kit.fontawesome.com/8908c40066.js"
+			crossorigin="anonymous"
+		></script>
+	</head>
+
+	<body class="w-full bg-neutral-light-gray p-5">
+		<header></header>
+
+		<main class="flex flex-col w-full font-Roboto self-center px-8 gap-5 pb-8">
+			<div
+				class="text-neutral-medium-gray flex h-10 items-center mt-5 gap-6 text-xs sm:text-base pl-5"
+			>
+				<a href="#">Dashboard</a>&gt;
+				<p class="text-primary">Select student</p>
+			</div>
+
+			<div class="flex flex-col gap-5 items-center">
+				<div class="flex flex-row w-full justify-center">
+					<img
+						src="../public/icons/green-double-arrows-right.png"
+						alt="arrows"
+						class="w-12 h-12 md:hidden"
+					/>
+					<h1 class="w-fit font-bold text-2xl font-Poppins">Select Student</h1>
+				</div>
+
+				<p class="w-fit text-sm">Select student to view results</p>
+
+				<img src="../public/icons/results.png" class="w-10 sm:w-15 md:hidden" />
+
+				<div class="flex flex-row items-center justify-center w-full h-12">
+					<input
+						class="w-55 sm:w-72 h-10 p-2 rounded-l-md text-neutral-medium-gray border border-[#CCCCCC] text-xs sm:text-sm"
+						type="text"
+						placeholder="Search for results..."
+					/>
+					<i
+						class="fa-solid fa-magnifying-glass border h-10 w-10 text-center py-2.5 rounded-r-md text-primary hover:bg-primary-hover hover:text-white"
+					></i>
+				</div>
+			</div>
+
+			<table class="w-full bg-table rounded-md md:hidden text-left">
+				<thead class="text-primary text-sm sm:text-xl">
+					<tr class="h-10">
+						<th class="pl-2 w-fit">ID</th>
+						<th class="pl-2 w-fit">F.Name</th>
+						<th class="pl-2 w-fit">L.Name</th>
+						<th class="pl-2 w-fit"></th>
+					</tr>
+				</thead>
+				<tbody class="text-xs sm:text-base">
+					<tr class="h-10 bg-neutral-light-gray">
+						<td class="pl-2 w-fit">1921840</td>
+						<td class="pl-2 w-fit">Joe</td>
+						<td class="pl-2 w-fit">Bloggs</td>
+						<td class="pl-2 w-fit">
+							<img src="../public/icons/info.png" alt="info-icon" class="w-5" />
+						</td>
+					</tr>
+					<tr class="h-10">
+						<td class="pl-2 w-fit">1921840</td>
+						<td class="pl-2 w-fit">Joe</td>
+						<td class="pl-2 w-fit">Bloggs</td>
+						<td class="pl-2 w-fit">
+							<img src="../public/icons/info.png" alt="info-icon" class="w-5" />
+						</td>
+					</tr>
+					<tr class="h-10 bg-neutral-light-gray">
+						<td class="pl-2 w-fit">1921840</td>
+						<td class="pl-2 w-fit">Joe</td>
+						<td class="pl-2 w-fit">Bloggs</td>
+						<td class="pl-2 w-fit">
+							<img src="../public/icons/info.png" alt="info-icon" class="w-5" />
+						</td>
+					</tr>
+					<tr class="h-10">
+						<td class="pl-2 w-fit">1921840</td>
+						<td class="pl-2 w-fit">Joe</td>
+						<td class="pl-2 w-fit">Bloggs</td>
+						<td class="pl-2 w-fit">
+							<img src="../public/icons/info.png" alt="info-icon" class="w-5" />
+						</td>
+					</tr>
+					<tr class="h-10 bg-neutral-light-gray">
+						<td class="pl-2 w-fit">1921840</td>
+						<td class="pl-2 w-fit">Joe</td>
+						<td class="pl-2 w-fit">Bloggs</td>
+						<td class="pl-2 w-fit">
+							<img src="../public/icons/info.png" alt="info-icon" class="w-5" />
+						</td>
+					</tr>
+					<tr class="h-10">
+						<td class="pl-2 w-fit">1921840</td>
+						<td class="pl-2 w-fit">Joe</td>
+						<td class="pl-2 w-fit">Bloggs</td>
+						<td class="pl-2 w-fit">
+							<img src="../public/icons/info.png" alt="info-icon" class="w-5" />
+						</td>
+					</tr>
+					<tr class="h-10 bg-neutral-light-gray">
+						<td class="pl-2 w-fit">1921840</td>
+						<td class="pl-2 w-fit">Joe</td>
+						<td class="pl-2 w-fit">Bloggs</td>
+						<td class="pl-2 w-fit">
+							<img src="../public/icons/info.png" alt="info-icon" class="w-5" />
+						</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<div class="hidden md:flex justify-center w-full">
+				<table
+					class="table-auto bg-table rounded-md w-full items-center text-left"
+				>
+					<thead class="w-full">
+						<tr class="text-primary text-xl lg:text-2xl text-left">
+							<th class="p-4 w-fit">Student ID</th>
+							<th class="p-4 w-fit">First Name</th>
+							<th class="p-4 w-fit">Last Name</th>
+							<th class="p-4 w-fit">Year</th>
+						</tr>
+					</thead>
+					<tbody class="text-base lg:text-xl text-neutral-dark-gray">
+						<tr
+							class="hover:bg-table-hover hover:cursor-default bg-neutral-light-gray"
+						>
+							<td class="p-4 w-fit">1921840</td>
+							<td class="p-4 w-fit">Joe</td>
+							<td class="p-4 w-fit">Bloggs</td>
+							<td class="p-4 w-fit">2020</td>
+						</tr>
+						<tr class="hover:bg-table-hover hover:cursor-default">
+							<td class="p-4 w-fit">1921840</td>
+							<td class="p-4 w-fit">Joe</td>
+							<td class="p-4 w-fit">Bloggs</td>
+							<td class="p-4 w-fit">2020</td>
+						</tr>
+						<tr
+							class="hover:bg-table-hover hover:cursor-default bg-neutral-light-gray"
+						>
+							<td class="p-4 w-fit">1921840</td>
+							<td class="p-4 w-fit">Joe</td>
+							<td class="p-4 w-fit">Bloggs</td>
+							<td class="p-4 w-fit">2020</td>
+						</tr>
+						<tr class="hover:bg-table-hover hover:cursor-default">
+							<td class="p-4 w-fit">1921840</td>
+							<td class="p-4 w-fit">Joe</td>
+							<td class="p-4 w-fit">Bloggs</td>
+							<td class="p-4 w-fit">2020</td>
+						</tr>
+						<tr
+							class="hover:bg-table-hover hover:cursor-default bg-neutral-light-gray"
+						>
+							<td class="p-4 w-fit">1921840</td>
+							<td class="p-4 w-fit">Joe</td>
+							<td class="p-4 w-fit">Bloggs</td>
+							<td class="p-4 w-fit">2020</td>
+						</tr>
+						<tr class="hover:bg-table-hover hover:cursor-default">
+							<td class="p-4 w-fit">1921840</td>
+							<td class="p-4 w-fit">Joe</td>
+							<td class="p-4 w-fit">Bloggs</td>
+							<td class="p-4 w-fit">2020</td>
+						</tr>
+						<tr
+							class="hover:bg-table-hover hover:cursor-default bg-neutral-light-gray"
+						>
+							<td class="p-4 w-fit">1921840</td>
+							<td class="p-4 w-fit">Joe</td>
+							<td class="p-4 w-fit">Bloggs</td>
+							<td class="p-4 w-fit">2020</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+			<ul
+				class="flex flex-row gap-2 self-center text-base md:text-xl text-neutral-medium-gray"
+			>
+				<li class="rounded-md border w-8 h-fit flex place-content-center p-1">
+					<a href="#">&laquo;</a>
+				</li>
+				<li class="rounded-md border w-8 h-fit flex place-content-center p-1">
+					<a href="#">&lsaquo;</a>
+				</li>
+				<li
+					class="rounded-md text-primary border border-y-primary w-8 h-fit flex place-content-center p-1"
+				>
+					<a href="#">1</a>
+				</li>
+				<li
+					class="rounded-md border w-8 h-fit place-content-center p-1 hidden md:flex"
+				>
+					<a href="#">2</a>
+				</li>
+				<li class="rounded-md border w-8 h-fit flex place-content-center p-1">
+					<a href="#">...</a>
+				</li>
+				<li
+					class="rounded-md border w-8 h-fit place-content-center p-1 hidden md:flex"
+				>
+					<a href="#">7</a>
+				</li>
+				<li class="rounded-md border w-8 h-fit flex place-content-center p-1">
+					<a href="#">8</a>
+				</li>
+				<li class="rounded-md border w-8 h-fit flex place-content-center p-1">
+					<a href="#">&rsaquo;</a>
+				</li>
+				<li class="rounded-md border w-8 h-fit flex place-content-center p-1">
+					<a href="#">&raquo;</a>
+				</li>
+			</ul>
+
+			<button
+				class="border-2 border-s-secondary rounded-md text-secondary py-2 px-5 w-fit self-center text-base sm:text-lg md:text-2xl font-semibold"
+				href="#"
+			>
+				Back to dashboard
+			</button>
+		</main>
+		<footer></footer>
+	</body>
+</html>
