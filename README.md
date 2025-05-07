@@ -13,8 +13,8 @@ For development, you will only need node version >=18.17.1 and npm version >=10.
     - JS
 
 ## Getting started
-
-    $ Change directory to edu-gate `cd  edu-gate-oct24ft`
+    $ Clone repo `git clone https://github.com/NoroffFEU/edu-gate-oct24ft.git`
+    $ Change directory to edu-gate-oct24ft `cd  edu-gate-oct24ft`
     $ `npm i`
-    $ `npm run build`
-    $ Open page with live-server
+    $ `npm run dev`
+    $ Open the url in a new tab
