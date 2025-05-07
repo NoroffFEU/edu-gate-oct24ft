@@ -16,5 +16,5 @@ For development, you will only need node version >=18.17.1 and npm version >=10.
 
     $ Change directory to edu-gate `cd  edu-gate-oct24ft`
     $ `npm i`
-    $ `npm run build`
+    $ `npm run dev`
     $ Open page with live-server
