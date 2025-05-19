@@ -22,7 +22,10 @@
     "url": "https://github.com/sulenchy/edu-gate/issues"
   },
   "homepage": "https://github.com/sulenchy/edu-gate#readme",
-  "dependencies": {},
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.7",
+    "tailwindcss": "^4.1.7"
+  },
   "directories": {
     "doc": "docs"
   },
