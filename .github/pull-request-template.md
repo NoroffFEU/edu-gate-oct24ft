@@ -33,8 +33,10 @@ Include screenshots or screen recordings to show UI changes or interactions.
 
 ## Acceptance Criteria
 
-- [ ] Changes have been tested locally.
-- [ ] Code follows the project's style guide.
-- [ ] Feature aligns with the design specification.
-- [ ] No console errors or warnings.
-- [ ] Responsive on desktop and mobile screens.
+
+- [ ] Changes have been tested locally (mobile + desktop)
+- [ ] Follows the style guide and naming conventions (e.g. kebab-case)
+- [ ] Matches design spec (e.g. from Figma)
+- [ ] No `console.log` or warnings
+- [ ] All images have `alt` text
+- [ ] Headings follow correct order (no skipping levels)
