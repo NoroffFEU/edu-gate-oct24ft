@@ -1,0 +1,20 @@
+body {
+  margin: 0 auto;
+  min-height: 100vh;
+}
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.about-login {
+  /* display: flex; */
+  padding: 20px 5px 0px 20px;
+}
+
+/* footer logo */
+.footer-login {
+  /* min-height: 100vh; */
+}
