@@ -16,7 +16,8 @@
     />
     <link rel="stylesheet" href="../css/forms.css" />
     <link rel="stylesheet" href="../css/log-in.css" />
-    <script defer src="script/log-in.js"></script>
+    <script defer src="/src/script/log-in.js"></script>
+    <script defer src="/src/script/user.json"></script>
   </head>
   <body>
     <div class="page-wrapper">
@@ -33,6 +34,28 @@
           </div>
         </nav>
       </header>
+      <div
+        id="success-popup"
+        class="popup hidden"
+        role="alert"
+        aria-live="assertive"
+      >
+        <div class="popup-content">
+          <span class="popup-icon"
+            ><img src="/public/assets/img/file-success.svg" alt="success icon"
+          /></span>
+          <div>
+            <strong class="login-success">Success!</strong>
+            <p>
+              Please check you email for instructions<br />on how to verify your
+              account.
+            </p>
+          </div>
+          <span class="popup-close"
+            ><img src="/public/assets/icons/green-x.png" alt=""
+          /></span>
+        </div>
+      </div>
       <main>
         <section class="login-box">
           <h1>Log in</h1>
@@ -63,12 +86,12 @@
               Forgot your password? Click
               <a
                 class="password-here-link"
-                href="(wave checker says suspicious link text because there are no link here!)"
+                href="placeholder.html"
                 aria-label="link to restore your password"
                 >here</a
               >
             </p>
-            <a class="login-button" href="">Submit</a>
+            <button class="login-button" type="submit">Submit</button>
           </form>
         </section>
       </main>

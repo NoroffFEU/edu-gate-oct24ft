@@ -63,3 +63,66 @@ footer {
   margin: auto;
   margin-top: 100px;
 }
+
+.placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.placeholder-btn {
+  margin-top: 40px;
+  padding: 10px 20px 10px 20px;
+  background-color: rgb(101, 173, 240);
+  border-radius: 6px;
+  font-size: 16px;
+  text-decoration: none;
+  color: black;
+}
+
+/* popup container */
+.popup {
+  position: fixed;
+  top: 150px; /*below nav*/
+  right: 20px;
+  background-color: #d4edda;
+  color: rgba(56, 142, 60, 1);
+  border-left: 6px solid #28a745;
+  padding: 16px 24px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  z-index: 999;
+  max-width: 450px;
+}
+
+.login-success {
+  font-size: 32px;
+}
+
+/* popup hidden by default */
+.hidden {
+  display: none; /* <--hide this line if you want the popup to stay on screen */
+}
+
+/* popup content */
+.popup-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+/* icon */
+.popup-icon {
+  font-size: 24px;
+  color: #28a745;
+}
+
+/* close button */
+.popup-close {
+  margin-left: auto;
+  font-size: 20px;
+  cursor: pointer;
+  font-weight: bold;
+}
