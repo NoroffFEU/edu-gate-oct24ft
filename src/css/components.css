@@ -1,4 +1,4 @@
-/* Global Header */
+/* --------------------  Global Header ------------------- */
 
 .header-desktop {
   display: none;
@@ -27,6 +27,17 @@
 .header-logo {
   height: 60px;
 }
+
+.nav-links li {
+  border-bottom: 3px solid transparent;
+  box-sizing: border-box;
+}
+
+.current {
+  border-bottom: 3px solid #4caf50 !important;
+}
+
+/* ---------------  Hamburger-menu  --------------------- */
 
 .hamburger {
   font-size: 2rem;
@@ -133,3 +144,5 @@
   margin-left: 8px;
   vertical-align: middle;
 }
+
+/* -------------    --------------- */

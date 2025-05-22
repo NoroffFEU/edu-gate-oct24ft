@@ -6,7 +6,47 @@
     display: none;
   }
 
+  .header-logo {
+    height: 176px;
+    flex-shrink: 0;
+    padding-left: 20px;
+  }
+
   .header-desktop {
     display: block;
+    height: 176px;
+    width: 100%;
+  }
+
+  .desktop-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    width: 100%;
+  }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    margin-right: 10vh;
+    gap: 2rem;
+    margin: 0;
+    padding: 0px 70px 0px 0px;
+  }
+
+  .nav-links li {
+    display: flex;
+    height: 74px;
+    width: 248px;
+    align-items: center;
+  }
+
+  .nav-links a {
+    font-size: 1.5rem;
+    list-style: none;
+    text-decoration: none;
+    color: black;
+    margin: auto;
   }
 }

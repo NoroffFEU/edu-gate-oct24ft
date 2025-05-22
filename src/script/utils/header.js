@@ -4,30 +4,48 @@ if (desktopHeader) {
   const nav = document.createElement('nav');
   nav.className = 'desktop-nav';
 
+  const logoLink = document.createElement('a');
+  logoLink.href = '/public/index.html';
+
   const logo = document.createElement('img');
-  logo.src = '/public/assets/img/logo-header-cropped.png';
+  logo.src = '/public/assets/img/logo-header.png';
   logo.alt = 'Edu-gate Logo';
   logo.className = 'header-logo';
+
+  logoLink.appendChild(logo);
 
   const ul = document.createElement('ul');
   ul.className = 'nav-links';
 
-  const aboutLi = document.createElement('li');
-  const aboutLink = document.createElement('a');
-  aboutLink.href = '#about'; // We should add an about page!
-  aboutLink.textContent = 'About';
-  aboutLi.appendChild(aboutLink);
+  const user = JSON.parse(localStorage.getItem('user')); // I've added it so we look for the user in local storage
 
-  const contactLi = document.createElement('li');
-  const contactLink = document.createElement('a');
-  contactLink.href = '#contact'; //We should add a contact page!
-  contactLink.textContent = 'Contact';
-  contactLi.appendChild(contactLink);
+  const navLinks = [];
+  if (user) {
+    navLinks.push({
+      text: 'Dashboard',
+      href: '/src/pages/dashboard-student.html',
+    });
+  }
+  navLinks.push(
+    { text: 'About', href: '/src/pages/about.html' },
+    { text: 'Contact', href: '/src/pages/contact.html' }
+  );
 
-  ul.appendChild(aboutLi);
-  ul.appendChild(contactLi);
+  const currentPath = window.location.pathname;
 
-  nav.appendChild(logo);
+  navLinks.forEach((link) => {
+    const li = document.createElement('li');
+    if (currentPath.endsWith(link.href)) {
+      li.classList.add('current');
+    }
+    const a = document.createElement('a');
+    a.href = link.href;
+    a.textContent = link.text;
+    li.appendChild(a);
+    ul.appendChild(li);
+  });
+
+  nav.appendChild(logoLink);
   nav.appendChild(ul);
 
   desktopHeader.appendChild(nav);
@@ -83,10 +101,14 @@ if (mobileHeader) {
       href: '/src/pages/sign-up.html',
       icon: '/public/assets/icons/signup.png',
     },
-    { text: 'About', href: '#about', icon: '/public/assets/icons/about.png' }, // We should add an about page!
+    {
+      text: 'About',
+      href: '/src/pages/about.html',
+      icon: '/public/assets/icons/about.png',
+    },
     {
       text: 'Contact',
-      href: '#contact', // We should add a contact page!
+      href: '/src/pages/contact.html',
       icon: '/public/assets/icons/contact.png',
     },
   ];
@@ -110,21 +132,17 @@ if (mobileHeader) {
   const panel = document.createElement('div');
   panel.className = 'dropdown-panel';
 
-  // Create a container for logo and close button
   const dropdownHeader = document.createElement('div');
   dropdownHeader.className = 'dropdown-header';
 
-  // Logo for dropdown
   const dropdownLogo = document.createElement('img');
   dropdownLogo.src = '/public/assets/img/logo-header-cropped.png';
   dropdownLogo.alt = 'Edu-gate Logo';
   dropdownLogo.className = 'dropdown-logo';
 
-  // Add logo and close button to header
   dropdownHeader.appendChild(dropdownLogo);
   dropdownHeader.appendChild(closeBtn);
 
-  // Add header and menu to panel
   panel.appendChild(dropdownHeader);
   panel.appendChild(menuList);
   dropdown.appendChild(panel);
