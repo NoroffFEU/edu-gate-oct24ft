@@ -1,0 +1,78 @@
+.login-box {
+  margin: auto;
+  width: 450px;
+  height: 500px;
+  border: 3px solid #757575;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+  gap: 20px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 700;
+  color: rgba(51, 51, 51, 1);
+}
+
+label {
+  font-weight: 600;
+}
+
+form {
+  padding-top: 40px;
+  display: flex;
+  flex-direction: column;
+  width: 315px;
+  height: 346px;
+}
+
+.form-input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 8px;
+  box-sizing: border-box;
+  border-radius: 6px;
+  border-width: 1px;
+  box-shadow: 0px 2px 2px rgba(204, 204, 204, 1) inset;
+  margin-bottom: 25px;
+}
+
+.form-text-p {
+  padding: 20px 0px 20px 0px;
+  font-weight: 400;
+}
+
+.password-here-link {
+  text-decoration: none;
+  font-weight: 700;
+  color: black;
+}
+
+.password-here-link:hover {
+  text-decoration: underline;
+}
+
+.login-button {
+  margin: auto;
+  font-size: 2rem;
+  font-weight: 700;
+  padding: 10px 20px 10px 20px;
+  width: 140px;
+  height: 59px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-color: rgba(78, 175, 80, 1);
+  text-decoration: none;
+}
+
+.login-button:hover {
+  background-color: rgb(59, 131, 60);
+}
