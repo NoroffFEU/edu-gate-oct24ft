@@ -44,6 +44,7 @@ if (desktopHeader) {
       icon: '/public/assets/icons/user-circle.png',
       href: '#edit-profile',
       isProfile: true,
+      alt: 'Edit profile icon',
     });
   }
 
@@ -57,7 +58,7 @@ if (desktopHeader) {
     if (link.isProfile) {
       const img = document.createElement('img');
       img.src = link.icon;
-      img.alt = 'Edit profile';
+      img.alt = link.alt || 'Profile icon';
       img.style.width = '64px';
       img.style.height = '64px';
       img.style.verticalAlign = 'middle';
@@ -92,7 +93,7 @@ if (mobileHeader) {
 
   const hamburgerIcon = document.createElement('img');
   hamburgerIcon.src = '/public/assets/icons/hamburger-menu.png';
-  hamburgerIcon.alt = 'Open menu';
+  hamburgerIcon.alt = 'Open menu icon';
   hamburgerIcon.className = 'hamburger-icon';
 
   hamburger.appendChild(hamburgerIcon);
@@ -106,7 +107,7 @@ if (mobileHeader) {
 
   const closeIcon = document.createElement('img');
   closeIcon.src = '/public/assets/icons/x-close(1).jpg';
-  closeIcon.alt = 'Close menu';
+  closeIcon.alt = 'Close menu icon';
   closeIcon.className = 'close-icon';
 
   closeBtn.appendChild(closeIcon);
@@ -123,21 +124,25 @@ if (mobileHeader) {
         text: 'Dashboard',
         href: '/src/pages/dashboard-student.html',
         icon: '/public/assets/icons/dashboard.png',
+        alt: 'Dashboard icon',
       },
       {
         text: 'Profile',
         href: '#edit-profile',
         icon: '/public/assets/icons/user-circle.png',
+        alt: 'Profile icon',
       },
       {
         text: 'About',
         href: '/src/pages/about.html',
         icon: '/public/assets/icons/about.png',
+        alt: 'About icon',
       },
       {
         text: 'Contact',
         href: '/src/pages/contact.html',
         icon: '/public/assets/icons/contact.png',
+        alt: 'Contact icon',
       },
     ];
   } else if (user && user.role === 'admin') {
@@ -146,26 +151,31 @@ if (mobileHeader) {
         text: 'Dashboard',
         href: '/src/pages/dashboard-admin.html',
         icon: '/public/assets/icons/dashboard.png',
+        alt: 'Dashboard icon',
       },
       {
         text: 'Profile',
         href: '#edit-profile',
         icon: '/public/assets/icons/user-circle.png',
+        alt: 'Profile icon',
       },
       {
         text: 'Manage user',
         href: '/src/pages/user-management.html',
         icon: '/public/assets/icons/user-management.png',
+        alt: 'Manage user icon',
       },
       {
         text: 'About',
         href: '/src/pages/about.html',
         icon: '/public/assets/icons/about.png',
+        alt: 'About icon',
       },
       {
         text: 'Contact',
         href: '/src/pages/contact.html',
         icon: '/public/assets/icons/contact.png',
+        alt: 'Contact icon',
       },
     ];
   } else if (user && user.role === 'teacher') {
@@ -174,26 +184,31 @@ if (mobileHeader) {
         text: 'Dashboard',
         href: '/src/pages/dashboard-teacher.html',
         icon: '/public/assets/icons/dashboard.png',
+        alt: 'Dashboard icon',
       },
       {
         text: 'Profile',
         href: '#edit-profile',
         icon: '/public/assets/icons/user-circle.png',
+        alt: 'Profile icon',
       },
       {
         text: 'Manage results',
         href: '/src/pages/manage-results.html',
         icon: '/public/assets/icons/results.png',
+        alt: 'Manage results icon',
       },
       {
         text: 'About',
         href: '/src/pages/about.html',
         icon: '/public/assets/icons/about.png',
+        alt: 'About icon',
       },
       {
         text: 'Contact',
         href: '/src/pages/contact.html',
         icon: '/public/assets/icons/contact.png',
+        alt: 'Contact icon',
       },
     ];
   } else {
@@ -202,21 +217,25 @@ if (mobileHeader) {
         text: 'Login',
         href: '/src/pages/log-in.html',
         icon: '/public/assets/icons/login.png',
+        alt: 'Login icon',
       },
       {
         text: 'Signup',
         href: '/src/pages/sign-up.html',
         icon: '/public/assets/icons/signup.png',
+        alt: 'Signup icon',
       },
       {
         text: 'About',
         href: '/src/pages/about.html',
         icon: '/public/assets/icons/about.png',
+        alt: 'About icon',
       },
       {
         text: 'Contact',
         href: '/src/pages/contact.html',
         icon: '/public/assets/icons/contact.png',
+        alt: 'Contact icon',
       },
     ];
   }
@@ -229,7 +248,7 @@ if (mobileHeader) {
 
     const icon = document.createElement('img');
     icon.src = link.icon;
-    icon.alt = `${link.text} icon`;
+    icon.alt = link.alt || `${link.text} icon`;
     icon.className = 'menu-icon';
 
     li.appendChild(a);
@@ -271,7 +290,7 @@ if (mobileHeader) {
 
     const logoutIcon = document.createElement('img');
     logoutIcon.src = '/public/assets/icons/logout.png';
-    logoutIcon.alt = 'Log out';
+    logoutIcon.alt = 'Log out icon';
     logoutIcon.className = 'menu-icon';
 
     logoutA.appendChild(logoutIcon);
