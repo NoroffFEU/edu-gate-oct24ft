@@ -22,6 +22,7 @@
   padding: 0.5rem 1rem;
   background: #fff;
   border-bottom: 1px solid #eee;
+  height: 70px;
 }
 
 .header-logo {
@@ -29,12 +30,37 @@
 }
 
 .nav-links li {
+  position: relative;
   border-bottom: 3px solid transparent;
   box-sizing: border-box;
+  transition: border-color 0.2s;
+}
+
+.nav-links li:hover::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background: #4caf50;
+  border-radius: 2px;
+}
+
+.nav-links a {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 7%;
+  letter-spacing: 0.03em;
 }
 
 .current {
   border-bottom: 3px solid #4caf50 !important;
+}
+
+.current a {
+  font-weight: 700;
 }
 
 /* ---------------  Hamburger-menu  --------------------- */
@@ -69,7 +95,6 @@
 
 .dropdown-logo {
   height: 60px;
-  padding-left: 5px;
 }
 
 .mobile-dropdown {
@@ -87,6 +112,18 @@
   padding: 0;
   transition: transform 0.3s ease;
   transform: translateX(100%);
+}
+
+.logout-link {
+  border-top: 1px solid #eee;
+}
+
+.dropdown-spacer {
+  height: 32px;
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
 }
 
 .dropdown-header {
@@ -136,7 +173,11 @@
 .dropdown-links a {
   text-decoration: none;
   color: #000000;
-  font-size: 1.2rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 7%;
+  letter-spacing: 0.03em;
 }
 
 .menu-icon {
@@ -145,4 +186,4 @@
   vertical-align: middle;
 }
 
-/* -------------    --------------- */
+/* -------------  Nav-bar  --------------- */
