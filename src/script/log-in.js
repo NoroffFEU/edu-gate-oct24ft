@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const emailInput = document.getElementById('email').value.trim();
     const passwordInput = document.getElementById('password').value.trim();
+    const errorMessage = document.getElementById('error-message');
 
     try {
       const response = await fetch('/src/script/api/user.json');
@@ -22,17 +23,21 @@ document.addEventListener('DOMContentLoaded', () => {
       );
 
       if (matchedUser) {
+        errorMessage.classList.add('hidden'); // hide previous error
         showPopup();
-
         setTimeout(() => {
           window.location.href = '/src/pages/dashboard-student.html';
         }, 3000); // Redirect after 3 seconds
       } else {
-        alert('Invalid email or password');
+        const errorMessage = document.getElementById('error-message');
+        errorMessage.textContent = 'Invalid email or password';
+        errorMessage.classList.remove('hidden');
       }
     } catch (error) {
       console.error('Error fetching user data:', error);
-      alert('Something went wrong. please try again later.');
+      errorMessage.textContent =
+        'Something went wrong. please try again later.';
+      errorMessage.classList.remove('hidden');
     }
   });
 });
