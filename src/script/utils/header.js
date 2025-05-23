@@ -82,10 +82,15 @@ if (mobileHeader) {
   const mobileNav = document.createElement('nav');
   mobileNav.className = 'mobile-nav';
 
+  const logoLink = document.createElement('a');
+  logoLink.href = '/public/index.html';
+
   const logo = document.createElement('img');
   logo.src = '/public/assets/img/logo-header-cropped.png';
   logo.alt = 'Edu-gate Logo';
   logo.className = 'header-logo';
+
+  logoLink.appendChild(logo);
 
   const hamburger = document.createElement('button');
   hamburger.className = 'hamburger';
@@ -305,7 +310,7 @@ if (mobileHeader) {
     menuList.appendChild(logoutLi);
   }
 
-  mobileNav.appendChild(logo);
+  mobileNav.appendChild(logoLink);
   mobileNav.appendChild(hamburger);
   mobileHeader.appendChild(mobileNav);
   mobileHeader.appendChild(dropdown);

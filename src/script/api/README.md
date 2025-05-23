@@ -1,5 +1,9 @@
 # Usage of mockup JSON file
 
+## This mock login setup is only for local development and testing.
+
+## Do not use this code for real authentication or production use.
+
 ### HTML example:
 
 <form id="loginForm">

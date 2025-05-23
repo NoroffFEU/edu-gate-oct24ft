@@ -51,7 +51,7 @@
   font-family: 'Poppins', sans-serif;
   font-weight: 600;
   font-size: 20px;
-  line-height: 7%;
+  line-height: 1.2;
   letter-spacing: 0.03em;
 }
 
@@ -65,32 +65,35 @@
 
 /* ---------------  Hamburger-menu  --------------------- */
 
-.hamburger {
-  font-size: 2rem;
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-
-.hamburger-icon {
-  width: 25px;
-  height: 24px;
-  object-fit: contain;
-  pointer-events: none;
-}
-
-.close-icon {
-  width: 24px;
-  height: 24px;
-  object-fit: contain;
-  pointer-events: none;
-}
-
+.hamburger,
 .close-dropdown {
   font-size: 2rem;
   background: none;
   border: none;
   cursor: pointer;
+}
+
+.menu-icon,
+.hamburger-icon,
+.close-icon {
+  object-fit: contain;
+  pointer-events: none;
+}
+
+.menu-icon {
+  width: 32px;
+  margin-left: 8px;
+  vertical-align: middle;
+}
+
+.hamburger-icon {
+  width: 25px;
+  height: 24px;
+}
+
+.close-icon {
+  width: 24px;
+  height: 24px;
 }
 
 .dropdown-logo {
@@ -180,10 +183,84 @@
   letter-spacing: 0.03em;
 }
 
-.menu-icon {
-  width: 32px;
-  margin-left: 8px;
-  vertical-align: middle;
+/* -------------  Nav-bar  --------------- */
+
+/*-------------- Global Footer ---------------*/
+
+.footer-desktop {
+  display: none;
 }
 
-/* -------------  Nav-bar  --------------- */
+.footer-desktop,
+.footer-mobile {
+  margin-top: 80px;
+  width: 100%;
+  text-align: right;
+}
+
+.footer-mobile {
+  position: static;
+  text-align: right;
+  width: 100%;
+}
+
+.footer-img {
+  max-width: 100%;
+  height: auto;
+  display: inline-block;
+  margin-right: 0;
+  margin-bottom: 0;
+  padding: 0;
+  vertical-align: bottom;
+}
+
+/*---------------- CTA buttons -----------------*/
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  padding: 10px 20px;
+  width: 110px;
+  height: 44px;
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  box-sizing: border-box;
+  transition: background 0.2s;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #4caf50;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #388e3c;
+}
+
+.btn-secondary {
+  color: #2196f3;
+  background: #fff;
+  border: 2px solid #2196f3;
+}
+.btn-secondary:hover {
+  background-color: #2196f3;
+  color: #fff;
+}
+
+.btn-alert {
+  color: #ff5722;
+  background: #fff;
+  border: none;
+}
+
+.btn-alert:hover {
+  background-color: #e64a19;
+  color: #fff;
+}

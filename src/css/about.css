@@ -1,0 +1,36 @@
+/* About Page. This will be merged with style.css after testing, or kept as is*/
+
+.about-hero {
+  display: flex;
+  flex-direction: column;
+  max-width: 560px;
+  margin: auto;
+  padding-top: 115px;
+}
+
+.about-hero h1 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 1.5;
+  margin: auto;
+}
+
+.about-text {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.2;
+  margin: auto;
+  padding: 40px;
+  max-width: 560px;
+}
+
+.about-btns {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  margin: auto;
+}
