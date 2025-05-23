@@ -74,7 +74,7 @@ main {
 
 /* popup hidden by default */
 .hidden {
-  /* display: none; <--hide this line if you want the popup to stay on screen */
+  display: none; /*<--hide this line if you want the popup to stay on screen*/
 }
 
 /* popup content */
