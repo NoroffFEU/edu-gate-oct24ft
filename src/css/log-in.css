@@ -71,6 +71,10 @@ footer {
   flex-direction: column;
 }
 
+.placeholder-p {
+  width: 1000px;
+}
+
 .placeholder-btn {
   margin-top: 40px;
   padding: 10px 20px 10px 20px;
