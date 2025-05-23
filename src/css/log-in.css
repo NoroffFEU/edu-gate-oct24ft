@@ -61,10 +61,8 @@ main {
   right: 20px;
   background-color: #d4edda;
   color: rgba(56, 142, 60, 1);
-  border-left: 6px solid #28a745;
   padding: 16px 24px;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: -3px 3px 6px 0.3px rgba(53, 53, 53, 0.6);
   display: flex;
   z-index: 999;
   max-width: 450px;
@@ -76,7 +74,7 @@ main {
 
 /* popup hidden by default */
 .hidden {
-  display: none; /* <--hide this line if you want the popup to stay on screen */
+  /* display: none; <--hide this line if you want the popup to stay on screen */
 }
 
 /* popup content */

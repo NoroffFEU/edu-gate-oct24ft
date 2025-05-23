@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const passwordInput = document.getElementById('password').value.trim();
 
     try {
-      const response = await fetch('/src/script/user.json');
+      const response = await fetch('/src/script/api/user.json');
       const user = await response.json();
 
       const matchedUser = user.find(
