@@ -1,0 +1,13 @@
+nav {
+  height: 176px;
+  padding: 0 48px;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  margin-bottom: 100px;
+}
+
+footer {
+  margin: auto;
+  margin-top: 100px;
+}
