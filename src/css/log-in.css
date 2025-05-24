@@ -1,3 +1,4 @@
+/* mobile */
 .page-wrapper {
   display: flex;
   flex-direction: column;
@@ -6,94 +7,186 @@
 
 main {
   flex-grow: 1;
+  padding: 16px;
 }
 
-.logo img {
-  height: 176px;
+.login-box {
+  margin: 0 auto;
+  padding: 20px;
+  max-width: 100%;
+  background: white;
 }
 
-.about-contact-div {
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+form {
   display: flex;
-  align-items: center;
-  justify-content: flex-end;
-}
-
-.about-login,
-.contact-login {
-  margin: 0px 75px 0px 75px;
-  font-weight: 600;
-  font-size: 20px;
-  text-decoration: none;
-  color: black;
-}
-
-.about-login:hover,
-.contact-login:hover {
-  text-decoration: underline rgba(78, 175, 80, 1);
-  text-underline-offset: 60px;
-}
-
-.placeholder {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   flex-direction: column;
-}
-
-.placeholder-p {
-  width: 1000px;
-}
-
-.placeholder-btn {
-  margin-top: 40px;
-  padding: 10px 20px 10px 20px;
-  background-color: rgb(101, 173, 240);
-  border-radius: 6px;
-  font-size: 16px;
-  text-decoration: none;
-  color: black;
-}
-
-/* popup container */
-.popup {
-  position: fixed;
-  top: 150px; /*below nav*/
-  right: 20px;
-  background-color: #d4edda;
-  color: rgba(56, 142, 60, 1);
-  padding: 16px 24px;
-  box-shadow: -3px 3px 6px 0.3px rgba(53, 53, 53, 0.6);
-  display: flex;
-  z-index: 999;
-  max-width: 450px;
-}
-
-.login-success {
-  font-size: 32px;
-}
-
-/* popup hidden by default */
-.hidden {
-  display: none; /*<--hide this line if you want the popup to stay on screen*/
-}
-
-/* popup content */
-.popup-content {
-  display: flex;
-  align-items: flex-start;
   gap: 12px;
 }
 
-/* icon */
-.popup-icon {
-  font-size: 24px;
-  color: #28a745;
+label {
+  font-weight: 600;
 }
 
-/* close button */
+.form-input {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  box-shadow: inset 0 2px 2px rgba(204, 204, 204, 1);
+}
+
+.error-message {
+  color: #ff5722;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.login-button {
+  font-size: 18px;
+  padding: 12px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 700;
+}
+
+.login-button:hover {
+  background-color: #388e3c;
+}
+
+/* Popup */
+.popup {
+  position: fixed;
+  top: 100px;
+  left: 16px;
+  right: 16px;
+  background-color: #d4edda;
+  padding: 16px;
+  display: flex;
+  gap: 12px;
+  box-shadow: -3px 3px 6px rgba(53, 53, 53, 0.6);
+  border-left: 5px solid #4caf50;
+}
+
+.popup-content {
+  display: flex;
+  gap: 12px;
+}
+
 .popup-close {
   margin-left: auto;
-  font-size: 20px;
   cursor: pointer;
-  font-weight: bold;
+}
+
+.hidden {
+  display: none;
+}
+
+/* tablet & desktop */
+@media (min-width: 720px) {
+  .page-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  main {
+    flex-grow: 1;
+  }
+
+  .logo img {
+    height: 176px;
+  }
+
+  .about-contact-div {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .about-login,
+  .contact-login {
+    margin: 0px 75px 0px 75px;
+    font-weight: 600;
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+  }
+
+  .about-login:hover,
+  .contact-login:hover {
+    text-decoration: underline rgba(78, 175, 80, 1);
+    text-underline-offset: 60px;
+  }
+
+  .placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .placeholder-p {
+    width: 1000px;
+  }
+
+  .placeholder-btn {
+    margin-top: 40px;
+    padding: 10px 20px 10px 20px;
+    background-color: rgb(101, 173, 240);
+    border-radius: 6px;
+    font-size: 16px;
+    text-decoration: none;
+    color: black;
+  }
+
+  /* popup container */
+  .popup {
+    position: fixed;
+    top: 150px; /*below nav*/
+    right: 20px;
+    background-color: #d4edda;
+    color: rgba(56, 142, 60, 1);
+    padding: 16px 24px;
+    box-shadow: -3px 3px 6px 0.3px rgba(53, 53, 53, 0.6);
+    display: flex;
+    z-index: 999;
+    max-width: 450px;
+  }
+
+  .login-success {
+    font-size: 32px;
+  }
+
+  /* popup hidden by default */
+  .hidden {
+    display: none; /*<--hide this line if you want the popup to stay on screen*/
+  }
+
+  /* popup content */
+  .popup-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  /* icon */
+  .popup-icon {
+    font-size: 24px;
+    color: #28a745;
+  }
+
+  /* close button */
+  .popup-close {
+    margin-left: auto;
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: bold;
+  }
 }

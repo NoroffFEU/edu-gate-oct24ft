@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login</title>
+    <meta name="description" content="Edugate login page" />
+    <title>Edugate Login</title>
     <link
       rel="icon"
       type="image/x-icon"
@@ -18,12 +19,19 @@
     <link rel="stylesheet" href="../css/log-in.css" />
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../css/components.css" />
+    <link rel="stylesheet" href="../css/media.css" />
+    <link rel="stylesheet" href="/public/index.html" />
+    <link rel="stylesheet" href="/src/pages/placeholder.html" />
+    <script defer src="/src/script/utils/header.js"></script>
+    <script defer src="/src/script/utils/footer.js"></script>
     <script defer src="/src/script/log-in.js"></script>
     <script defer src="/src/script/api/user.json"></script>
   </head>
   <body>
     <div class="page-wrapper">
-      <header>
+      <header class="header-mobile"></header>
+      <header class="header-desktop"></header>
+      <!-- <header>
         <nav>
           <div class="logo">
             <img src="/public/assets/img/logo-header.png" alt="School logo" />
@@ -35,7 +43,7 @@
             >
           </div>
         </nav>
-      </header>
+      </header> -->
       <div
         id="success-popup"
         class="popup hidden"
@@ -60,6 +68,7 @@
           /></span>
         </div>
       </div>
+
       <main>
         <section class="login-box">
           <h1>Log in</h1>
@@ -105,9 +114,7 @@
         </section>
       </main>
 
-      <footer>
-        <img src="/public/assets/img/circle-footer.png" alt="footer icon" />
-      </footer>
+      <footer class="footer-circles"></footer>
     </div>
   </body>
 </html>
