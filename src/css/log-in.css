@@ -14,13 +14,15 @@ main {
   margin: 0 auto;
   padding: 20px;
   max-width: 100%;
-  background: white;
 }
 
-h1 {
-  font-size: 24px;
-  margin-bottom: 20px;
+.login-h1 {
+  font-size: 2rem;
+  margin: 80px 60px;
   text-align: center;
+  font-weight: 700;
+  line-height: 1.5px;
+  letter-spacing: 0.5%;
 }
 
 form {
@@ -44,20 +46,6 @@ label {
   color: #ff5722;
   font-size: 14px;
   font-weight: 500;
-}
-
-.login-button {
-  font-size: 18px;
-  padding: 12px;
-  background-color: #4caf50;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  font-weight: 700;
-}
-
-.login-button:hover {
-  background-color: #388e3c;
 }
 
 /* Popup */
@@ -144,6 +132,15 @@ label {
     color: black;
   }
 
+  .login-h1 {
+    font-size: 2rem;
+    margin: 20px 20px;
+    text-align: center;
+    font-weight: 700;
+    line-height: 1.5px;
+    letter-spacing: 0.5%;
+  }
+
   /* popup container */
   .popup {
     position: fixed;
@@ -163,25 +160,22 @@ label {
   }
 
   /* popup hidden by default */
-  /*<--hide this line if you want the popup to stay on screen*/
+  /*hide this line if you want the popup to stay on screen*/
   .hidden {
     display: none;
   }
 
-  /* popup content */
   .popup-content {
     display: flex;
     align-items: flex-start;
     gap: 12px;
   }
 
-  /* icon */
   .popup-icon {
     font-size: 24px;
     color: #28a745;
   }
 
-  /* close button */
   .popup-close {
     margin-left: auto;
     font-size: 20px;
