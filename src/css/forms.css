@@ -79,11 +79,6 @@
     margin-top: -20px;
   }
 
-  /*hide this line if you want the error text to stay on screen*/
-  .hidden {
-    display: none;
-  }
-
   .password-here-link {
     text-decoration: none;
     font-weight: 700;
