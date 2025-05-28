@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Results Modal</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <button onclick="openModal()">Open Modal</button>
+
+    <div class="modal-overlay" id="modal">
+      <div class="modal">
+        <div class="modal-header">
+          <h3>Delete This Student’s Results?</h3>
+          <span class="close" onclick="closeModal()">×</span>
+        </div>
+        <div class="modal-body">
+          <p>
+            Are you sure you want to delete this student’s selected results?
+            This action is permanent and cannot be undone.
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn delete" onclick="deleteResults()">
+            Yes, delete results
+          </button>
+          <button class="btn cancel" onclick="closeModal()">Cancel</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="../script/modal.js"></script>
+  </body>
+</html>
