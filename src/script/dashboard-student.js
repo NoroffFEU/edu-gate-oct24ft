@@ -1,4 +1,4 @@
-// mobile view
+// ---------------------------------------mobile view-------------------------------------
 
 // h1 heading
 const Heading = document.createElement('h1');
@@ -55,8 +55,49 @@ myResultsIcon();
 function logoutIcon() {
   const imgDiv = document.getElementById('logout-icon');
   const imgIcon = document.createElement('img');
-  imgIcon.src = '/public/assets/icons/logout.png';
+  imgIcon.src = '/public/assets/icons/logout-mobile.png';
   imgIcon.alt = 'logout icon';
   imgDiv.appendChild(imgIcon);
 }
 logoutIcon();
+
+// ----------------------------------------desktop view-----------------------------------------
+// student initials img
+function studentInitialsImgDesktop() {
+  const imgDiv = document.getElementById('student-initials-desktop');
+  const imgIcon = document.createElement('img');
+  imgIcon.src = '/public/assets/img/Student initials.png';
+  imgIcon.alt = 'student initials icon';
+  imgDiv.appendChild(imgIcon);
+}
+studentInitialsImgDesktop();
+
+// profile img
+function profileIconDesktop() {
+  const imgDiv = document.getElementById('profile-icon-desktop');
+  const imgIcon = document.createElement('img');
+  imgIcon.src = '/public/assets/icons/see-profile-desktop.png';
+  imgIcon.alt = 'student icon';
+  imgDiv.appendChild(imgIcon);
+}
+profileIconDesktop();
+
+// my results icon
+function myResultsIconDesktop() {
+  const imgDiv = document.getElementById('my-results-icon-desktop');
+  const imgIcon = document.createElement('img');
+  imgIcon.src = '/public/assets/icons/my-results-desktop.png';
+  imgIcon.alt = 'profile icon';
+  imgDiv.appendChild(imgIcon);
+}
+myResultsIconDesktop();
+
+// logout icon
+function logoutIconDesktop() {
+  const imgDiv = document.getElementById('logout-icon-desktop');
+  const imgIcon = document.createElement('img');
+  imgIcon.src = '/public/assets/icons/log out.png';
+  imgIcon.alt = 'logout icon';
+  imgDiv.appendChild(imgIcon);
+}
+logoutIconDesktop();

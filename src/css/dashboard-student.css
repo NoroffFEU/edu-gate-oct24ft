@@ -32,6 +32,69 @@
 #logout-icon {
   text-align: center;
   margin: auto;
-  width: 110px;
-  height: 90px;
+}
+
+/* #icon-group-desktop {
+  display: block;
+} */
+
+/* hidden in mobile view */
+#student-initials-desktop,
+#profile-icon-desktop,
+#my-results-icon-desktop,
+#logout-icon-desktop {
+  display: none;
+}
+
+/* desktop view */
+@media (min-width: 720px) {
+  #student-initials-desktop,
+  #profile-icon-desktop,
+  #my-results-icon-desktop,
+  #logout-icon-desktop {
+    display: block;
+  }
+
+  #heading {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  #student-initials-desktop {
+    display: block;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  #student-name {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  #student-title {
+    text-align: center;
+    margin-bottom: 40px;
+    font-weight: 500;
+    font-size: 20px;
+  }
+
+  #icon-group-desktop {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+  }
+
+  #profile-icon-desktop,
+  #my-results-icon-desktop,
+  #logout-icon-desktop {
+    text-align: center;
+  }
+
+  /* hidden in desktop view */
+  #student-initials-mobile,
+  #my-results-icon,
+  #profile-icon,
+  #logout-icon {
+    display: none;
+  }
 }
