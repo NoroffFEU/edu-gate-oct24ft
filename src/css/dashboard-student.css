@@ -1,0 +1,37 @@
+/* mobile view */
+#heading {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+#student-initials-mobile {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+#student-name {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+#student-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+#profile-icon {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+#my-results-icon {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+#logout-icon {
+  text-align: center;
+  margin: auto;
+  width: 110px;
+  height: 90px;
+}
