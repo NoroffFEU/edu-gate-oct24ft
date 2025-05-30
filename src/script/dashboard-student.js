@@ -31,7 +31,7 @@ studentTitle.innerHTML = 'Student at Edugate school';
 const studentT = document.getElementById('student-title');
 studentT.appendChild(studentTitle);
 
-// profile img
+// profile icon
 function profileIcon() {
   const imgDiv = document.getElementById('profile-icon');
   const imgIcon = document.createElement('img');
@@ -72,7 +72,7 @@ function studentInitialsImgDesktop() {
 }
 studentInitialsImgDesktop();
 
-// profile img
+// profile icon
 function profileIconDesktop() {
   const imgDiv = document.getElementById('profile-icon-desktop');
   const imgIcon = document.createElement('img');

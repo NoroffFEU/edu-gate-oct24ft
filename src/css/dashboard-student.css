@@ -1,29 +1,10 @@
-/* mobile view */
-#heading {
-  text-align: center;
-  margin-bottom: 40px;
-}
+/* -----------------------mobile view----------------- */
 
-#student-initials-mobile {
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-#student-name {
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-#student-title {
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-#profile-icon {
-  text-align: center;
-  margin-bottom: 40px;
-}
-
+#heading,
+#student-initials-mobile,
+#student-name,
+#student-title,
+#profile-icon,
 #my-results-icon {
   text-align: center;
   margin-bottom: 40px;
@@ -31,12 +12,7 @@
 
 #logout-icon {
   text-align: center;
-  margin: auto;
 }
-
-/* #icon-group-desktop {
-  display: block;
-} */
 
 /* hidden in mobile view */
 #student-initials-desktop,
@@ -46,7 +22,7 @@
   display: none;
 }
 
-/* desktop view */
+/* -----------------------------desktop view----------------------- */
 @media (min-width: 720px) {
   #student-initials-desktop,
   #profile-icon-desktop,
@@ -55,18 +31,14 @@
     display: block;
   }
 
-  #heading {
+  #heading,
+  #student-name {
     text-align: center;
     margin-bottom: 40px;
   }
 
   #student-initials-desktop {
     display: block;
-    text-align: center;
-    margin-bottom: 40px;
-  }
-
-  #student-name {
     text-align: center;
     margin-bottom: 40px;
   }
