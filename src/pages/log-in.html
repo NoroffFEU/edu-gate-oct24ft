@@ -21,11 +21,11 @@
     <link rel="stylesheet" href="../css/components.css" />
     <link rel="stylesheet" href="../css/media.css" />
     <link rel="stylesheet" href="/public/index.html" />
-    <link rel="stylesheet" href="/src/pages/placeholder.html" />
+    <!-- <link rel="stylesheet" href="/src/pages/placeholder.html" />  (Page is finished, but holding it closed for now) -->
     <script defer src="/src/script/utils/header.js"></script>
     <script defer src="/src/script/utils/footer.js"></script>
     <script defer src="/src/script/log-in.js"></script>
-    <script defer src="/src/script/api/user.json"></script>
+    <script defer src="/src/script/api/login-user.json"></script>
   </head>
   <body>
     <div class="page-wrapper">
@@ -82,8 +82,7 @@
               name="email"
               id="email"
               placeholder="example@mail.com"
-              aria-required="true"
-              aria-label="write your email address"
+              aria-required="true"              
               class="form-input"
               required
             />
@@ -93,8 +92,7 @@
               name="password"
               id="password"
               placeholder="Enter password"
-              aria-required="true"
-              aria-label="write your password"
+              aria-required="true"              
               class="form-input"
               required
             />
@@ -104,13 +102,14 @@
               aria-live="assertive"
             ></p>
             <p class="form-text-p">
-              Forgot your password? Click
-              <a
+              Forgot your password? Click <strong>here</strong>
+              <!-- anchor link is hidden for now -->
+              <!-- <a
                 class="password-here-link"
                 href="/src/pages/placeholder.html"
                 aria-label="forgot your password, click here"
                 >here</a
-              >
+              > -->
             </p>
             <button class="login-button" type="submit">Submit</button>
           </form>

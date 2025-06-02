@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const errorMessage = document.getElementById('error-message');
 
     try {
-      const response = await fetch('/src/script/api/user.json');
+      const response = await fetch('/src/script/api/login-user.json');
       const user = await response.json();
 
       const matchedUser = user.find(
