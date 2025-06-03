@@ -4,7 +4,11 @@
 
 ## Do not use this code for real authentication or production use.
 
+See user.json for code.
+
 ### HTML example:
+
+<!--
 
 <form id="loginForm">
   <input type="text" id="username" placeholder="Username" required />
@@ -13,7 +17,11 @@
   <div id="loginError" style="color:red;"></div>
 </form>
 
+-->
+
 ### JavaScript example:
+
+<!--
 
 document.getElementById('loginForm').addEventListener('submit', function(e) {
 e.preventDefault();
@@ -39,3 +47,5 @@ errorDiv.textContent = 'Invalid username or password';
 errorDiv.textContent = 'Could not load user data.';
 });
 });
+
+-->
