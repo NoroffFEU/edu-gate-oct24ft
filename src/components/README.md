@@ -15,10 +15,9 @@ All other code will be handled by the header.js file in /src/script/utils.
 
 ### Navbar usage:
 
-Insert the given code at the top of the <body> element.
+Insert the given code at the top of the <body> element, but underneath "Header".
 All other code will be handled by the navbar.js file in /src/script/utils.
 
 ### Footer usage:
 
-Insert the given code at the top of the <body> element.
-All other code will be handled by the footer.js file in /src/script/utils.
+Only insert script link in <head>. JavaScript automatically enters a footer element when script is detected.
