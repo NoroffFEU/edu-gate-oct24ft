@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Edugate login page" />
+    <title>Edugate Login</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      alt="browser tab icon"
+      href="/public/assets/icons/favicon/favicon-16x16.png"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/login-form.css" />
+    <link rel="stylesheet" href="../css/log-in.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/utils/components.css" />
+    <link rel="stylesheet" href="../css/media.css" />
+    <link rel="stylesheet" href="/public/index.html" />
+    <!-- Placeholder Page -->
+    <link rel="stylesheet" href="/src/pages/placeholder.html" />
+    <script defer src="/src/script/utils/header.js"></script>
+    <script defer src="/src/script/utils/footer.js"></script>
+    <script defer src="/src/script/log-in.js"></script>
+    <script defer src="/src/script/api/login-user.json"></script>
+  </head>
+  <body>
+    <div class="page-wrapper">
+      <header class="header-mobile"></header>
+      <header class="header-desktop"></header>
+      <div
+        id="success-popup"
+        class="popup hidden"
+        role="alert"
+        aria-live="assertive"
+      >
+        <div class="popup-content-div">
+          <div class="icon-text-div">
+            <div class="popup-header-div">
+              <img
+                class="popup-icon"
+                src="/public/assets/img/file-success.svg"
+                alt="success icon"
+              /><span class="popup-icon-desktop"
+                ><img
+                  src="/public/assets/img/file-success.svg"
+                  alt="success icon"
+              /></span>
+              <div class="pop-text-desktop-div">
+                <strong class="login-success">Success!</strong>
+                <p class="popup-text-desktop">
+                  Please check you email for instructions<br />on how to verify
+                  your account.
+                </p>
+              </div>
+            </div>
+
+            <p class="popup-text-mobile">
+              Please check you email for instructions<br />on how to verify your
+              account.
+            </p>
+          </div>
+
+          <span class="popup-close"
+            ><img
+              src="/public/assets/icons/green-x.png"
+              alt="click x to close the popup"
+          /></span>
+        </div>
+      </div>
+
+      <main>
+        <section class="login-box">
+          <h1 class="login-h1">Log in</h1>
+          <form>
+            <label for="email">Email</label>
+            <input
+              type="text"
+              name="email"
+              id="email"
+              placeholder="example@mail.com"
+              aria-required="true"              
+              class="form-input"
+              required
+            />
+            <label for="password">Password</label>
+            <input
+              type="text"
+              name="password"
+              id="password"
+              placeholder="Enter password"
+              aria-required="true"              
+              class="form-input"
+              required
+            />
+            <p
+              id="error-message"
+              class="error-message hidden"
+              aria-live="assertive"
+            ></p>
+            <p class="form-text-p">
+              Forgot your password? Click 
+              <!-- placeholder page anchor link -->
+              <a
+                class="password-here-link"
+                href="/src/pages/placeholder.html"
+                aria-label="forgot your password, click here"
+                ><strong>here</strong></a
+              >
+            </p>
+            <button class="login-button" type="submit">Submit</button>
+          </form>
+        </section>
+      </main>
+
+      <footer class="footer-circles"></footer>
+    </div>
+  </body>
+</html>

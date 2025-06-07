@@ -1,0 +1,203 @@
+/*----------------------------------- mobile ----------------------------*/
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex-grow: 1;
+  margin-top: 16px;
+}
+
+.login-box {
+  margin: 0 auto;
+  padding: 20px;
+  max-width: 100%;
+  max-width: 350px;
+}
+
+.login-h1 {
+  font-size: 32px;
+  margin: 80px 60px;
+  text-align: center;
+  font-weight: 700;
+  line-height: 1.5px;
+  letter-spacing: 0.5%;
+}
+
+/* to placeholder.html */
+.placeholder {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* to placeholder.html */
+.placeholder-p {
+  text-align: start;
+}
+
+/* to placeholder.html */
+.placeholder-btn {
+  margin-top: 40px;
+  padding: 10px 20px 10px 20px;
+  background-color: rgb(101, 173, 240);
+  border-radius: 6px;
+  font-size: 16px;
+  text-decoration: none;
+  color: black;
+  justify-content: center;
+}
+
+/* Popup container*/
+.popup {
+  position: fixed;
+  top: 100px;
+  right: 0px;
+  background-color: #d4edda;
+  color: rgba(56, 142, 60, 1);
+  padding: 16px 8px;
+  display: flex;
+  box-shadow: -3px 3px 6px 0.3px rgba(53, 53, 53, 0.6);
+}
+
+.login-success {
+  font-size: 24px;
+}
+
+.popup-text-mobile {
+  font-size: 14px;
+  margin: 6px 0 0 0;
+  line-height: 1.5;
+  text-align: left;
+}
+
+/* popup hidden by default */
+/*hide this line if you want the popup to stay on screen*/
+.hidden {
+  display: none;
+}
+
+.popup-content-div {
+  display: flex;
+}
+
+.popup-header-div {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.popup-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 30px;
+  color: #28a745;
+}
+
+/* hidden for mobile view */
+.popup-icon-desktop,
+.popup-text-desktop, .footer-desktop {
+  display: none;
+}
+
+.icon-text-div {
+  display: flex;
+  flex-direction: column;
+}
+
+.popup-close {
+  margin-left: auto;
+  font-size: 20px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/*-------------------------------------- desktop --------------------------*/
+@media (min-width: 720px) {
+
+  main {
+    margin-top: 80px;
+  }
+
+  .login-box {
+    width: 474px;
+    height: 498px;
+    border: 3px solid #cccccccc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    gap: 20px;
+  }
+
+  .login-h1 {  
+    margin: 30px 0px 20px 0px;  
+  }
+
+  .logo img {
+    height: 176px;
+  }
+
+  /* placeholder.html */
+  .placeholder-p {
+    width: 1000px;
+    margin-top: 8%;
+  }
+
+  /* popup container */
+  .popup {
+    top: 150px;
+    padding: 16px 10px;
+    width: 450px;
+    height: 130px;
+    align-items: center;
+  }
+
+  .login-success {
+    font-size: 32px;
+  }
+
+  /* popup hidden by default */
+  /*hide this line if you want the popup to stay on screen*/
+  .hidden {
+    display: none;
+  }
+
+  .popup-content-div {
+    position: relative;
+    width: 100%;
+  }
+
+  .popup-icon {
+    width: 100px;
+    height: auto;
+  }
+
+  .popup-text-desktop {
+    margin: 0;
+    display: flex;
+  }
+
+  .pop-text-desktop-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  /* .popup-text-mobile is hidden for desktop view */
+  .popup-text-mobile {
+    display: none;
+  }
+
+  .popup-close {
+    font-size: 24px;
+    position: absolute;
+    right: 10px;
+    top: -20px;
+  }
+}
