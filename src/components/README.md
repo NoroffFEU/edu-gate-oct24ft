@@ -1,7 +1,23 @@
 ## Component usage:
 
-### Header
+### Head
 
-Insert the given code at the top of the <body> element. All other code will be handled by the header.js file in /src/script/utils.
+Link to the JavaScript file in the <head> element of the HTML file.
+
+<script src="../script/utils/header.js" defer></script>
+<script src="../script/utils/footer.js" defer></script>
+<script src="../script/utils/navbar.js" defer></script>
+
+### Header usage:
+
+Insert the given code at the top of the <body> element.
+All other code will be handled by the header.js file in /src/script/utils.
 
 ### Navbar usage:
+
+Insert the given code at the top of the <body> element, but underneath "Header".
+All other code will be handled by the navbar.js file in /src/script/utils.
+
+### Footer usage:
+
+Only insert script link in <head>. JavaScript automatically enters a footer element when script is detected.
