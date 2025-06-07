@@ -100,7 +100,7 @@ main {
 
 /* hidden for mobile view */
 .popup-icon-desktop,
-.popup-text-desktop {
+.popup-text-desktop, .footer-desktop {
   display: none;
 }
 
