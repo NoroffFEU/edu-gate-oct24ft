@@ -1,0 +1,75 @@
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+main h1 {
+  font-size: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+main h2 {
+  font-size: 0.8rem;
+  color: #555;
+  margin-bottom: 2.5rem;
+}
+
+#searchInput {
+  width: 100%;
+  max-width: 250px;
+  padding: 0.5rem;
+  font-size: 0.8rem;
+  margin-bottom: 2.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#dataTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.5rem;
+}
+
+#dataTable thead {
+  background-color: #fff;
+  color: #4caf50;
+}
+
+#dataTable th,
+#dataTable td {
+  padding: 12px 15px;
+  text-align: left;
+}
+
+#dataTable tbody tr:nth-child(odd) {
+  background-color: #f9f9f9;
+  cursor: pointer;
+}
+
+#paginationContainer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 2.5rem;
+}
+
+#paginationContainer button {
+  padding: 6px 12px;
+  font-size: 0.95rem;
+  border: 1px solid #ccc;
+  background-color: white;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.btn-secondary {
+  font-size: 1.5rem;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+}
