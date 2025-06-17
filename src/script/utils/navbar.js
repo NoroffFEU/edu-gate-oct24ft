@@ -124,6 +124,11 @@ document.addEventListener('DOMContentLoaded', function () {
     const navList = document.createElement('ul');
     navList.className = 'desktop-navbar-list';
 
+    const spacerLi = document.createElement('li');
+    spacerLi.className = 'desktop-navbar-spacer';
+    spacerLi.style.height = '32px';
+    navList.appendChild(spacerLi);
+
     const homeLi = document.createElement('li');
     homeLi.className = 'desktop-navbar-item';
 

@@ -80,7 +80,7 @@
     flex-direction: row;
   }
 
-  /* Desktop sidebar navbar */
+  /* ------------- Desktop navbar---------------- */
 
   .mobile-navbar,
   .mobile-navbar-overlay,
@@ -140,7 +140,9 @@
     height: 41px;
     object-fit: contain;
     margin-right: 0;
+    flex-shrink: 0;
     transition: margin 0.3s;
+    display: block;
   }
 
   .desktop-navbar-label {
@@ -161,5 +163,9 @@
 
   .desktop-navbar:hover .desktop-navbar-icon {
     margin-right: 12px;
+  }
+
+  .breadcrumb {
+    padding-left: 300px;
   }
 }
