@@ -18,7 +18,7 @@
   .header-desktop {
     display: block;
     height: 176px;
-    width: 100%;
+    max-width: 100%;
   }
 
   .desktop-nav {
@@ -32,7 +32,7 @@
   .nav-links {
     display: flex;
     align-items: center;
-    gap: 2rem;
+    gap: 5rem;
     margin: 0;
     padding: 0px 70px 0px 0px;
   }
@@ -40,7 +40,7 @@
   .nav-links li {
     display: flex;
     height: 74px;
-    width: 248px;
+    max-width: 248px;
     align-items: center;
     list-style: none;
   }
@@ -78,5 +78,94 @@
 
   .about-btns {
     flex-direction: row;
+  }
+
+  /* ------------- Desktop navbar---------------- */
+
+  .mobile-navbar,
+  .mobile-navbar-overlay,
+  .navbar-trigger {
+    display: none !important;
+  }
+
+  .desktop-navbar {
+    position: fixed;
+    top: 180px;
+    left: 0;
+    width: 72px;
+    height: calc(100vh - 87px);
+    background: #fff;
+    z-index: 2100;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+  }
+
+  .desktop-navbar:hover {
+    width: 240px;
+  }
+
+  .desktop-navbar-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+
+  .desktop-navbar-item {
+    width: 100%;
+  }
+
+  .desktop-navbar-link {
+    display: flex;
+    align-items: center;
+    padding: 20px 16px;
+    width: 100%;
+    text-decoration: none;
+    color: #000;
+    transition: background 0.2s;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+  }
+
+  .desktop-navbar-link:hover {
+    background: #f5f5f5;
+  }
+
+  .desktop-navbar-icon {
+    width: 41px;
+    height: 41px;
+    object-fit: contain;
+    margin-right: 0;
+    flex-shrink: 0;
+    transition: margin 0.3s;
+    display: block;
+  }
+
+  .desktop-navbar-label {
+    opacity: 0;
+    margin-left: 0;
+    white-space: nowrap;
+    transition:
+      opacity 0.3s,
+      margin-left 0.3s;
+    pointer-events: none;
+  }
+
+  .desktop-navbar:hover .desktop-navbar-label {
+    opacity: 1;
+    margin-left: 16px;
+    pointer-events: auto;
+  }
+
+  .desktop-navbar:hover .desktop-navbar-icon {
+    margin-right: 12px;
+  }
+
+  .breadcrumb {
+    padding-left: 300px;
   }
 }
