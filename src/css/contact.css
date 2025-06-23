@@ -1,0 +1,91 @@
+body,
+html {
+  width: 100%;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.contact-main {
+  width: 100%;
+  max-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-main form {
+  max-width: 400px;
+  min-width: 260px;
+  width: 100%;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+input,
+textarea {
+  max-width: 600px; /* or whatever width you want */
+  width: 100%;
+  padding: 12px 14px;
+  border: 1.5px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: border-color 0.2s;
+  box-sizing: border-box;
+  background: #fff;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #4caf50;
+  outline: none;
+}
+
+.input-error {
+  border-color: #e53935 !important;
+}
+
+.error-message {
+  color: #e53935;
+  font-size: 0.95rem;
+  min-height: 1.2em;
+  margin-top: 2px;
+}
+
+button[type='submit'].btn {
+  margin-top: 0.5rem;
+  width: 100%;
+  max-width: 360px;
+}
+
+.edit-form-label,
+.form-group label {
+  font-weight: 600;
+  font-size: 1.05rem;
+  margin-bottom: 0.2rem;
+  color: #222;
+  letter-spacing: 0.01em;
+}
+
+.contact-desc {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  word-break: break-word;
+  max-width: 400px;
+  text-align: left;
+  margin: 0 auto 0.5rem auto;
+}

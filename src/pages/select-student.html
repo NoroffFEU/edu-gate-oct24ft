@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="../css/media.css" />
     <script src="../script/utils/header.js" defer></script>
     <script src="../script/utils/footer.js" defer></script>
+    <script src="../script/utils/navbar.js" defer></script>
+
     <script src="../script/select-student.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -20,16 +22,18 @@
     />
   </head>
   <body>
-    <header class="header-mobile"></header>
-    <header class="header-desktop"></header>
-    <main>
-      <h1>Select Student</h1>
-      <h2>Select student to view results</h2>
-      <div id="searchContainer"></div>
-      <div id="tableContainer"></div>
-      <div id="paginationContainer"></div>
-        <button class="btn-secondary" onclick="window.location.href='dashboard-student.html'">Back to dashboard</button>
-      </div>
-    </main>
+    <div class="page-wrapper">
+      <header class="header-mobile"></header>
+      <header class="header-desktop"></header>
+      <main class="select-student-main">
+        <h1>Select Student</h1>
+        <h2>Select student to view results</h2>
+        <div id="searchContainer"></div>
+        <div id="tableContainer"></div>
+        <div id="paginationContainer"></div>
+          <button class="btn-secondary" onclick="window.location.href='dashboard-student.html'">Back to dashboard</button>
+        </div>
+      </main>
+    </div>
   </body>
 </html>

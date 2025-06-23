@@ -1,4 +1,22 @@
-@media (min-width: 600px) {
+@media (min-width: 100px) {
+  .col-year,
+  .col-term,
+  .col-result,
+  .col-edit,
+  .col-delete {
+    display: none;
+  }
+  .col-info {
+    display: table-cell;
+    text-align: center;
+    width: 40px;
+  }
+  .info-icon {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+  }
 }
 
 @media (min-width: 900px) {
@@ -94,7 +112,7 @@
     left: 0;
     width: 72px;
     height: calc(100vh - 87px);
-    background: #fff;
+    background: #f5f5f5;
     z-index: 2100;
     display: flex;
     flex-direction: column;
@@ -167,5 +185,28 @@
 
   .breadcrumb {
     padding-left: 300px;
+  }
+
+  /* --------------- Results  -------------- */
+
+  .col-info {
+    display: none !important;
+  }
+
+  .col-year,
+  .col-term,
+  .col-result,
+  .col-edit,
+  .col-delete {
+    display: table-cell;
+  }
+
+  .results-main {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .edit-form-delete-mobile {
+    display: none !important;
   }
 }

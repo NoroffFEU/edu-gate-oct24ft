@@ -23,17 +23,21 @@ function buildTable(data, filter = '') {
 
   const searchText = filter.toLowerCase();
 
-  const filteredData = data.filter(student =>
-    student.studentId.toLowerCase().includes(searchText) ||
-    student.firstName.toLowerCase().includes(searchText) ||
-    student.lastName.toLowerCase().includes(searchText) ||
-    String(student.year).includes(searchText)
+  const filteredData = data.filter(
+    (student) =>
+      student.studentId.toLowerCase().includes(searchText) ||
+      student.firstName.toLowerCase().includes(searchText) ||
+      student.lastName.toLowerCase().includes(searchText) ||
+      String(student.year).includes(searchText)
   );
 
   const startIndex = (currentPage - 1) * rowsPerPage;
-  const paginatedData = filteredData.slice(startIndex, startIndex + rowsPerPage);
+  const paginatedData = filteredData.slice(
+    startIndex,
+    startIndex + rowsPerPage
+  );
 
-  paginatedData.forEach(student => {
+  paginatedData.forEach((student) => {
     const tr = document.createElement('tr');
     tr.innerHTML = `
       <td>${student.studentId}</td>
@@ -41,6 +45,14 @@ function buildTable(data, filter = '') {
       <td>${student.lastName}</td>
       <td>${student.year}</td>
     `;
+    tr.addEventListener('click', () => {
+      localStorage.setItem('selectedStudentId', student.studentId);
+      localStorage.setItem(
+        'selectedStudentName',
+        student.firstName + ' ' + student.lastName
+      );
+      window.location.href = 'results.html';
+    });
     tbody.appendChild(tr);
   });
 
@@ -103,7 +115,6 @@ function renderPagination(totalRows, filter) {
       addPageButton(totalPages - 1);
       addPageButton(totalPages);
     }
-
   } else {
     for (let i = 1; i <= totalPages; i++) {
       addPageButton(i);
@@ -144,18 +155,18 @@ function createSearch() {
 
 function init() {
   fetch('../script/api/students.json')
-    .then(response => {
+    .then((response) => {
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);
       }
       return response.json();
     })
-    .then(data => {
+    .then((data) => {
       students = data;
       createSearch();
       buildTable(students);
     })
-    .catch(error => {
+    .catch((error) => {
       console.error('Error while fetching students.json:', error);
       const tableContainer = document.getElementById('tableContainer');
       tableContainer.innerHTML = '<p>Could not load student data.</p>';
@@ -163,4 +174,3 @@ function init() {
 }
 
 document.addEventListener('DOMContentLoaded', init);
-
