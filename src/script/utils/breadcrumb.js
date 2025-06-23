@@ -8,7 +8,6 @@ document.addEventListener('DOMContentLoaded', function () {
   const parts = path.split('>').map((s) => s.trim());
   breadcrumb.innerHTML = parts
     .map((part, i) => {
-      // Split label and url if present
       const [label, url] = part.split(':');
       if (i < parts.length - 1 && url) {
         return `<a href="${url.trim()}">${label.trim()}</a><span class="breadcrumb-separator">&gt;</span>`;
