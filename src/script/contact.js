@@ -32,7 +32,6 @@ document.addEventListener('DOMContentLoaded', function () {
   form.addEventListener('submit', function (e) {
     e.preventDefault();
 
-    // Clear previous errors
     document
       .querySelectorAll('.error-message')
       .forEach((el) => (el.textContent = ''));
@@ -42,7 +41,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     let valid = true;
 
-    // Email validation
     const email = form.email.value.trim();
     if (!email || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) {
       document.getElementById('emailError').textContent =
@@ -51,21 +49,18 @@ document.addEventListener('DOMContentLoaded', function () {
       valid = false;
     }
 
-    // Name validation
     if (!form.name.value.trim()) {
       document.getElementById('nameError').textContent = 'Name required';
       form.name.classList.add('input-error');
       valid = false;
     }
 
-    // Surname validation
     if (!form.surname.value.trim()) {
       document.getElementById('surnameError').textContent = 'Surname required';
       form.surname.classList.add('input-error');
       valid = false;
     }
 
-    // Message validation
     if (!form.message.value.trim()) {
       document.getElementById('messageError').textContent = 'Message required';
       form.message.classList.add('input-error');
@@ -73,7 +68,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     if (valid) {
-      // You can handle the form submission here (e.g., send to server)
       form.reset();
       alert('Thank you for contacting us!');
     }
