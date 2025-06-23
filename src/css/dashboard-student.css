@@ -7,7 +7,7 @@
 #profile-icon,
 #my-results-icon {
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 16px;
 }
 
 #logout-icon {
@@ -31,21 +31,26 @@
     display: block;
   }
 
-  #heading,
+  #heading {
+    text-align: center;
+    margin-top: 142px;
+    margin-bottom: 48px;
+  }
+
   #student-name {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 24px;
   }
 
   #student-initials-desktop {
     display: block;
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 24px;
   }
 
   #student-title {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 48px;
     font-weight: 500;
     font-size: 20px;
   }
@@ -54,6 +59,7 @@
     display: flex;
     justify-content: center;
     gap: 40px;
+    margin-bottom: 48px;
   }
 
   #profile-icon-desktop,
