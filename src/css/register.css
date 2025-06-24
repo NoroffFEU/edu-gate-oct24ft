@@ -11,14 +11,14 @@ main {
   margin-top: 16px;
 }
 
-.login-box {
+.register-box {
   margin: 0 auto;
   padding: 20px;
   max-width: 100%;
   max-width: 350px;
 }
 
-.login-h1 {
+.register-h1 {
   font-size: 32px;
   margin: 80px 60px;
   text-align: center;
@@ -27,30 +27,7 @@ main {
   letter-spacing: 0.5%;
 }
 
-/* to placeholder.html */
-.placeholder {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
-
-/* to placeholder.html */
-.placeholder-p {
-  text-align: start;
-}
-
-/* to placeholder.html */
-.placeholder-btn {
-  margin-top: 40px;
-  padding: 10px 20px 10px 20px;
-  background-color: rgb(101, 173, 240);
-  border-radius: 6px;
-  font-size: 16px;
-  text-decoration: none;
-  color: black;
-  justify-content: center;
-}
-
+/* ----------------------------- mobile ------------------ */
 /* --------------------- from login-form.css ------------- */
 form {
   margin: auto;
@@ -75,13 +52,6 @@ label {
   margin-bottom: 10px;
 }
 
-.error-message {
-  color: #ff5722;
-  font-size: 14px;
-  font-weight: 500;
-  margin-top: -20px;
-}
-
 .form-text-p {
   font-weight: 300;
   font-size: 14px;
@@ -89,12 +59,6 @@ label {
   letter-spacing: 0%;
   text-align: center;
   color: #000000;
-}
-
-.password-here-link {
-  text-decoration: none;
-  font-weight: 700;
-  color: black;
 }
 
 .login-button {
@@ -123,39 +87,35 @@ label {
     margin-top: 80px;
   }
 
-  .login-box {
-    width: 474px;
-    height: 498px;
+  .register-box {
+    width: 503px;
+    height: 687px;
     border: 3px solid #cccccccc;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     box-sizing: border-box;
-    gap: 20px;
+    padding: 40px 30px 40px 30px;
+    gap: 48px;
   }
 
-  .login-h1 {
+  .register-h1 {
     margin: 30px 0px 20px 0px;
   }
 
   .logo img {
     height: 176px;
   }
-
-  /* placeholder.html */
-  .placeholder-p {
-    width: 1000px;
-    margin-top: 8%;
-  }
 }
-
+/* ---------------------------------- Desktop ------------------------ */
 /* ------------------------------- from login-form.css --------------- */
 @media (min-width: 720px) {
   form {
     padding-top: 40px;
     width: 315px;
-    height: 346px;
+    height: 531px;
+    /* gap: 32px; */
   }
 
   label {
