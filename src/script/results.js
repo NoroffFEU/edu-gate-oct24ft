@@ -15,11 +15,34 @@ document.addEventListener('DOMContentLoaded', function () {
 
   const searchContainer = document.createElement('div');
   searchContainer.id = 'searchContainer';
+
+  const searchWrapper = document.createElement('div');
+  searchWrapper.className = 'search-wrapper';
+
   const searchInput = document.createElement('input');
   searchInput.type = 'text';
   searchInput.placeholder = 'Search results...';
   searchInput.id = 'searchInput';
-  searchContainer.appendChild(searchInput);
+
+  const searchBtn = document.createElement('button');
+  searchBtn.type = 'button';
+  searchBtn.className = 'search-btn';
+  searchBtn.innerHTML = `<img src="/public/assets/icons/search.png" alt="Search" />`;
+
+  searchBtn.addEventListener('click', () => {
+    currentPage = 1;
+    buildTable(allResults, searchInput.value);
+  });
+
+  searchInput.addEventListener('input', () => {
+    currentPage = 1;
+    buildTable(allResults, searchInput.value);
+  });
+
+  searchWrapper.appendChild(searchInput);
+  searchWrapper.appendChild(searchBtn);
+  searchContainer.appendChild(searchWrapper);
+  main.appendChild(searchContainer);
 
   const addBtnContainer = document.createElement('div');
   addBtnContainer.className = 'add-btn-container';
@@ -29,7 +52,6 @@ document.addEventListener('DOMContentLoaded', function () {
   addBtn.textContent = 'Add Results';
   addBtnContainer.appendChild(addBtn);
 
-  main.appendChild(searchContainer);
   main.appendChild(addBtnContainer);
 
   const tableContainer = document.createElement('div');
@@ -213,11 +235,6 @@ document.addEventListener('DOMContentLoaded', function () {
       })
     );
   }
-
-  searchInput.addEventListener('input', () => {
-    currentPage = 1;
-    buildTable(allResults, searchInput.value);
-  });
 
   fetch('../script/api/results.json')
     .then((response) => response.json())

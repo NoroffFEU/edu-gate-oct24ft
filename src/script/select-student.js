@@ -12,10 +12,22 @@ function buildTable(data, filter = '') {
   const thead = document.createElement('thead');
   thead.innerHTML = `
     <tr>
-      <th>Student ID</th>
-      <th>First Name</th>
-      <th>Last Name</th>
-      <th>Year</th>
+      <th>
+        <span class="th-mobile">ID</span>
+        <span class="th-desktop">Student ID</span>
+      </th>
+      <th>
+        <span class="th-mobile">F. Name</span>
+        <span class="th-desktop">First Name</span>
+      </th>
+      <th>
+        <span class="th-mobile">L. Name</span>
+        <span class="th-desktop">Last Name</span>
+      </th>
+      <th>
+        <span class="th-mobile">Year</span>
+        <span class="th-desktop">Year</span>
+      </th>
     </tr>`;
   table.appendChild(thead);
 
@@ -140,17 +152,32 @@ function createSearch() {
   const searchContainer = document.getElementById('searchContainer');
   searchContainer.innerHTML = '';
 
+  const searchWrapper = document.createElement('div');
+  searchWrapper.className = 'search-wrapper';
+
   const input = document.createElement('input');
   input.type = 'text';
   input.placeholder = 'Search for student...';
   input.id = 'searchInput';
+
+  const searchBtn = document.createElement('button');
+  searchBtn.type = 'button';
+  searchBtn.className = 'search-btn';
+  searchBtn.innerHTML = `<img src="/public/assets/icons/search.png" alt="Search" />`;
+
+  searchBtn.addEventListener('click', () => {
+    currentPage = 1;
+    buildTable(students, input.value);
+  });
 
   input.addEventListener('input', () => {
     currentPage = 1;
     buildTable(students, input.value);
   });
 
-  searchContainer.appendChild(input);
+  searchWrapper.appendChild(input);
+  searchWrapper.appendChild(searchBtn);
+  searchContainer.appendChild(searchWrapper);
 }
 
 function init() {

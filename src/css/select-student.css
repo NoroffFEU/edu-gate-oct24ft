@@ -15,16 +15,48 @@ main h2 {
   font-size: 0.8rem;
   color: #555;
   margin-bottom: 2.5rem;
+  font-weight: 400;
 }
 
-#searchInput {
-  width: 100%;
+.search-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
   max-width: 250px;
-  padding: 0.5rem;
+  width: 100%;
+  margin: 0 auto 2.5rem auto;
+}
+
+.search-wrapper input {
+  height: 38px;
+  width: 100%;
+  padding: 0 38px 0 12px;
   font-size: 0.8rem;
-  margin-bottom: 2.5rem;
   border: 1px solid #ccc;
   border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.search-btn {
+  position: absolute;
+  right: 4px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  height: 38px;
+  width: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-btn img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
 }
 
 #dataTable {
@@ -44,9 +76,12 @@ main h2 {
   text-align: left;
 }
 
+#dataTable tbody tr {
+  cursor: pointer;
+}
+
 #dataTable tbody tr:nth-child(odd) {
   background-color: #f9f9f9;
-  cursor: pointer;
 }
 
 #paginationContainer {
@@ -72,4 +107,12 @@ main h2 {
   border-radius: 5px;
   padding: 10px;
   cursor: pointer;
+}
+
+.th-mobile {
+  display: inline;
+}
+
+.th-desktop {
+  display: none;
 }

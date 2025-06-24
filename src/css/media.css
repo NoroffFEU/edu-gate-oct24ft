@@ -185,7 +185,22 @@
   }
 
   .breadcrumb {
-    padding-left: 300px;
+    padding-left: 90px;
+  }
+
+  /* --------------- Select Student  --------------------*/
+
+  .th-mobile {
+    display: none;
+  }
+
+  .th-desktop {
+    display: inline;
+  }
+
+  #tableContainer {
+    padding-left: 50px;
+    padding-right: 30px;
   }
 
   /* --------------- Results  -------------- */
