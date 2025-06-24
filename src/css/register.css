@@ -1,5 +1,4 @@
 /* ----------------------------- mobile ------------------ */
-/* --------------------- from log-in.css ----------------- */
 .page-wrapper {
   display: flex;
   flex-direction: column;
@@ -15,7 +14,6 @@ main {
   margin: 0 auto;
   padding: 20px;
   max-width: 100%;
-  max-width: 350px;
 }
 
 .register-h1 {
@@ -27,13 +25,11 @@ main {
   letter-spacing: 0.5%;
 }
 
-/* ----------------------------- mobile ------------------ */
-/* --------------------- from login-form.css ------------- */
 form {
   margin: auto;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 20px;
   max-width: 350px;
 }
 
@@ -48,26 +44,17 @@ label {
   box-sizing: border-box;
   border-radius: 6px;
   border: 1px solid #cccccc;
-  box-shadow: inset 0px 2px 2px rgba(204, 204, 204, 1);
-  margin-bottom: 10px;
+  box-shadow: inset 0px 3px 2px rgba(204, 204, 204, 1);
+  margin-bottom: 0px;
 }
 
-.form-text-p {
-  font-weight: 300;
-  font-size: 14px;
-  line-height: 1.5px;
-  letter-spacing: 0%;
-  text-align: center;
-  color: #000000;
-}
-
-.login-button {
+.submit-button {
   margin: auto;
   font-weight: 600;
   font-size: 16px;
   line-height: 100%;
   letter-spacing: 0%;
-  background-color: #4caf50;
+  background-color: rgba(76, 175, 80, 1);
   color: #ffffff;
   border: none;
   width: 110px;
@@ -76,21 +63,16 @@ label {
   padding: 10px 20px;
 }
 
-.login-button:hover {
-  background-color: #388e3c;
-}
-
 /* ---------------------------------- Desktop ------------------------ */
-/* ------------------------------- from log-in.css ------------------- */
 @media (min-width: 720px) {
   main {
-    margin-top: 80px;
+    margin-top: 48px;
   }
 
   .register-box {
     width: 503px;
     height: 687px;
-    border: 3px solid #cccccccc;
+    border: 3px solid rgba(204, 204, 204, 0.8);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -98,42 +80,55 @@ label {
     box-sizing: border-box;
     padding: 40px 30px 40px 30px;
     gap: 48px;
+    margin-bottom: -30px;
   }
 
   .register-h1 {
-    margin: 30px 0px 20px 0px;
+    margin: 8px 0px 8px 0px;
   }
 
-  .logo img {
-    height: 176px;
-  }
-}
-/* ---------------------------------- Desktop ------------------------ */
-/* ------------------------------- from login-form.css --------------- */
-@media (min-width: 720px) {
   form {
-    padding-top: 40px;
     width: 315px;
     height: 531px;
-    /* gap: 32px; */
+    padding-top: 0px;
+    gap: 32px;
   }
 
+  /* label city, postal-code */
   label {
-    margin-bottom: -10px;
+    margin-bottom: 3px;
   }
 
-  .form-text-p {
-    font-weight: 400;
-    font-size: 16px;
-    text-align: start;
+  /* labels needed to be split because of div on city and postal-code */
+  .school,
+  .address-line-1,
+  .address-line-2 {
+    margin-bottom: -26px;
   }
 
-  .login-button {
+  .city-postal {
+    display: flex;
+    justify-content: space-between;
+    gap: 23px;
+  }
+
+  .city-postal .input-group {
+    display: flex;
+    flex-direction: column;
+    width: 48%;
+  }
+
+  .submit-button {
     font-weight: 700;
     font-size: 26px;
     letter-spacing: 0.5px;
-    width: 140px;
+    width: 138px;
     height: 59px;
     box-shadow: 0px 2px 8px rgb(87, 87, 87) inset;
+  }
+
+  .submit-button:hover {
+    background-color: #388e3c;
+    cursor: pointer;
   }
 }
