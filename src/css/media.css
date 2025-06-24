@@ -37,6 +37,7 @@
     display: block;
     height: 176px;
     max-width: 100%;
+    border-bottom: #d3d3d3 solid 1px;
   }
 
   .desktop-nav {

@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function () {
       } else if (i < parts.length - 1) {
         return `<a href="#">${label.trim()}</a><span class="breadcrumb-separator">&gt;</span>`;
       } else {
-        return `<span>${label.trim()}</span>`;
+        return `<span class="breadcrumb-current">${label.trim()}</span>`;
       }
     })
     .join('');

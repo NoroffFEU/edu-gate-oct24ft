@@ -427,3 +427,8 @@ body.navbar-open {
 .breadcrumb a:hover {
   color: #4caf50;
 }
+
+.breadcrumb-current {
+  color: #4caf50;
+  font-weight: 600;
+}
