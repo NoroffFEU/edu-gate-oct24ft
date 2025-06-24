@@ -73,6 +73,12 @@
 
   #profile-icon-desktop,
   #my-results-icon-desktop,
+  #logout-icon-desktop :hover {
+    cursor: pointer;
+  }
+
+  #profile-icon-desktop,
+  #my-results-icon-desktop,
   #logout-icon-desktop,
   #heading,
   #student-name,
