@@ -6,6 +6,7 @@ html {
     margin: 0;
     background-color: #F5F5F5;
 }
+
 .landingpage-main-section {
     display: grid;
     grid-template-columns: auto;
@@ -14,13 +15,13 @@ html {
 
 .landingpage-div {
     display: grid;
-    grid-template-rows: auto;
+    grid-template-rows: 1fr;
     background-image: url(../../public/assets/img/heroimage-edugate.png);
     max-width: 100%;
     height: 18.75rem;
     background-size: cover;
     background-position: center;
-    margin: 3.1rem 0 0 0;
+    /* margin: 3.1rem 0 0 0; */
 }
 
 .landingpage-h1 {
@@ -48,7 +49,6 @@ html {
 .landingpage-button-div {
     display: grid;
     grid-row: 2;
-    
 }
 
 .landingpage-signup-btn {
@@ -92,7 +92,7 @@ html {
     cursor: pointer;
 }
 
-@media only screen and (min-width: 900px) {
+@media only screen and (min-width: 767px) {
     .landingpage-main-section {
         display: grid;
         background-image: url(../../public/assets/img/heroimage-edugate.png);
@@ -108,7 +108,6 @@ html {
         display: flex;
         flex-direction: column;
         justify-self: center;
-        
     }
 
       .landingpage-button-div {
@@ -122,14 +121,14 @@ html {
 
     .landingpage-h1 {
         margin-top: 0;
-        grid-row: 1;        
+        grid-row: 1;
+        margin-top: 3.31rem;      
     }
 
     .landingpage-paragraph-text {
         margin: 0;
         padding: 0;
         font-size: 1rem;
-         
     }
 
     .landingpage-signup-btn {
@@ -152,19 +151,47 @@ html {
         line-height: 0.13rem;
         letter-spacing: 0.06rem;
     }
+}
 
-    @media only screen and (min-width: 1460px) {
-     .landingpage-main-section {
+@media only screen and (min-width: 1460px) {
+    .landingpage-main-section {
         height: 59rem;
     }
 
-    .landingpage-signup-btn .landingpage-login-btn {
+    .landingpage-signup-btn, .landingpage-login-btn {
         margin: 0 0 4.5rem 0;
     }
 
     .landingpage-h1 {
-    margin: 0 0 0.2rem 0;
+        margin: 3.31rem 0 0.2rem 0;
     
+    }
 }
-}}
+
+@media only screen and (min-width: 2559px) {
+    .landingpage-main-section {
+        height: 76rem;
+    }
+
+    .landingpage-h1 {
+        font-size: 3.7rem;
+    }
+
+    .landingpage-paragraph-text {
+        font-size: 1.7rem;
+    }
+
+    .landingpage-signup-btn, .landingpage-login-btn {
+        height: 6.4rem;
+        font-size: 2.3rem;
+    }
+
+    .landingpage-signup-btn {
+        width: 12rem;
+    }
+
+     .landingpage-login-btn {
+        width: 11rem;
+     }
+}
 
