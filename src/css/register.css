@@ -16,9 +16,9 @@ main {
   max-width: 100%;
 }
 
-.register-h1 {
+.register-h1-mobile {
   font-size: 32px;
-  margin: 80px 60px;
+  margin: 16px 0px 60px 0px;
   text-align: center;
   font-weight: 700;
   line-height: 1.5px;
@@ -35,6 +35,24 @@ form {
 
 label {
   font-weight: 600;
+}
+
+.city-postal .input-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.city-postal .input-group label {
+  margin-bottom: 16px; /* push the label higher from the input */
+}
+
+.city-postal .input-group input {
+  margin-top: 0; /* prevent it from pushing upward */
+}
+
+/* pushing postal code down to get space */
+#city {
+  margin-bottom: 23px;
 }
 
 .form-input {
@@ -61,6 +79,16 @@ label {
   height: 44px;
   border-radius: 6px;
   padding: 10px 20px;
+}
+
+.submit-button:hover {
+  background-color: #388e3c;
+  cursor: pointer;
+}
+
+/* hide desktop view */
+.register-h1 {
+  display: none;
 }
 
 /* ---------------------------------- Desktop ------------------------ */
@@ -94,9 +122,9 @@ label {
     gap: 32px;
   }
 
-  /* label city, postal-code */
-  label {
-    margin-bottom: 3px;
+  /* label city, postal-code, prevent to push the label higher */
+  .city-postal .input-group label {
+    margin-bottom: 4px;
   }
 
   /* labels needed to be split because of div on city and postal-code */
@@ -127,8 +155,13 @@ label {
     box-shadow: 0px 2px 8px rgb(87, 87, 87) inset;
   }
 
-  .submit-button:hover {
-    background-color: #388e3c;
-    cursor: pointer;
+  /* hide in desktop view */
+  .register-h1-mobile {
+    display: none;
+  }
+
+  /* hide in desktop view */
+  #city {
+    margin-bottom: 0px;
   }
 }
