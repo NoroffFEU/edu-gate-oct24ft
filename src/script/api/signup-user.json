@@ -1,9 +1,9 @@
 [
   {
     "email": "joeblogs2024@edugate.no",
-    "first name": "Joe",
+    "firstName": "Joe",
     "surname": "Bloggs",
     "password": "joe",
-    "confirm password": "joe"
+    "confirmPassword": "joe"
   }
 ]

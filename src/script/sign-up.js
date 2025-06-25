@@ -17,7 +17,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const confirmPasswordInput = document
       .getElementById('confirm-password')
       .value.trim();
-    const errorMessage = document.getElementById('error-message');
 
     try {
       const response = await fetch('/src/script/api/signup-user.json');
@@ -33,17 +32,13 @@ document.addEventListener('DOMContentLoaded', () => {
       );
 
       if (matchedUser) {
-        errorMessage.classList.add('hidden'); // hide previous error
-        showPopup();
-        setTimeout(() => {
-          window.location.href = '/src/pages/log-in.html';
-        }, 3000); // Redirect after 3 seconds
+        window.location.href = '/src/pages/log-in.html'; // redirect on success
+      } else {
+        showPopup(); // show popup alert on failure
       }
     } catch (error) {
       console.error('Error fetching user data:', error);
-      errorMessage.textContent =
-        'Something went wrong. please try again later.';
-      errorMessage.classList.remove('hidden');
+      showPopup();
     }
   });
 });
