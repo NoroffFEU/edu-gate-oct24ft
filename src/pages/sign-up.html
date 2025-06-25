@@ -31,6 +31,47 @@
     <div class="page-wrapper">
       <header class="header-mobile"></header>
       <header class="header-desktop"></header>
+
+      <div
+        id="success-popup"
+        class="popup hidden"
+        role="alert"
+        aria-live="assertive"
+      >
+        <div class="popup-content-div">
+          <div class="icon-text-div">
+            <div class="popup-header-div">
+              <img
+                class="popup-icon"
+                src="/public/assets/img/file-success.svg"
+                alt="success icon"
+              /><span class="popup-icon-desktop"
+                ><img
+                  src="/public/assets/img/file-success.svg"
+                  alt="success icon"
+              /></span>
+              <div class="pop-text-desktop-div">
+                <strong class="login-success">Success!</strong>
+                <p class="popup-text-desktop">
+                  Please check you email for instructions<br />on how to verify
+                  your account.
+                </p>
+              </div>
+            </div>
+
+            <p class="popup-text-mobile">
+              Please check you email for instructions<br />on how to verify your
+              account.
+            </p>
+          </div>
+
+          <span class="popup-close"
+            ><img
+              src="/public/assets/icons/green-x.png"
+              alt="click x to close the popup"
+          /></span>
+        </div>
+      </div>
       <main>
         <section class="register-box">
           <h1 class="register-h1">Signup</h1>
