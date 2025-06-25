@@ -16,8 +16,6 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../css/sign-up.css" />
-    <!-- <link rel="stylesheet" href="../css/login-form.css" />
-    <link rel="stylesheet" href="../css/log-in.css" /> -->
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../css/utils/components.css" />
     <link rel="stylesheet" href="../css/media.css" />
@@ -26,8 +24,6 @@
     <script defer src="/src/script/utils/header.js"></script>
     <script defer src="/src/script/utils/footer.js"></script>
     <script defer src="/src/script/sign-up.js"></script>
-    <!-- <script defer src="/src/script/log-in.js"></script> -->
-    <!-- <script defer src="/src/script/api/login-user.json"></script> -->
   </head>
   <body>
     <div class="page-wrapper">
@@ -35,7 +31,7 @@
       <header class="header-desktop"></header>
 
       <div
-        id="success-popup"
+        id="fail-popup"
         class="popup hidden"
         role="alert"
         aria-live="assertive"
@@ -45,31 +41,25 @@
             <div class="popup-header-div">
               <img
                 class="popup-icon"
-                src="/public/assets/img/file-success.svg"
-                alt="success icon"
+                src="/public/assets/icons/vector.png"
+                alt="fail icon"
               /><span class="popup-icon-desktop"
-                ><img
-                  src="/public/assets/img/file-success.svg"
-                  alt="success icon"
+                ><img src="/public/assets/icons/vector.png" alt="fail icon"
               /></span>
               <div class="pop-text-desktop-div">
-                <strong class="login-success">Success!</strong>
+                <strong class="signup-fail">Failed Sign Up!</strong>
                 <p class="popup-text-desktop">
-                  Please check you email for instructions<br />on how to verify
-                  your account.
+                  Wrong password or email address!
                 </p>
               </div>
             </div>
 
-            <p class="popup-text-mobile">
-              Please check you email for instructions<br />on how to verify your
-              account.
-            </p>
+            <p class="popup-text-mobile">Wrong password or email address!</p>
           </div>
 
           <span class="popup-close"
             ><img
-              src="/public/assets/icons/green-x.png"
+              src="/public/assets/icons/x-red.png"
               alt="click x to close the popup"
           /></span>
         </div>
@@ -79,63 +69,61 @@
           <h1 class="signup-h1">Signup</h1>
           <h1 class="signup-h1-mobile">Signup</h1>
           <form>
-            <label class="school" for="school">School</label>
+            <label class="email" for="email">Email</label>
             <input
               type="text"
-              name="school"
-              id="school"
-              placeholder="Edugate"
+              name="Email"
+              id="email"
+              placeholder="example@mail.com"
               aria-required="true"
               class="form-input"
               required
             />
-            <label class="address-line-1" for="Address line 1"
-              >Address line 1</label
-            >
-            <input
-              type="text"
-              name="address line 1"
-              id="address-line-1"
-              placeholder="Address"
-              aria-required="true"
-              class="form-input"
-              required
-            />
-            <label class="address-line-2" for="address-line-2"
-              >Address line 2</label
-            >
-            <input
-              type="text"
-              name="address-line-2"
-              id="address-line-2"
-              placeholder="Address"
-              aria-required="true"
-              class="form-input"
-            />
-            <div class="city-postal">
+            <div class="first-surname">
               <div class="input-group">
-                <label for="city">City</label>
+                <label for="first name">First name</label>
                 <input
                   type="text"
-                  name="city"
-                  id="city"
-                  placeholder="Oslo"
+                  name="first name"
+                  id="first-name"
+                  placeholder="Ola"
                   class="form-input"
                   required
                 />
               </div>
               <div class="input-group">
-                <label for="postal code">Postal Code</label>
+                <label for="surname">Surname</label>
                 <input
                   type="text"
-                  name="postal code"
-                  id="postal-code"
-                  placeholder="0000"
+                  name="surname"
+                  id="surname"
+                  placeholder="Nordmann"
                   class="form-input"
                   required
                 />
               </div>
             </div>
+            <label class="password" for="password">Password</label>
+            <input
+              type="text"
+              name="password"
+              id="password"
+              placeholder="Choose password"
+              aria-required="true"
+              class="form-input"
+              required
+            />
+            <label class="confirm-password" for="confirm password"
+              >confirm password</label
+            >
+            <input
+              type="text"
+              name="confirm password"
+              id="confirm-password"
+              placeholder="Repeat password"
+              aria-required="true"
+              class="form-input"
+            />
 
             <button class="submit-button" type="submit">Submit</button>
           </form>
