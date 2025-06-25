@@ -77,13 +77,13 @@ main {
   font-weight: bold;
 }
 
-.register-box {
+.signup-box {
   margin: 0 auto;
   padding: 20px;
   max-width: 100%;
 }
 
-.register-h1-mobile {
+.signup-h1-mobile {
   font-size: 32px;
   margin: 16px 0px 60px 0px;
   text-align: center;
@@ -154,7 +154,7 @@ label {
 }
 
 /* hide desktop view */
-.register-h1 {
+.signup-h1 {
   display: none;
 }
 
@@ -216,7 +216,7 @@ label {
     top: -20px;
   }
 
-  .register-box {
+  .signup-box {
     width: 503px;
     height: 687px;
     border: 3px solid rgba(204, 204, 204, 0.8);
@@ -230,7 +230,7 @@ label {
     margin-bottom: -30px;
   }
 
-  .register-h1 {
+  .signup-h1 {
     margin: 8px 0px 8px 0px;
   }
 
