@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Edugate login page" />
+    <title>Edugate Signup</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      alt="browser tab icon"
+      href="/public/assets/icons/favicon/favicon-16x16.png"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/login-form.css" />
+    <link rel="stylesheet" href="../css/log-in.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/utils/components.css" />
+    <link rel="stylesheet" href="../css/media.css" />
+    <link rel="stylesheet" href="../css/register.css" />
+    <link rel="stylesheet" href="/public/index.html" />
+    <script defer src="/src/script/utils/header.js"></script>
+    <script defer src="/src/script/utils/footer.js"></script>
+    <script defer src="/src/script/log-in.js"></script>
+    <script defer src="/src/script/api/login-user.json"></script>
+  </head>
+  <body>
+    <div class="page-wrapper">
+      <header class="header-mobile"></header>
+      <header class="header-desktop"></header>
+      <main>
+        <section class="register-box">
+          <h1 class="register-h1">Signup</h1>
+          <h1 class="register-h1-mobile">Signup</h1>
+          <form>
+            <label class="school" for="school">School</label>
+            <input
+              type="text"
+              name="school"
+              id="school"
+              placeholder="Edugate"
+              aria-required="true"
+              class="form-input"
+              required
+            />
+            <label class="address-line-1" for="Address line 1"
+              >Address line 1</label
+            >
+            <input
+              type="text"
+              name="address line 1"
+              id="address-line-1"
+              placeholder="Address"
+              aria-required="true"
+              class="form-input"
+              required
+            />
+            <label class="address-line-2" for="address-line-2"
+              >Address line 2</label
+            >
+            <input
+              type="text"
+              name="address-line-2"
+              id="address-line-2"
+              placeholder="Address"
+              aria-required="true"
+              class="form-input"
+            />
+            <div class="city-postal">
+              <div class="input-group">
+                <label for="city">City</label>
+                <input
+                  type="text"
+                  name="city"
+                  id="city"
+                  placeholder="Oslo"
+                  class="form-input"
+                  required
+                />
+              </div>
+              <div class="input-group">
+                <label for="postal code">Postal Code</label>
+                <input
+                  type="text"
+                  name="postal code"
+                  id="postal-code"
+                  placeholder="0000"
+                  class="form-input"
+                  required
+                />
+              </div>
+            </div>
+
+            <button class="submit-button" type="submit">Submit</button>
+          </form>
+        </section>
+      </main>
+
+      <footer class="footer-circles"></footer>
+    </div>
+  </body>
+</html>
