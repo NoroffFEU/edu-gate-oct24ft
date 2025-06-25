@@ -12,10 +12,22 @@ function buildTable(data, filter = '') {
   const thead = document.createElement('thead');
   thead.innerHTML = `
     <tr>
-      <th>Student ID</th>
-      <th>First Name</th>
-      <th>Last Name</th>
-      <th>Year</th>
+      <th>
+        <span class="th-mobile">ID</span>
+        <span class="th-desktop">Student ID</span>
+      </th>
+      <th>
+        <span class="th-mobile">F. Name</span>
+        <span class="th-desktop">First Name</span>
+      </th>
+      <th>
+        <span class="th-mobile">L. Name</span>
+        <span class="th-desktop">Last Name</span>
+      </th>
+      <th>
+        <span class="th-mobile">Year</span>
+        <span class="th-desktop">Year</span>
+      </th>
     </tr>`;
   table.appendChild(thead);
 
@@ -23,17 +35,21 @@ function buildTable(data, filter = '') {
 
   const searchText = filter.toLowerCase();
 
-  const filteredData = data.filter(student =>
-    student.studentId.toLowerCase().includes(searchText) ||
-    student.firstName.toLowerCase().includes(searchText) ||
-    student.lastName.toLowerCase().includes(searchText) ||
-    String(student.year).includes(searchText)
+  const filteredData = data.filter(
+    (student) =>
+      student.studentId.toLowerCase().includes(searchText) ||
+      student.firstName.toLowerCase().includes(searchText) ||
+      student.lastName.toLowerCase().includes(searchText) ||
+      String(student.year).includes(searchText)
   );
 
   const startIndex = (currentPage - 1) * rowsPerPage;
-  const paginatedData = filteredData.slice(startIndex, startIndex + rowsPerPage);
+  const paginatedData = filteredData.slice(
+    startIndex,
+    startIndex + rowsPerPage
+  );
 
-  paginatedData.forEach(student => {
+  paginatedData.forEach((student) => {
     const tr = document.createElement('tr');
     tr.innerHTML = `
       <td>${student.studentId}</td>
@@ -41,6 +57,14 @@ function buildTable(data, filter = '') {
       <td>${student.lastName}</td>
       <td>${student.year}</td>
     `;
+    tr.addEventListener('click', () => {
+      localStorage.setItem('selectedStudentId', student.studentId);
+      localStorage.setItem(
+        'selectedStudentName',
+        student.firstName + ' ' + student.lastName
+      );
+      window.location.href = 'results.html';
+    });
     tbody.appendChild(tr);
   });
 
@@ -103,7 +127,6 @@ function renderPagination(totalRows, filter) {
       addPageButton(totalPages - 1);
       addPageButton(totalPages);
     }
-
   } else {
     for (let i = 1; i <= totalPages; i++) {
       addPageButton(i);
@@ -129,33 +152,48 @@ function createSearch() {
   const searchContainer = document.getElementById('searchContainer');
   searchContainer.innerHTML = '';
 
+  const searchWrapper = document.createElement('div');
+  searchWrapper.className = 'search-wrapper';
+
   const input = document.createElement('input');
   input.type = 'text';
   input.placeholder = 'Search for student...';
   input.id = 'searchInput';
+
+  const searchBtn = document.createElement('button');
+  searchBtn.type = 'button';
+  searchBtn.className = 'search-btn';
+  searchBtn.innerHTML = `<img src="/public/assets/icons/search.png" alt="Search" />`;
+
+  searchBtn.addEventListener('click', () => {
+    currentPage = 1;
+    buildTable(students, input.value);
+  });
 
   input.addEventListener('input', () => {
     currentPage = 1;
     buildTable(students, input.value);
   });
 
-  searchContainer.appendChild(input);
+  searchWrapper.appendChild(input);
+  searchWrapper.appendChild(searchBtn);
+  searchContainer.appendChild(searchWrapper);
 }
 
 function init() {
   fetch('../script/api/students.json')
-    .then(response => {
+    .then((response) => {
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);
       }
       return response.json();
     })
-    .then(data => {
+    .then((data) => {
       students = data;
       createSearch();
       buildTable(students);
     })
-    .catch(error => {
+    .catch((error) => {
       console.error('Error while fetching students.json:', error);
       const tableContainer = document.getElementById('tableContainer');
       tableContainer.innerHTML = '<p>Could not load student data.</p>';
@@ -163,4 +201,3 @@ function init() {
 }
 
 document.addEventListener('DOMContentLoaded', init);
-

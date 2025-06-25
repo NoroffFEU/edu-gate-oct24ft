@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function () {
   } else if (user.role === 'teacher') {
     menuItems = [
       { icon: 'user-circle.png', label: 'Profile', href: '#profile' },
-      { icon: 'results.png', label: 'Results', href: '#results' },
+      { icon: 'results.png', label: 'Results', href: 'select-student.html' },
       { icon: 'add-results.png', label: 'Add Results', href: '#add-results' },
       {
         icon: 'top-students.png',

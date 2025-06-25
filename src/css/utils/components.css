@@ -28,8 +28,6 @@
   background: #fff;
   border-bottom: 1px solid #eee;
 
-  
-
   height: 70px;
 }
 
@@ -428,4 +426,9 @@ body.navbar-open {
 }
 .breadcrumb a:hover {
   color: #4caf50;
+}
+
+.breadcrumb-current {
+  color: #4caf50;
+  font-weight: 600;
 }
