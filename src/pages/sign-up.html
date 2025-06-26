@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Edugate login page" />
+    <title>Edugate Signup</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      alt="browser tab icon"
+      href="/public/assets/icons/favicon/favicon-16x16.png"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/src/pages/log-in.html" />
+    <link rel="stylesheet" href="../css/sign-up.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/utils/components.css" />
+    <link rel="stylesheet" href="../css/media.css" />
+    <link rel="stylesheet" href="../css/register.css" />
+    <script defer src="/src/script/utils/header.js"></script>
+    <script defer src="/src/script/utils/footer.js"></script>
+    <script defer src="/src/script/sign-up.js"></script>
+  </head>
+  <body>
+    <div class="page-wrapper">
+      <header class="header-mobile"></header>
+      <header class="header-desktop"></header>
+
+      <div
+        id="fail-popup"
+        class="popup hidden"
+        role="alert"
+        aria-live="assertive"
+      >
+        <div class="popup-content-div">
+          <div class="icon-text-div">
+            <div class="popup-header-div">
+              <img
+                class="popup-icon"
+                src="/public/assets/icons/vector.png"
+                alt="fail icon"
+              /><span class="popup-icon-desktop"
+                ><img src="/public/assets/icons/vector.png" alt="fail icon"
+              /></span>
+              <div class="pop-text-desktop-div">
+                <strong class="signup-fail">Failed Sign Up!</strong>
+                <p class="popup-text-desktop">
+                  Wrong password or email address!
+                </p>
+              </div>
+            </div>
+
+            <p class="popup-text-mobile">Wrong password or email address!</p>
+          </div>
+
+          <span class="popup-close"
+            ><img
+              src="/public/assets/icons/x-red.png"
+              alt="click x to close the popup"
+          /></span>
+        </div>
+      </div>
+      <main>
+        <section class="signup-box">
+          <h1 class="signup-h1">Sign up</h1>
+          <h1 class="signup-h1-mobile">Sign up</h1>
+          <form>
+            <label class="email" for="email">Email</label>
+            <input
+              type="text"
+              name="Email"
+              id="email"
+              placeholder="example@mail.com"
+              aria-required="true"
+              class="form-input"
+              required
+            />
+            <div class="first-surname">
+              <div class="input-group">
+                <label for="first-name">First name</label>
+                <input
+                  type="text"
+                  name="first name"
+                  id="first-name"
+                  placeholder="Ola"
+                  class="form-input"
+                  required
+                />
+              </div>
+              <div class="input-group">
+                <label for="surname">Surname</label>
+                <input
+                  type="text"
+                  name="surname"
+                  id="surname"
+                  placeholder="Nordmann"
+                  class="form-input"
+                  required
+                />
+              </div>
+            </div>
+            <label class="password" for="password">Password</label>
+            <input
+              type="password"
+              name="password"
+              id="password"
+              placeholder="Choose password"
+              aria-required="true"
+              class="form-input"
+              required
+            />
+            <label class="confirm-password" for="confirm password"
+              >confirm password</label
+            >
+            <input
+              type="password"
+              name="confirm password"
+              id="confirm-password"
+              placeholder="Repeat password"
+              aria-required="true"
+              class="form-input"
+            />
+
+            <button class="submit-button" type="submit">Submit</button>
+          </form>
+        </section>
+      </main>
+
+      <footer class="footer-circles"></footer>
+    </div>
+  </body>
+</html>
