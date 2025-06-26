@@ -102,6 +102,7 @@ form {
   flex-direction: column;
   gap: 20px;
   max-width: 350px;
+  font-family: roboto;
 }
 
 label {
@@ -135,11 +136,15 @@ label {
   border: 1px solid #cccccc;
   box-shadow: inset 0px 3px 2px rgba(204, 204, 204, 1);
   margin-bottom: 0px;
+  font-size: 16px;
+  font-family: roboto;
+  color: rgba(51, 51, 51, 0.8);
 }
 
 .submit-button {
   margin: auto;
   font-weight: 600;
+  font-family: poppins;
   font-size: 16px;
   line-height: 100%;
   letter-spacing: 0%;
