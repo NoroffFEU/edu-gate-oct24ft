@@ -282,7 +282,7 @@ label {
     letter-spacing: 0.5px;
     width: 138px;
     height: 59px;
-    box-shadow: 0px 2px 8px rgb(87, 87, 87) inset;
+    box-shadow: 0px 4px 4px 0px rgb(52, 129, 55) inset;
   }
 
   /* hide in desktop view */
