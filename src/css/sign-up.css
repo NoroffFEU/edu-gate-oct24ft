@@ -176,7 +176,7 @@ label {
   /* popup container */
   .popup {
     position: fixed;
-    left: 1290px;
+    right: 0px;
     top: 150px;
     padding: 16px 10px;
     width: 450px;
