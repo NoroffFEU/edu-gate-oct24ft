@@ -295,3 +295,12 @@ label {
     margin-bottom: 0px;
   }
 }
+
+/* ------------------- Tablet -------------------- */
+@media (min-width: 721px) and (max-width: 900px) {
+  .popup {
+    position: relative;
+    top: 0;
+    right: auto;
+  }
+}
