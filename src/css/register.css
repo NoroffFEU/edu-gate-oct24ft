@@ -113,6 +113,7 @@ label {
 
   .register-h1 {
     margin: 8px 0px 8px 0px;
+    display: block;
   }
 
   form {
