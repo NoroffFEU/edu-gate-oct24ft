@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
         localStorage.setItem('user', JSON.stringify(matchedUser));
         showPopup();
         setTimeout(() => {
-          window.location.href = '/src/pages/dashboard-student.html';
+          window.location.href = '/src/pages/dashboard.html';
         }, 3000);
       } else {
         const errorMessage = document.getElementById('error-message');

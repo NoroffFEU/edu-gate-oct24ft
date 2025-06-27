@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
       {
         icon: 'user-circle.png',
         label: 'Profile',
-        href: '../pages/dashboard-student.html',
+        href: '../pages/dashboard.html',
       },
       {
         icon: 'results.png',
@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', function () {
       btn.addEventListener('click', (e) => {
         e.preventDefault();
         localStorage.removeItem('user');
-        window.location.reload();
+        window.location.href = '/public/index.html';
       });
     }
 
@@ -141,7 +141,7 @@ document.addEventListener('DOMContentLoaded', function () {
     homeLi.className = 'desktop-navbar-item';
 
     const homeLink = document.createElement('a');
-    homeLink.href = '../pages/dashboard-student.html';
+    homeLink.href = '../pages/dashboard.html';
     homeLink.className = 'desktop-navbar-link';
 
     const homeIcon = document.createElement('img');
@@ -185,7 +185,7 @@ document.addEventListener('DOMContentLoaded', function () {
         link.addEventListener('click', (e) => {
           e.preventDefault();
           localStorage.removeItem('user');
-          window.location.reload();
+          window.location.href = '/public/index.html';
         });
       }
 

@@ -95,3 +95,42 @@
     display: none;
   }
 }
+
+.dashboard-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.dashboard-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+  padding: 1.5rem 1.5rem 1rem 1.5rem;
+  transition: box-shadow 0.2s;
+  min-width: 120px;
+}
+
+.dashboard-icon:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.13);
+  background: #f5f7fa;
+}
+
+.dashboard-icon img {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 0.75rem;
+}
+
+.dashboard-icon span {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #222;
+  text-align: center;
+}
