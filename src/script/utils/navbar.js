@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', function () {
       btn.addEventListener('click', (e) => {
         e.preventDefault();
         localStorage.removeItem('user');
-        window.location.reload();
+        window.location.href = '/public/index.html';
       });
     }
 
@@ -185,7 +185,7 @@ document.addEventListener('DOMContentLoaded', function () {
         link.addEventListener('click', (e) => {
           e.preventDefault();
           localStorage.removeItem('user');
-          window.location.reload();
+          window.location.href = '/public/index.html';
         });
       }
 

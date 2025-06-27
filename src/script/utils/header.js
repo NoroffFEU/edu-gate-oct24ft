@@ -155,7 +155,7 @@ if (mobileHeader) {
     links = [
       {
         text: 'Dashboard',
-        href: '/src/pages/dashboard-admin.html',
+        href: '/src/pages/dashboard.html',
         icon: '/public/assets/icons/dashboard.png',
         alt: 'Dashboard icon',
       },
@@ -188,7 +188,7 @@ if (mobileHeader) {
     links = [
       {
         text: 'Dashboard',
-        href: '/src/pages/dashboard-teacher.html',
+        href: '/src/pages/dashboard.html',
         icon: '/public/assets/icons/dashboard.png',
         alt: 'Dashboard icon',
       },

@@ -1,0 +1,136 @@
+/* -----------------------mobile view----------------- */
+
+#heading,
+#student-initials-mobile,
+#student-name,
+#student-title,
+#profile-icon,
+#my-results-icon {
+  margin-bottom: 16px;
+}
+
+#logout-icon,
+#heading,
+#student-initials-mobile,
+#student-name,
+#student-title,
+#profile-icon,
+#my-results-icon {
+  text-align: center;
+}
+
+#logout-icon {
+  margin-bottom: -70px;
+}
+
+/* hidden in mobile view */
+#student-initials-desktop,
+#profile-icon-desktop,
+#my-results-icon-desktop,
+#logout-icon-desktop {
+  display: none;
+}
+
+/* -----------------------------desktop view----------------------- */
+@media (min-width: 720px) {
+  #student-initials-desktop,
+  #profile-icon-desktop,
+  #my-results-icon-desktop,
+  #logout-icon-desktop {
+    display: block;
+  }
+
+  .header-desktop {
+    border-bottom: 1px lightgray solid;
+  }
+
+  #heading {
+    margin-top: 142px;
+    margin-bottom: 48px;
+  }
+
+  #student-name {
+    margin-bottom: 24px;
+  }
+
+  #student-initials-desktop {
+    display: block;
+    margin-bottom: 24px;
+  }
+
+  #student-title {
+    margin-bottom: 48px;
+    font-weight: 500;
+    font-size: 20px;
+  }
+
+  #icon-group-desktop {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 48px;
+  }
+
+  #profile-icon-desktop,
+  #my-results-icon-desktop,
+  #logout-icon-desktop :hover {
+    cursor: pointer;
+  }
+
+  #profile-icon-desktop,
+  #my-results-icon-desktop,
+  #logout-icon-desktop,
+  #heading,
+  #student-name,
+  #student-initials-desktop,
+  #student-title {
+    text-align: center;
+  }
+
+  /* hidden in desktop view */
+  #student-initials-mobile,
+  #my-results-icon,
+  #profile-icon,
+  #logout-icon {
+    display: none;
+  }
+}
+
+.dashboard-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.dashboard-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+  padding: 1.5rem 1.5rem 1rem 1.5rem;
+  transition: box-shadow 0.2s;
+  min-width: 120px;
+}
+
+.dashboard-icon:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.13);
+  background: #f5f7fa;
+}
+
+.dashboard-icon img {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 0.75rem;
+}
+
+.dashboard-icon span {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #222;
+  text-align: center;
+}

@@ -6,6 +6,8 @@
 
 See user.json for code.
 
+(NB: user.json and login-user.json has been merged)
+
 ### 1.
 
 email: joeblogs2024@edugate.no

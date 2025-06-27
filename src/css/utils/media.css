@@ -188,6 +188,34 @@
     padding-left: 90px;
   }
 
+  /* ------------------ Dashboard  ---------------------*/
+
+  .dashboard-initials-img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .dashboard-icons {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2.5rem;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .dashboard-icon {
+    flex: 1 1 calc(33.33% - 2.5rem); /* 3 per row, minus gap */
+    max-width: 220px;
+    min-width: 180px;
+    margin-bottom: 2rem;
+  }
+
+  .dashboard-icon img {
+    width: 96px;
+    height: 96px;
+  }
+
   /* --------------- Select Student  --------------------*/
 
   .th-mobile {

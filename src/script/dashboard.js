@@ -1,109 +1,132 @@
-// ---------------------------------------mobile view-------------------------------------
+document.addEventListener('DOMContentLoaded', function () {
+  const user = JSON.parse(localStorage.getItem('user'));
+  if (!user) {
+    window.location.href = '/src/pages/log-in.html';
+    return;
+  }
 
-// h1 heading
-const Heading = document.createElement('h1');
-Heading.innerHTML = 'Dashboard';
+  document.getElementById('dashboard-heading').textContent = 'Dashboard';
 
-const dashboard = document.getElementById('heading');
-dashboard.appendChild(Heading);
+  const initialsImg = document.getElementById('dashboard-initials-img');
+  function setInitialsImg() {
+    initialsImg.src =
+      window.innerWidth >= 900
+        ? '/public/assets/img/Student initials.png'
+        : '/public/assets/img/Student initials mobile.png';
+  }
+  setInitialsImg();
+  window.addEventListener('resize', setInitialsImg);
 
-// student initials img
-function studentInitialsImg() {
-  const imgDiv = document.getElementById('student-initials-mobile');
-  const imgIcon = document.createElement('img');
-  imgIcon.src = '/public/assets/img/Student initials mobile.png';
-  imgIcon.alt = 'student initials icon';
-  imgDiv.appendChild(imgIcon);
-}
-studentInitialsImg();
+  let fullName = '';
+  if (user.firstName && user.lastName) {
+    fullName = `${user.firstName} ${user.lastName}`;
+  } else if (user.username) {
+    fullName = user.username;
+  } else if (user.name) {
+    fullName = user.name;
+  } else if (user.email) {
+    fullName = user.email;
+  } else {
+    fullName = 'User';
+  }
+  document.getElementById('dashboard-username').textContent = fullName;
 
-// student name
-const studentName = document.createElement('h2');
-studentName.innerHTML = 'Joe Bloggs';
+  const role = user.role
+    ? user.role.charAt(0).toUpperCase() + user.role.slice(1)
+    : 'User';
+  document.getElementById('dashboard-role').textContent =
+    `${role} at Edugate School`;
 
-const studentContainer = document.getElementById('student-name');
-studentContainer.appendChild(studentName);
+  const iconData = {
+    student: [
+      {
+        label: 'My Results',
+        icon: 'results.png',
+        link: '/src/pages/results.html',
+      },
+      { label: 'See Profile', icon: 'user-circle.png', link: '#profile' },
+      { label: 'Log Out', icon: 'logout.png', link: '#logout' },
+    ],
+    teacher: [
+      {
+        label: 'Top Students',
+        icon: 'top-students.png',
+        link: '/src/pages/top-students.html',
+      },
+      {
+        label: 'Add Results',
+        icon: 'add-results.png',
+        link: '/src/pages/select-student.html',
+      },
+      {
+        label: 'View Results',
+        icon: 'results.png',
+        link: '/src/pages/select-student.html',
+      },
+      { label: 'See Profile', icon: 'user-circle.png', link: '#profile' },
+      { label: 'Log Out', icon: 'logout.png', link: '#logout' },
+    ],
+    admin: [
+      {
+        label: 'Manage Users',
+        icon: 'add-user.png',
+        link: '/src/pages/user-management.html',
+      },
+      {
+        label: 'Add Students',
+        icon: 'add-student.png',
+        link: '/src/pages/add-student.html',
+      },
+      {
+        label: 'Add School',
+        icon: 'add-school.png',
+        link: '/src/pages/add-school.html',
+      },
+      {
+        label: 'Add Teachers',
+        icon: 'add-teacher.png',
+        link: '/src/pages/add-teacher.html',
+      },
+      { label: 'See Profile', icon: 'user-circle.png', link: '#profile' },
+      { label: 'Log Out', icon: 'logout.png', link: '#logout' },
+    ],
+  };
 
-// student title
-const studentTitle = document.createElement('p');
-studentTitle.innerHTML = 'Student at Edugate school';
+  const icons = iconData[user.role] || [];
+  if (user.role === 'student') {
+    const idx = icons.findIndex((i) => i.label === 'See Profile');
+    if (idx > -1) {
+      const [profileIcon] = icons.splice(idx, 1);
+      icons.unshift(profileIcon);
+    }
+  }
 
-const studentT = document.getElementById('student-title');
-studentT.appendChild(studentTitle);
+  const iconGroup = document.querySelector('.dashboard-icons');
+  iconGroup.innerHTML = '';
 
-// profile icon
-function profileIcon() {
-  const imgDiv = document.getElementById('profile-icon');
-  const imgIcon = document.createElement('img');
-  imgIcon.src = '/public/assets/icons/profile.png';
-  imgIcon.alt = 'student icon';
-  imgDiv.appendChild(imgIcon);
-}
-profileIcon();
+  icons.forEach((item) => {
+    const iconDiv = document.createElement('div');
+    iconDiv.className = 'dashboard-icon';
 
-// my results icon
-function myResultsIcon() {
-  const imgDiv = document.getElementById('my-results-icon');
-  const imgIcon = document.createElement('img');
-  imgIcon.src = '/public/assets/icons/my-results.png';
-  imgIcon.alt = 'profile icon';
-  imgDiv.appendChild(imgIcon);
-}
-myResultsIcon();
+    const img = document.createElement('img');
+    img.src = `/public/assets/icons/${item.icon}`;
+    img.alt = item.label;
+    iconDiv.appendChild(img);
 
-// logout icon
-function logoutIcon() {
-  const imgDiv = document.getElementById('logout-icon');
-  const imgIcon = document.createElement('img');
-  imgIcon.src = '/public/assets/icons/logout-mobile.png';
-  imgIcon.alt = 'logout icon';
-  imgIcon.addEventListener('click', () => {
-    window.location.href = '/public/index.html';
+    const label = document.createElement('span');
+    label.textContent = item.label;
+    iconDiv.appendChild(label);
+
+    iconDiv.addEventListener('click', () => {
+      if (item.link === '#logout') {
+        localStorage.removeItem('user');
+        window.location.href = '/public/index.html';
+      } else if (item.link.startsWith('#')) {
+      } else {
+        window.location.href = item.link;
+      }
+    });
+
+    iconGroup.appendChild(iconDiv);
   });
-  imgDiv.appendChild(imgIcon);
-}
-logoutIcon();
-
-// ----------------------------------------desktop view-----------------------------------------
-// student initials img
-function studentInitialsImgDesktop() {
-  const imgDiv = document.getElementById('student-initials-desktop');
-  const imgIcon = document.createElement('img');
-  imgIcon.src = '/public/assets/img/Student initials.png';
-  imgIcon.alt = 'student initials icon';
-  imgDiv.appendChild(imgIcon);
-}
-studentInitialsImgDesktop();
-
-// profile icon
-function profileIconDesktop() {
-  const imgDiv = document.getElementById('profile-icon-desktop');
-  const imgIcon = document.createElement('img');
-  imgIcon.src = '/public/assets/icons/see-profile-desktop.png';
-  imgIcon.alt = 'student icon';
-  imgDiv.appendChild(imgIcon);
-}
-profileIconDesktop();
-
-// my results icon
-function myResultsIconDesktop() {
-  const imgDiv = document.getElementById('my-results-icon-desktop');
-  const imgIcon = document.createElement('img');
-  imgIcon.src = '/public/assets/icons/my-results-desktop.png';
-  imgIcon.alt = 'profile icon';
-  imgDiv.appendChild(imgIcon);
-}
-myResultsIconDesktop();
-
-// logout icon
-function logoutIconDesktop() {
-  const imgDiv = document.getElementById('logout-icon-desktop');
-  const imgIcon = document.createElement('img');
-  imgIcon.src = '/public/assets/icons/log out.png';
-  imgIcon.alt = 'logout icon';
-  imgIcon.addEventListener('click', () => {
-    window.location.href = '/public/index.html';
-  });
-  imgDiv.appendChild(imgIcon);
-}
-logoutIconDesktop();
+});
