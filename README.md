@@ -13,6 +13,7 @@ For development, you will only need node version >=18.17.1 and npm version >=10.
     - CSS
     - JS
 
+
 ## For the developers:
 
 ### Getting started
@@ -30,8 +31,10 @@ npm install
 npm run dev
 
 ```
---- 
-### 🧩 Shared Components
+
+---
+
+## 🧩 Shared Components
 
 The header, navbar, and footer are dynamically rendered via JavaScript.  
 You can find usage instructions in [`/src/script/utils/components/README.md`](./src/script/utils/components/README.md).
@@ -43,6 +46,28 @@ You can find usage instructions in [`/src/script/utils/components/README.md`](./
 This project includes a mock login setup meant only for development and demonstration purposes.
 No real authentication is being used. Instead, we simulate login using locally stored user data. 
 See [`/src/script/api/README.md`](./src/script/api/README.md) for more details and example usage.
+
+There are three different user types, and four different users. Here are their login credentials:
+
+### 1.
+
+email: joeblogs2024@edugate.no
+password: joe
+
+### 2.
+
+username: student
+password: student123
+
+### 3.
+
+username: teacher
+password: teacher123
+
+### 4.
+
+username: admin
+password: admin123
 
 ---
 
@@ -59,7 +84,9 @@ See [`/src/script/api/README.md`](./src/script/api/README.md) for more details a
 
 5. If the credentials are correct, you'll be logged in as a student and a green confirmation popup will appear (only on login).
 
-All accounts are stored in /src/script/api/login-user.json or /src/script/api/signup-user.json
+All accounts are stored in /src/script/api/user.json or /src/script/api/signup-user.json
+
+
 
 ---
 You can also log in directly through the browser console by calling the login function manually using either:
@@ -69,6 +96,7 @@ You can also log in directly through the browser console by calling the login fu
 { "username": "teacher", "password": "teacher123", "role": "teacher" }
 ```
 ## Contributors
+
 
 | Role | GitHub Username |
 |------|-----------------|

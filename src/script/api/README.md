@@ -6,7 +6,27 @@
 
 See user.json for code.
 
-### HTML example:
+### 1.
+
+email: joeblogs2024@edugate.no
+password: joe
+
+### 2.
+
+username: student
+password: student123
+
+### 3.
+
+username: teacher
+password: teacher123
+
+### 4.
+
+username: admin
+password: admin123
+
+# HTML example:
 
 <!--
 
@@ -19,7 +39,7 @@ See user.json for code.
 
 -->
 
-### JavaScript example:
+# JavaScript example:
 
 <!--
 

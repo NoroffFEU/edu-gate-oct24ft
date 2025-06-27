@@ -4,8 +4,12 @@ if (desktopHeader) {
   const nav = document.createElement('nav');
   nav.className = 'desktop-nav';
 
+  const user = JSON.parse(localStorage.getItem('user'));
+
   const logoLink = document.createElement('a');
-  logoLink.href = '/public/index.html';
+  logoLink.href = user
+    ? '/src/pages/dashboard-student.html'
+    : '/public/index.html';
 
   const logo = document.createElement('img');
   logo.src = '/public/assets/img/logo-header.png';
@@ -16,8 +20,6 @@ if (desktopHeader) {
 
   const ul = document.createElement('ul');
   ul.className = 'nav-links';
-
-  const user = JSON.parse(localStorage.getItem('user'));
 
   const excludedPages = [
     '/public/index.html',
@@ -82,8 +84,12 @@ if (mobileHeader) {
   const mobileNav = document.createElement('nav');
   mobileNav.className = 'mobile-nav';
 
+  const user = JSON.parse(localStorage.getItem('user'));
+
   const logoLink = document.createElement('a');
-  logoLink.href = '/public/index.html';
+  logoLink.href = user
+    ? '/src/pages/dashboard-student.html'
+    : '/public/index.html';
 
   const logo = document.createElement('img');
   logo.src = '/public/assets/img/logo-header-cropped.png';
@@ -120,7 +126,6 @@ if (mobileHeader) {
   const menuList = document.createElement('ul');
   menuList.className = 'dropdown-links';
 
-  const user = JSON.parse(localStorage.getItem('user'));
   let links = [];
 
   if (user && user.role === 'student') {

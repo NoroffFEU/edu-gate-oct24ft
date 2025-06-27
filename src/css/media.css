@@ -225,3 +225,17 @@
   .edit-form-delete-mobile {
     display: none !important;
   }
+
+  /*--------------- Top Students ----------------*/
+
+  #dataTable th,
+  #dataTable td {
+    display: table-cell !important;
+  }
+  .th-mobile {
+    display: none !important;
+  }
+  .th-desktop {
+    display: inline !important;
+  }
+}
