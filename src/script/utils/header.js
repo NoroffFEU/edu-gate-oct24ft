@@ -7,9 +7,7 @@ if (desktopHeader) {
   const user = JSON.parse(localStorage.getItem('user'));
 
   const logoLink = document.createElement('a');
-  logoLink.href = user
-    ? '/src/pages/dashboard-student.html'
-    : '/public/index.html';
+  logoLink.href = user ? '/src/pages/dashboard.html' : '/public/index.html';
 
   const logo = document.createElement('img');
   logo.src = '/public/assets/img/logo-header.png';
@@ -33,7 +31,7 @@ if (desktopHeader) {
   if (user && !excludedPages.includes(currentPath)) {
     navLinks.push({
       text: 'Dashboard',
-      href: '/src/pages/dashboard-student.html',
+      href: '/src/pages/dashboard.html',
     });
   }
   navLinks.push(
@@ -87,9 +85,7 @@ if (mobileHeader) {
   const user = JSON.parse(localStorage.getItem('user'));
 
   const logoLink = document.createElement('a');
-  logoLink.href = user
-    ? '/src/pages/dashboard-student.html'
-    : '/public/index.html';
+  logoLink.href = user ? '/src/pages/dashboard.html' : '/public/index.html';
 
   const logo = document.createElement('img');
   logo.src = '/public/assets/img/logo-header-cropped.png';
@@ -132,7 +128,7 @@ if (mobileHeader) {
     links = [
       {
         text: 'Dashboard',
-        href: '/src/pages/dashboard-student.html',
+        href: '/src/pages/dashboard.html',
         icon: '/public/assets/icons/dashboard.png',
         alt: 'Dashboard icon',
       },

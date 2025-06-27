@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
       {
         icon: 'user-circle.png',
         label: 'Profile',
-        href: '../pages/dashboard-student.html',
+        href: '../pages/dashboard.html',
       },
       {
         icon: 'results.png',
@@ -141,7 +141,7 @@ document.addEventListener('DOMContentLoaded', function () {
     homeLi.className = 'desktop-navbar-item';
 
     const homeLink = document.createElement('a');
-    homeLink.href = '../pages/dashboard-student.html';
+    homeLink.href = '../pages/dashboard.html';
     homeLink.className = 'desktop-navbar-link';
 
     const homeIcon = document.createElement('img');
