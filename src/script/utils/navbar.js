@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function () {
       {
         icon: 'results.png',
         label: 'Results',
-        href: '../pages/results-student.html',
+        href: '../pages/results.html',
       },
       { icon: 'logout.png', label: 'Log out', href: '#logout' },
     ];

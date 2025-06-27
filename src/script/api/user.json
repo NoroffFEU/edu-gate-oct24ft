@@ -2,7 +2,8 @@
   {
     "username": "student",
     "password": "student123",
-    "role": "student"
+    "role": "student",
+    "studentId": "1921840"
   },
   {
     "username": "admin",
@@ -18,6 +19,7 @@
     "email": "joeblogs2024@edugate.no",
     "password": "joe",
     "role": "student",
-    "username": "JB"
+    "username": "Joe",
+    "studentId": "1921840"
   }
 ]

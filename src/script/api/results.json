@@ -3,6 +3,64 @@
     "studentId": "1921840",
     "results": [
       {
+        "year": "2022",
+        "term": "Spring",
+        "subject": "Math",
+        "exam": "Final",
+        "result": 89,
+        "grade": "A"
+      },
+      {
+        "year": "2022",
+        "term": "Spring",
+        "subject": "English",
+        "exam": "Final",
+        "result": 76,
+        "grade": "B"
+      },
+      {
+        "year": "2022",
+        "term": "Autumn",
+        "subject": "Science",
+        "exam": "Midterm",
+        "result": 82,
+        "grade": "B"
+      }
+    ]
+  },
+  {
+    "studentId": "1921841",
+    "results": [
+      {
+        "year": "2022",
+        "term": "Spring",
+        "subject": "Math",
+        "exam": "Final",
+        "result": 65,
+        "grade": "C"
+      },
+      {
+        "year": "2022",
+        "term": "Spring",
+        "subject": "English",
+        "exam": "Final",
+        "result": 92,
+        "grade": "A"
+      },
+      {
+        "year": "2022",
+        "term": "Autumn",
+        "subject": "Science",
+        "exam": "Midterm",
+        "result": 70,
+        "grade": "B"
+      }
+    ]
+  },
+  {
+    "studentId": "1921840",
+    "results": [
+      {
         "year": 2019,
         "term": "Fall",
         "subject": "Language",

@@ -25,18 +25,30 @@ document.addEventListener('DOMContentLoaded', function () {
   const aboutBtns = document.createElement('section');
   aboutBtns.className = 'about-btns';
 
-  const signUpBtn = document.createElement('a');
-  signUpBtn.href = '../pages/sign-up.html';
-  signUpBtn.className = 'btn btn-primary';
-  signUpBtn.textContent = 'Sign Up';
+  const user = JSON.parse(localStorage.getItem('user'));
+  if (!user) {
+    const signUpBtn = document.createElement('a');
+    signUpBtn.href = '../pages/sign-up.html';
+    signUpBtn.className = 'btn btn-primary';
+    signUpBtn.textContent = 'Sign Up';
 
-  const logInBtn = document.createElement('a');
-  logInBtn.href = '../pages/log-in.html';
-  logInBtn.className = 'btn btn-secondary';
-  logInBtn.textContent = 'Log In';
+    const logInBtn = document.createElement('a');
+    logInBtn.href = '../pages/log-in.html';
+    logInBtn.className = 'btn btn-secondary';
+    logInBtn.textContent = 'Log In';
 
-  aboutBtns.appendChild(signUpBtn);
-  aboutBtns.appendChild(logInBtn);
+    aboutBtns.appendChild(signUpBtn);
+    aboutBtns.appendChild(logInBtn);
+  } else {
+    const logOutBtn = document.createElement('button');
+    logOutBtn.className = 'btn btn-alert';
+    logOutBtn.textContent = 'Log Out';
+    logOutBtn.addEventListener('click', () => {
+      localStorage.removeItem('user');
+      window.location.reload();
+    });
+    aboutBtns.appendChild(logOutBtn);
+  }
 
   aboutHero.appendChild(h1);
   aboutHero.appendChild(aboutText);
