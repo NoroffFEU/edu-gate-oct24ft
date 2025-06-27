@@ -57,6 +57,9 @@ function logoutIcon() {
   const imgIcon = document.createElement('img');
   imgIcon.src = '/public/assets/icons/logout-mobile.png';
   imgIcon.alt = 'logout icon';
+  imgIcon.addEventListener('click', () => {
+    window.location.href = '/public/index.html';
+  });
   imgDiv.appendChild(imgIcon);
 }
 logoutIcon();
@@ -98,6 +101,10 @@ function logoutIconDesktop() {
   const imgIcon = document.createElement('img');
   imgIcon.src = '/public/assets/icons/log out.png';
   imgIcon.alt = 'logout icon';
+  imgIcon.style.cursor = 'pointer'; // Optional: shows pointer cursor on hover
+  imgIcon.addEventListener('click', () => {
+    window.location.href = '/public/index.html';
+  });
   imgDiv.appendChild(imgIcon);
 }
 logoutIconDesktop();
