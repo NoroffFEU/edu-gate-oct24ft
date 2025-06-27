@@ -101,7 +101,7 @@ function logoutIconDesktop() {
   const imgIcon = document.createElement('img');
   imgIcon.src = '/public/assets/icons/log out.png';
   imgIcon.alt = 'logout icon';
-  imgIcon.style.cursor = 'pointer'; // Optional: shows pointer cursor on hover
+  imgIcon.style.cursor = 'pointer';
   imgIcon.addEventListener('click', () => {
     window.location.href = '/public/index.html';
   });
