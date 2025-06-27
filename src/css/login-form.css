@@ -23,6 +23,7 @@ label {
   box-shadow: inset 0px 2px 2px rgba(204, 204, 204, 1);
   margin-bottom: 10px;
   font-family: roboto;
+  color: rgba(51, 51, 51, 0.8);
 }
 
 .error-message {
