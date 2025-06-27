@@ -6,6 +6,7 @@ form {
   flex-direction: column;
   gap: 12px;
   max-width: 350px;
+  font-family: roboto;
 }
 
 label {
@@ -21,6 +22,7 @@ label {
   border: 1px solid #cccccc;
   box-shadow: inset 0px 2px 2px rgba(204, 204, 204, 1);
   margin-bottom: 10px;
+  font-family: roboto;
 }
 
 .error-message {
@@ -58,6 +60,7 @@ label {
   height: 44px;
   border-radius: 6px;
   padding: 10px 20px;
+  font-family: poppins;
 }
 
 .login-button:hover {
