@@ -43,11 +43,12 @@ You can find usage instructions in [`/src/script/utils/components/README.md`](./
 ## 🔐 For Testing the Login System:
 
 ### Mock Login System (Development Only)
-This project includes a mock login setup meant only for development and demonstration purposes.
-No real authentication is being used. Instead, we simulate login using locally stored user data. 
+This project includes a **_mock login setup meant only for development and demonstration purposes._**
+
+All user credentials listed here are **_fictional_** and for **_testing purposes only._** No real authentication is being used. Instead, we simulate login using locally stored user data. 
 See [`/src/script/api/README.md`](./src/script/api/README.md) for more details and example usage.
 
-There are three different user types, and four different users. Here are their login credentials:
+There are three different user types, and four different users. Here are their demo login credentials:
 
 ### 1.
 
