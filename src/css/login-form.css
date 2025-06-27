@@ -24,6 +24,7 @@ label {
   margin-bottom: 10px;
   font-family: roboto;
   color: rgba(51, 51, 51, 0.8);
+  font-size: 16px;
 }
 
 .error-message {
