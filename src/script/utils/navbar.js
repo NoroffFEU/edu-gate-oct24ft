@@ -34,8 +34,16 @@ document.addEventListener('DOMContentLoaded', function () {
   } else if (user.role === 'teacher') {
     menuItems = [
       { icon: 'user-circle.png', label: 'Profile', href: '#profile' },
-      { icon: 'results.png', label: 'Results', href: 'select-student.html' },
-      { icon: 'add-results.png', label: 'Add Results', href: '#add-results' },
+      {
+        icon: 'results.png',
+        label: 'Results',
+        href: '/src/pages/select-student.html',
+      },
+      {
+        icon: 'add-results.png',
+        label: 'Add Results',
+        href: '/src/pages/select-student.html',
+      },
       {
         icon: 'top-students.png',
         label: 'Top Students',
