@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function () {
       {
         icon: 'top-students.png',
         label: 'Top Students',
-        href: '#top-students',
+        href: '../pages/top-students.html',
       },
       { icon: 'logout.png', label: 'Log out', href: '#logout' },
     ];
@@ -141,7 +141,7 @@ document.addEventListener('DOMContentLoaded', function () {
     homeLi.className = 'desktop-navbar-item';
 
     const homeLink = document.createElement('a');
-    homeLink.href = '../pages/dashboard.html';
+    homeLink.href = '../pages/dashboard-student.html';
     homeLink.className = 'desktop-navbar-link';
 
     const homeIcon = document.createElement('img');

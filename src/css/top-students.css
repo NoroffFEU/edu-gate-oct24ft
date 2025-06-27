@@ -1,0 +1,14 @@
+#dataTable th:nth-child(1),
+#dataTable td:nth-child(1),
+#dataTable th:nth-child(2),
+#dataTable td:nth-child(2) {
+  display: none;
+}
+
+.th-mobile {
+  display: inline;
+}
+
+.th-desktop {
+  display: none;
+}

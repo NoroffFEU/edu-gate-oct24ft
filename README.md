@@ -13,7 +13,8 @@ For development, you will only need node version >=18.17.1 and npm version >=10.
     - JS
 
 ## Getting started
-   ```bash
+
+```bash
 # Clone the repository
 git clone https://github.com/NoroffFEU/edu-gate-oct24ft.git
 
@@ -27,14 +28,41 @@ npm install
 npm run dev
 
 ```
---- 
-### ⚠️ Mock Login System
 
-This project uses a mock login setup for development purposes only.  
+---
+
+## ⚠️ Mock Login System
+
+This project uses a mock login setup for development purposes only.
+Some of the menu elements and pages only show for select user types, so to test the entire page you need to log out and back in with another user.
+
+There are three different user types, and four different users. Here are their login credentials:
+
+### 1.
+
+email: joeblogs2024@edugate.no
+password: joe
+
+### 2.
+
+username: student
+password: student123
+
+### 3.
+
+username: teacher
+password: teacher123
+
+### 4.
+
+username: admin
+password: admin123
+
 See [`/src/script/api/README.md`](./src/script/api/README.md) for more details and example usage.
 
---- 
-### 🧩 Shared Components
+---
+
+## 🧩 Shared Components
 
 The header, navbar, and footer are dynamically rendered via JavaScript.  
 You can find usage instructions in [`/src/script/utils/components/README.md`](./src/script/utils/components/README.md).
@@ -43,7 +71,7 @@ You can find usage instructions in [`/src/script/utils/components/README.md`](./
 
 ## Contributors
 
-| Role | GitHub Username |
-|------|-----------------|
-|  Quality Assurance Engineer | [emmelinlarina](https://github.com/emmelinlarina) |
-|  Developers | [larstp](https://github.com/larstp), [jankbyr](https://github.com/jankbyr), [jb12-art](https://github.com/jb12-art), [susannt](https://github.com/susannt), [lowrensRosinelli](https://github.com/lowrensRosinelli), [nadiia-balitska](https://github.com/nadiia-balitska) |
+| Role                       | GitHub Username                                                                                                                                                                                                                                                            |
+| -------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Quality Assurance Engineer | [emmelinlarina](https://github.com/emmelinlarina)                                                                                                                                                                                                                          |
+| Developers                 | [larstp](https://github.com/larstp), [jankbyr](https://github.com/jankbyr), [jb12-art](https://github.com/jb12-art), [susannt](https://github.com/susannt), [lowrensRosinelli](https://github.com/lowrensRosinelli), [nadiia-balitska](https://github.com/nadiia-balitska) |

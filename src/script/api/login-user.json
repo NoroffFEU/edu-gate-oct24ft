@@ -1,6 +1,8 @@
 [
   {
     "email": "joeblogs2024@edugate.no",
-    "password": "joe"
+    "password": "joe",
+    "role": "student",
+    "username": "JB"
   }
 ]

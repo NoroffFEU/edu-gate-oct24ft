@@ -1,33 +1,35 @@
 document.addEventListener('DOMContentLoaded', () => {
   const form = document.querySelector('form');
-  const closeBtn = document.querySelector('.popup-close'); // grab the close button
+  const closeBtn = document.querySelector('.popup-close');
 
-  // add event listener to close button
   closeBtn.addEventListener('click', () => {
     document.getElementById('success-popup').classList.add('hidden');
   });
 
   form.addEventListener('submit', async (event) => {
-    event.preventDefault(); // prevent default form submission
+    event.preventDefault();
 
     const emailInput = document.getElementById('email').value.trim();
     const passwordInput = document.getElementById('password').value.trim();
     const errorMessage = document.getElementById('error-message');
 
     try {
-      const response = await fetch('/src/script/api/login-user.json');
+      const response = await fetch('/src/script/api/user.json');
       const user = await response.json();
 
       const matchedUser = user.find(
-        (user) => user.email === emailInput && user.password === passwordInput
+        (user) =>
+          (user.email === emailInput || user.username === emailInput) &&
+          user.password === passwordInput
       );
 
       if (matchedUser) {
-        errorMessage.classList.add('hidden'); // hide previous error
+        errorMessage.classList.add('hidden');
+        localStorage.setItem('user', JSON.stringify(matchedUser));
         showPopup();
         setTimeout(() => {
           window.location.href = '/src/pages/dashboard-student.html';
-        }, 3000); // Redirect after 3 seconds
+        }, 3000);
       } else {
         const errorMessage = document.getElementById('error-message');
         errorMessage.textContent = 'Invalid email or password';

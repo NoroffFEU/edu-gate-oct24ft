@@ -3,22 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Edu-gate select student page" />
-    <title>Edu-gate | Select Student</title>
+    <meta name="description" content="Edu-gate top students page" />
+    <title>Edu-gate | Top Students</title>
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../css/utils/components.css" />
-    <link rel="stylesheet" href="../css/select-student.css">
+    <link rel="stylesheet" href="../css/select-student.css" />
+    <link rel="stylesheet" href="../css/results.css" />
+    <link rel="stylesheet" href="../css/top-students.css" />
     <link rel="stylesheet" href="../css/media.css" />
     <script src="../script/utils/header.js" defer></script>
     <script src="../script/utils/footer.js" defer></script>
     <script src="../script/utils/navbar.js" defer></script>
     <script src="../script/utils/breadcrumb.js"></script>
-
-    <script src="../script/select-student.js" defer></script>
+    <script src="../script/top-students.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
       rel="stylesheet"
     />
   </head>
@@ -26,15 +27,21 @@
     <div class="page-wrapper">
       <header class="header-mobile"></header>
       <header class="header-desktop"></header>
-      <nav class="breadcrumb" data-breadcrumb='Dashboard:/src/pages/dashboard-student.html > Select Student:/src/pages/select-student.html'></nav>
-      <main class="select-student-main">
-        <h1>Select Student</h1>
-        <h2>Select student to view results</h2>
+      <nav
+        class="breadcrumb"
+        data-breadcrumb="Dashboard:/src/pages/dashboard-student.html > Top Students:/src/pages/top-students.html"
+      ></nav>
+      <main class="top-students-main">
+        <h1>Top Performing Students</h1>
+        <p>View the top performing students in your classes.</p>
         <div id="searchContainer"></div>
         <div id="tableContainer"></div>
-        <div id="paginationContainer"></div>
-          <button class="btn-secondary" onclick="window.location.href='dashboard-student.html'">Back to dashboard</button>
-        </div>
+        <button
+          class="btn-secondary"
+          onclick="window.location.href='dashboard-student.html'"
+        >
+          Back to dashboard
+        </button>
       </main>
     </div>
   </body>

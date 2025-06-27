@@ -1,4 +1,11 @@
 document.addEventListener('DOMContentLoaded', function () {
+  const user = JSON.parse(localStorage.getItem('user'));
+  if (!user) {
+    const breadcrumb = document.querySelector('.breadcrumb');
+    if (breadcrumb) breadcrumb.style.display = 'none';
+    return;
+  }
+
   const breadcrumb = document.querySelector('.breadcrumb');
   if (!breadcrumb) return;
 
